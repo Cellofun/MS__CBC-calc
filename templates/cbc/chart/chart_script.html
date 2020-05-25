@@ -1,0 +1,82 @@
+
+var charts = function(id, arr, ran) {
+    am4core.useTheme(am4themes_animated);
+
+    // Create chart instance
+    var chart = am4core.create(id, am4charts.XYChart);
+    {#chart.paddingRight = 20;#}
+
+    // Add data
+    for (var i=0; i < arr.length; i++) {
+        if (arr[i].value < ran[0]) {
+            arr[i].level = "Понижено"
+        } else if (arr[i].value > ran[1]) {
+            arr[i].level = "Повышено"
+        } else {
+            arr[i].level = "Норма"
+        }
+
+        var pk = arr[i].pk;
+        if(arr[i].type === 3) {
+            arr[i].url = "{% url 'cbc:three-dif-detail' 999 %}".replace (999, pk);
+        } else if(arr[i].type === 5) {
+            arr[i].url = "{% url 'cbc:five-dif-detail' 999 %}".replace (999, pk);
+        } else if(arr[i].type === 9) {
+            arr[i].url = "{% url 'cbc:blood-smear-detail' 999 %}".replace (999, pk);
+        }
+    }
+
+    chart.data = arr;
+
+console.log(arr);
+
+    // Create axes
+    var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+    categoryAxis.dataFields.category = "date";
+    categoryAxis.renderer.minGridDistance = 50;
+    categoryAxis.renderer.grid.template.location = 0.5;
+    categoryAxis.renderer.grid.template.stroke = am4core.color("#c5cbe3");
+    categoryAxis.renderer.grid.template.strokeDasharray = "3,3";
+    categoryAxis.renderer.labels.template.fill = am4core.color("#464E5F");
+
+    // Create value axis
+    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    valueAxis.renderer.grid.template.stroke = am4core.color("#c5cbe3");
+    valueAxis.renderer.grid.template.strokeDasharray = "3,3";
+    valueAxis.renderer.labels.template.fill = am4core.color("#464E5F");
+
+    // Create series
+    var series = chart.series.push(new am4charts.LineSeries());
+    series.dataFields.valueY = "value";
+    series.dataFields.categoryX = "date";
+    series.dataFields.level = "level";
+    series.strokeWidth = 3;
+    series.tensionX = 0.77;
+    series.adapter.add("stroke", function(fill, target){
+        if(target.dataItem.level === "Норма"){
+            return am4core.color("#28a745");
+        }
+        return am4core.color("#dc3545");
+    });
+
+    // bullet is added because we add tooltip to a bullet for it to change color
+    var bullet = series.bullets.push(new am4charts.Bullet());
+    bullet.tooltipText = "[bold]{level}[/]\n[font-size:14px]{valueY}";
+    bullet.adapter.add("fill", function(fill, target){
+    if(target.dataItem.level === "Норма"){
+        return am4core.color("#28a745");
+    }
+    return am4core.color("#dc3545");
+    });
+
+    var circle = bullet.createChild(am4core.Circle);
+    circle.radius = 6;
+    circle.strokeOpacity = 0;
+    circle.propertyFields.url = "url";
+
+    var range = valueAxis.createSeriesRange(series);
+    range.value = ran[0];
+    range.endValue = ran[1];
+    range.contents.stroke = am4core.color("#28a745");
+    range.contents.fill = range.contents.stroke;
+};

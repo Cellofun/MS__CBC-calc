@@ -1,0 +1,33 @@
+{% load static %}
+
+<div id="kt_header" class="header ">
+	<div class="container d-flex align-items-stretch justify-content-between">
+		<div class="d-none d-lg-flex align-items-center">
+			<a href="/"><img alt="Logo" src="{% static 'img/icon.png' %}" class="logo-sticky max-h-35px mr-8"></a>
+            {% if request.user.is_authenticated %}
+            {% else %}
+                <a href="{% url 'cbc:three-dif-create' %}" class="text-danger opacity-90 font-size-base d-none d-md-inline mx-4">Новый 3DIFF анализ</a>
+                <a href="{% url 'cbc:five-dif-create' %}" class="text-danger opacity-90 font-size-base d-none d-md-inline mx-4">Новый 5DIFF анализ</a>
+                <a href="{% url 'cbc:blood-smear-create' %}" class="text-danger opacity-90 font-size-base d-none d-md-inline mx-4">Новый анализ микроскопии</a>
+            {% endif %}
+        </div>
+        <div class="topbar">
+            {% if request.user.is_authenticated %}
+                <div class="topbar-item mx-4">
+                    <span class="text-muted font-weight-bold font-size-base mr-1">Привет,</span>
+                    <a href="{% url 'cbc:cbc-list' %}"class="text-danger opacity-90 font-size-base d-none d-md-inline">{{ request.user }}</a>
+                </div>
+                <div class="topbar-item ml-4">
+                    <a href="{% url 'logout' %}" class="text-danger opacity-90 font-size-base d-none d-md-inline">Выйти</a>
+                </div>
+            {% else %}
+                <div class="topbar-item mx-4">
+                    <a href="{% url 'login' %}" class="text-danger opacity-90 font-size-base d-none d-md-inline">Войти</a>
+                </div>
+                <div class="topbar-item ml-4">
+                    <a href="{% url 'patient:register' %}" class="text-danger opacity-90 font-size-base d-none d-md-inline">Зарегистрироваться</a>
+                </div>
+            {% endif %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,237 @@
+<script>
+var charts = function(id, arr) {
+    am4core.useTheme(am4themes_animated);
+
+    // Create chart instance
+    var chart = am4core.create(id, am4charts.XYChart);
+
+    // Add data
+    for (var i=0; i < arr.length; i++) {
+        var pk = arr[i].pk;
+        if(arr[i].type === 3) {
+            arr[i].url = "{% url 'cbc:three-dif-detail' 999 %}".replace (999, pk);
+        } else if(arr[i].type === 5) {
+            arr[i].url = "{% url 'cbc:five-dif-detail' 999 %}".replace (999, pk);
+        } else if(arr[i].type === 9) {
+            arr[i].url = "{% url 'cbc:blood-smear-detail' 999 %}".replace (999, pk);
+        }
+    }
+    chart.data = arr;
+
+    // Colors
+    chart.colors.list = [
+        am4core.color("#007bff"),
+        am4core.color("#6610f2"),
+        am4core.color("#6f42c1"),
+        am4core.color("#e83e8c"),
+        am4core.color("#dc3545"),
+        am4core.color("#fd7e14"),
+        am4core.color("#ffc107"),
+        am4core.color("#28a745"),
+        am4core.color("#20c997"),
+        am4core.color("#17a2b8"),
+        am4core.color("#1d5f8c")
+    ];
+
+    // Create axes
+    var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+    categoryAxis.dataFields.category = "date";
+    categoryAxis.renderer.minGridDistance = 50;
+    categoryAxis.renderer.grid.template.location = 0.5;
+    categoryAxis.renderer.grid.template.stroke = am4core.color("#c5cbe3");
+    categoryAxis.renderer.grid.template.strokeDasharray = "3,3";
+    categoryAxis.renderer.labels.template.fill = am4core.color("#464E5F");
+
+
+    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    valueAxis.renderer.grid.template.stroke = am4core.color("#c5cbe3");
+    valueAxis.renderer.grid.template.strokeDasharray = "3,3";
+    valueAxis.renderer.labels.template.fill = am4core.color("#464E5F");
+
+    // Create series
+    function createSeries(field, name) {
+
+        // Set up series
+        var series = chart.series.push(new am4charts.ColumnSeries());
+        series.name = name;
+        series.dataFields.valueY = field;
+        series.dataFields.categoryX = "date";
+        series.sequencedInterpolation = true;
+
+        // Make it stacked
+        series.stacked = true;
+
+        // Configure columns
+        series.columns.template.width = am4core.percent(60);
+        series.columns.template.tooltipText = "[bold]{name}[/]\n[font-size:14px]{valueY}%";
+        series.columns.template.propertyFields.url = "url";
+
+        // Add label
+        var labelBullet = series.bullets.push(new am4charts.LabelBullet());
+        labelBullet.label.text = "{valueY}";
+        labelBullet.locationY = 0.5;
+        labelBullet.label.hideOversized = true;
+
+
+      return series;
+    }
+
+    createSeries("pro", "Промиелоциты");
+    createSeries("myel", "Миелоциты");
+    createSeries("meta", "Метамиелоциты");
+    createSeries("bn", "Нейтрофилы (пал.)");
+    createSeries("sn", "Нейтрофилы (сегм.)");
+    createSeries("neut", "Нейтрофилы");
+    createSeries("mono", "Лимфоциты");
+    createSeries("lymph", "Моноциты");
+    createSeries("eo", "Эозинофилы");
+    createSeries("baso", "Базофилы");
+    createSeries("plasm", "Плазмациты");
+
+    // Legend
+    chart.legend = new am4charts.Legend();
+    var markerTemplate = chart.legend.markers.template;
+    markerTemplate.width = 10;
+    markerTemplate.height = 10;
+    };
+
+    let three_dif_arr = [
+        {% for item in three_dif %}
+            {
+                "date": new Date("{{ item.cbc.analysis_date.isoformat }}"),
+                "pro": '',
+                "myel": '',
+                "meta": '',
+                "bn": '',
+                "sn": '',
+                "neut": parseFloat({{ item.neutrophil|stringformat:".2f" }}),
+                "mono": parseFloat({{ item.monocyte|stringformat:".2f" }}),
+                "lymph": parseFloat({{ item.lymphocyte|stringformat:".2f" }}),
+                "eo": '',
+                "baso": '',
+                "plasm": '',
+                "type": parseInt({{ item.cbc.type }}),
+                "pk": parseInt({{ item.cbc.pk }}),
+                "value_type": "{{ item.value_type }}",
+                "leuko": parseFloat({{ item.cbc.leukocyte }})
+            },
+        {% endfor %}
+    ];
+
+    let five_diff_arr = [
+        {% for item in five_dif %}
+            {
+                "date": new Date("{{ item.cbc.analysis_date.isoformat }}"),
+                "pro": '',
+                "myel": '',
+                "meta": '',
+                "bn": '',
+                "sn": '',
+                "neut": parseFloat({{ item.neutrophil|stringformat:".2f" }}),
+                "mono": parseFloat({{ item.monocyte|stringformat:".2f" }}),
+                "lymph": parseFloat({{ item.lymphocyte|stringformat:".2f" }}),
+                "eo": parseFloat({{ item.eosinophil|stringformat:".2f" }}),
+                "baso": parseFloat({{ item.basophil|stringformat:".2f" }}),
+                "plasm": '',
+                "type": parseInt({{ item.cbc.type }}),
+                "pk": parseInt({{ item.cbc.pk }}),
+                "value_type": "{{ item.value_type }}",
+                "leuko": parseFloat({{ item.cbc.leukocyte }})
+            },
+        {% endfor %}
+    ];
+
+    let blood_smear_arr = [
+        {% for item in blood_smear %}
+            {
+                "date": new Date("{{ item.cbc.analysis_date.isoformat }}"),
+                "pro": parseFloat({{ item.promyelocyte|stringformat:".2f" }}),
+                "myel": parseFloat({{ item.myelocyte|stringformat:".2f" }}),
+                "meta": parseFloat({{ item.metamyelocyte|stringformat:".2f" }}),
+                "bn": parseFloat({{ item.banded_neutrophil|stringformat:".2f" }}),
+                "sn": parseFloat({{ item.segmented_neutrophil|stringformat:".2f" }}),
+                "neut": '',
+                "mono": parseFloat({{ item.monocyte|stringformat:".2f" }}),
+                "lymph": parseFloat({{ item.lymphocyte|stringformat:".2f" }}),
+                "eo": parseFloat({{ item.eosinophil|stringformat:".2f" }}),
+                "baso": parseFloat({{ item.basophil|stringformat:".2f" }}),
+                "plasm": parseFloat({{ item.plasma_cell|stringformat:".2f" }}),
+                "type": parseInt({{ item.cbc.type }}),
+                "pk": parseInt({{ item.cbc.pk }}),
+                "value_type": "{{ item.value_type }}",
+                "leuko": parseFloat({{ item.cbc.leukocyte }})
+            },
+        {% endfor %}
+    ];
+
+
+    function mergeSorted(a, b) {
+        let answer = new Array(a.length + b.length), i = 0, j = 0, k = 0;
+        while (i < a.length && j < b.length) {
+            if (a[i].date < b[j].date) {
+                answer[k] = a[i];
+                i++;
+            } else {
+                answer[k] = b[j];
+                j++;
+            }
+            k++;
+        }
+        while (i < a.length) {
+            answer[k] = a[i];
+            i++;
+            k++;
+        }
+        while (j < b.length) {
+            answer[k] = b[j];
+            j++;
+            k++;
+        }
+        return answer;
+    }
+    let mergeAll = function(){
+        return Array.prototype.slice.call(arguments).reduce(mergeSorted);
+    };
+
+    let formatDate = function(date) {
+        let d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+
+        year = year.toString().substr(-2);
+
+        if (month.length < 2)
+            month = '0' + month;
+        if (day.length < 2)
+            day = '0' + day;
+
+        return [day, month, year].join('.');
+    };
+
+
+    let arr = mergeAll(three_dif_arr, five_diff_arr, blood_smear_arr);
+
+    console.log(arr);
+
+    arr.map(function(obj) {
+        obj.date = formatDate(obj.date);
+        if (obj.value_type === 'absolute') {
+            obj.pro = (obj.pro * 100 / obj.leuko).toFixed(2);
+            obj.myel = (obj.myel * 100 / obj.leuko).toFixed(2);
+            obj.meta = (obj.meta * 100 / obj.leuko).toFixed(2);
+            obj.bn = (obj.bn * 100 / obj.leuko).toFixed(2);
+            obj.sn = (obj.sn * 100 / obj.leuko).toFixed(2);
+            obj.neut = (obj.neut * 100 / obj.leuko).toFixed(2);
+            obj.mono = (obj.mono * 100 / obj.leuko).toFixed(2);
+            obj.lymph = (obj.lymph * 100 / obj.leuko).toFixed(2);
+            obj.eo = (obj.eo * 100 / obj.leuko).toFixed(2);
+            obj.baso = (obj.baso * 100 / obj.leuko).toFixed(2);
+            obj.plasm = (obj.plasm * 100 / obj.leuko).toFixed(2);
+        }
+    });
+
+    console.log(arr);
+
+    charts('diff', arr);
+</script>

@@ -1,0 +1,150 @@
+{% extends "home/home_index.html" %}
+{% load static %}
+
+{% block head_title %}Калькулятор общего анализа крови{% endblock %}
+
+{% block content %}
+    <div class="content d-flex flex-column flex-column-fluid hp__content py-0" id="kt_content">
+        <div class="d-flex flex-row-fluid bgi-size-cover bgi-position-center hp__image" style="background-image: url('{% static "img/lab.jpg" %}'); position: relative;">
+            <div class="hp__container container">
+                <div class="d-flex align-items-stretch text-right flex-column pt-60">
+                    <h1 class="display-3 text-white font-weight-bolder mb-12">Сделить за здоровьем легко!</h1>
+                </div>
+                <div class="d-flex align-items-stretch text-right flex-column pt-10">
+                    <h3 class="text-white mb-12">
+                        Узнайте степень интоксикации, аллергизации и иммунореактивности
+                        <br>
+                        на основе результатов общего анализа крови
+                    </h3>
+                </div>
+                <div class="d-flex align-items-stretch text-right flex-column">
+                    <h3 class="text-white mb-12">
+                        <a href="{% url 'cbc:three-dif-create' %}" class="btn btn-primary font-weight-bold btn-pill font-size-h6 px-10 py-4 mr-4">Новый 3DIFF анализ</a>
+                        <a href="{% url 'cbc:five-dif-create' %}" class="btn btn-primary font-weight-bold btn-pill font-size-h6 px-10 py-4 mr-4">Новый 5DIFF анализ</a>
+                        <a href="{% url 'cbc:blood-smear-create' %}" class="btn btn-primary font-weight-bold btn-pill font-size-h6 px-10 py-4">Новый анализ микроскопии</a>
+                    </h3>
+                </div>
+                <a data-scroll href="#home__about" class="smooth-scroll text-white-50">
+                    <span><i class="ki ki-double-arrow-down"></i></span>
+                    <p class="text-uppercase">Подробнее</p>
+                </a>
+            </div>
+        </div>
+        <div id="home__about" class="d-flex flex-row-fluid bgi-size-cover bgi-position-center" style="background-color: #fff; outline: none">
+            <div class="hp__container container text-center">
+                <div class="d-flex align-items-stretch flex-column pt-40">
+                    <h1 class="display-4 text-dark font-weight-bolder mb-12">Как это работает?</h1>
+                </div>
+                <div class="d-flex align-items-stretch flex-column pt-10">
+                    <h3 class="text-dark mb-12">
+                        Лейкограмма — это процентное соотношение различных видов лейкоцитов, определяемое при подсчете
+                        их в окрашенном мазке крови под микроскопом.
+                    </h3>
+                </div>
+                <div class="d-flex align-items-stretch flex-column pb-40">
+                    <h3 class="text-dark mb-12">
+                        В клинической практике лейкограмма имеет большое значение, так как при любых изменениях в
+                        организме процентное содержание одних видов клеток белой крови увеличивается или уменьшается
+                        за счет увеличения или уменьшения других. По данным лейкограммы можно судить о ходе
+                        патологического процесса, появлении осложнений и прогнозировать исход болезни.
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-window kt-sc" data-parallax="scroll" data-image-src="{% static "img/mirco.jpg" %}">
+            <div class="hp__container container text-center">
+                <div class="d-flex align-items-stretch flex-column py-60">
+                    <h1 class="display-4 text-white font-weight-bolder">
+                        Как правильно выбрать метод диагностики результатов общего анализа крови?
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row-fluid bgi-size-cover bgi-position-center" style="background-color: #fff;">
+            <div class="hp__container container text-center">
+                <div class="d-flex align-items-stretch flex-column pt-40">
+                    <h3 class="text-dark mb-12">
+                        Выбор методов диагностики результатов общего анализа крови зависит в первую очередь метода
+                        исследования. На сегодняшний день для проведения анализа чаще всего используют автоматические
+                        анализаторы класса 3DIFF и 5DIFF или методы микроскопических исследований.
+                    </h3>
+                </div>
+                <div class="d-flex align-items-stretch flex-column">
+                    <h3 class="text-dark mb-12">
+                        Пожалуйста, сравните список компонентов результатов Вашего общего анализа крови со списками,
+                        приведенными ниже.
+                    </h3>
+                </div>
+                <div class="row justify-content-center my-20">
+                    <div class="col-md-4 col-xxl-3">
+                        <div class="pt-30 pt-md-25 pb-15 px-5 text-center">
+                            <div class="d-flex flex-center position-relative mb-25">
+                                <span class="svg svg-fill-success opacity-4 position-absolute">
+                                    <svg width="175" height="200">
+                                        <polyline points="87,0 174,50 174,150 87,200 0,150 0,50 87,0"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="svg-icon svg-icon-5x svg-icon-success display-1 text-success">3</span>
+                            </div>
+                            <h4 class="font-size-h6 d-block font-weight-bold mb-7 text-dark-50">3DIFF</h4>
+                            <p class="mb-15 d-flex flex-column" style="min-height: 15rem;">
+                                <span>Нейтрофилы</span>
+                                <span>Лимфоциты</span>
+                                <span>Моноциты</span>
+                            </p>
+                            <a href="{% url 'cbc:three-dif-create' %}" class="btn btn-success text-uppercase font-weight-bolder px-15 py-3">Выбрать</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xxl-3">
+                        <div class="pt-30 pt-md-25 pb-15 px-5 text-center">
+                            <div class="d-flex flex-center position-relative mb-25">
+                                <span class="svg svg-fill-info opacity-4 position-absolute">
+                                    <svg width="175" height="200">
+                                        <polyline points="87,0 174,50 174,150 87,200 0,150 0,50 87,0"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="svg-icon svg-icon-5x svg-icon-primary display-1 text-info">5</span>
+                            </div>
+                            <h4 class="font-size-h6 d-block font-weight-bold mb-7 text-dark-50">5DIFF</h4>
+                            <p class="mb-15 d-flex flex-column" style="min-height: 15rem;">
+                                <span>Нейтрофилы</span>
+                                <span>Лимфоциты</span>
+                                <span>Базофилы</span>
+                                <span>Эозинофилы</span>
+                                <span>Моноциты</span>
+                            </p>
+                            <a href="{% url 'cbc:five-dif-create' %}" class="btn btn-info text-uppercase font-weight-bolder px-15 py-3">Выбрать</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xxl-3">
+                        <div class="pt-30 pt-md-25 pb-15 px-5 text-center">
+                            <div class="d-flex flex-center position-relative mb-25">
+                                <span class="svg svg-fill-warning opacity-4 position-absolute">
+                                    <svg width="175" height="200">
+                                        <polyline points="87,0 174,50 174,150 87,200 0,150 0,50 87,0"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="svg-icon svg-icon-5x svg-icon-warning display-1 text-warning">10</span>
+                            </div>
+                            <h4 class="font-size-h6 d-block font-weight-bold mb-7 text-dark-50">Микроскопия</h4>
+                            <p class="mb-15 d-flex flex-column" style="min-height: 15rem;">
+                                <span>Промиелоциты</span>
+                                <span>Миелоциты</span>
+                                <span>Метамиелоциты</span>
+                                <span>Палочкоядерные нейтрофилы</span>
+                                <span>Сегментоядерные нейтрофилы</span>
+                                <span>Лимфоциты</span>
+                                <span>Моноциты</span>
+                                <span>Эозинофилы</span>
+                                <span>Базофилы</span>
+                                <span>Плазматические клетки</span>
+                            </p>
+                            <a href="{% url 'cbc:five-dif-create' %}" class="btn btn-warning text-uppercase font-weight-bolder px-15 py-3">Выбрать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include "utils/footer.html" %}
+    </div>
+{% endblock %}

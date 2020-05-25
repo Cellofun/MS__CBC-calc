@@ -1,0 +1,220 @@
+<tr>
+    <td class="font-weight-boldest">Промиелоциты</td>
+    <td>{{ blood_smear.promyelocyte }}</td>
+    {% if patient.get_age < 18 %}
+        <td>{{ range.diff.promyelocyte_min }} - {{ range.diff.promyelocyte_max }}
+            {% if blood_smear.value_type == 'relative' %}
+                %
+            {% elif blood_smear.value_type == 'absolute' %}
+                &#215; 10<sup>9</sup>/л
+            {% endif %}
+        </td>
+    {% else %}
+        <td>{{ range.diff.promyelocyte_min }}
+            {% if blood_smear.value_type == 'relative' %}
+                %
+            {% elif blood_smear.value_type == 'absolute' %}
+                &#215; 10<sup>9</sup>/л
+            {% endif %}
+        </td>
+    {% endif %}
+    {% if blood_smear.promyelocyte < range.diff.promyelocyte_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif blood_smear.promyelocyte > range.diff.promyelocyte_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Миелоциты</td>
+    <td>{{ blood_smear.myelocyte }}</td>
+    {% if patient.get_age < 18 %}
+        <td>{{ range.diff.myelocyte_min }} - {{ range.diff.myelocyte_max }}
+            {% if blood_smear.value_type == 'relative' %}
+                %
+            {% elif blood_smear.value_type == 'absolute' %}
+                &#215; 10<sup>9</sup>/л
+            {% endif %}
+        </td>
+    {% else %}
+        <td>{{ range.diff.myelocyte_min }}
+            {% if blood_smear.value_type == 'relative' %}
+                %
+            {% elif blood_smear.value_type == 'absolute' %}
+                &#215; 10<sup>9</sup>/л
+            {% endif %}
+        </td>
+    {% endif %}
+    {% if blood_smear.myelocyte < range.diff.myelocyte_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif blood_smear.myelocyte > range.diff.myelocyte_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Метамиелоциты</td>
+    <td>{{ blood_smear.metamyelocyte }}</td>
+    {% if patient.get_age < 18 %}
+        <td>{{ range.diff.metamyelocyte_min }} - {{ range.diff.metamyelocyte_max }}
+            {% if blood_smear.value_type == 'relative' %}
+                %
+            {% elif blood_smear.value_type == 'absolute' %}
+                &#215; 10<sup>9</sup>/л
+            {% endif %}
+        </td>
+    {% else %}
+        <td>{{ range.diff.metamyelocyte_min }}
+            {% if blood_smear.value_type == 'relative' %}
+                %
+            {% elif blood_smear.value_type == 'absolute' %}
+                &#215; 10<sup>9</sup>/л
+            {% endif %}
+        </td>
+    {% endif %}
+    {% if blood_smear.metamyelocyte < range.diff.metamyelocyte_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif blood_smear.metamyelocyte > range.diff.metamyelocyte_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Палочкоядерные нейтрофилы</td>
+    <td>{{ blood_smear.banded_neutrophil }}</td>
+    <td>{{ range.diff.banded_neutrophil_min }} - {{ range.diff.banded_neutrophil_max }}
+        {% if blood_smear.value_type == 'relative' %}
+            %
+        {% elif blood_smear.value_type == 'absolute' %}
+            &#215; 10<sup>9</sup>/л
+        {% endif %}
+    </td>
+    {% if blood_smear.banded_neutrophil < range.diff.banded_neutrophil_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif blood_smear.banded_neutrophil > range.diff.banded_neutrophil_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Сегментоядерные нейтрофилы</td>
+    <td>{{ blood_smear.segmented_neutrophil }}</td>
+    <td>{{ range.diff.segmented_neutrophil_min }} - {{ range.diff.segmented_neutrophil_max }}
+        {% if blood_smear.value_type == 'relative' %}
+            %
+        {% elif blood_smear.value_type == 'absolute' %}
+            &#215; 10<sup>9</sup>/л
+        {% endif %}
+    </td>
+    {% if blood_smear.segmented_neutrophil < range.diff.segmented_neutrophil_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif blood_smear.segmented_neutrophil > range.diff.segmented_neutrophil_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Лимфоциты</td>
+    <td>{{ blood_smear.lymphocyte }}</td>
+    <td>{{ range.diff.lymphocyte_min }} - {{ range.diff.lymphocyte_max }}
+        {% if blood_smear.value_type == 'relative' %}
+            %
+        {% elif blood_smear.value_type == 'absolute' %}
+            &#215; 10<sup>9</sup>/л
+        {% endif %}
+    </td>
+    {% if blood_smear.lymphocyte < range.diff.lymphocyte_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif blood_smear.lymphocyte > range.diff.lymphocyte_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Моноциты</td>
+    <td>{{ blood_smear.monocyte }}</td>
+    <td>{{ range.diff.monocyte_min }} - {{ range.diff.monocyte_max }}
+        {% if blood_smear.value_type == 'relative' %}
+            %
+        {% elif blood_smear.value_type == 'absolute' %}
+            &#215; 10<sup>9</sup>/л
+        {% endif %}
+    </td>
+    {% if blood_smear.monocyte < range.diff.monocyte_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif blood_smear.monocyte > range.diff.monocyte_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Эозинофилы</td>
+    <td>{{ blood_smear.eosinophil }}</td>
+    <td>{{ range.diff.eosinophil_min }} - {{ range.diff.eosinophil_max }}
+        {% if blood_smear.value_type == 'relative' %}
+            %
+        {% elif blood_smear.value_type == 'absolute' %}
+            &#215; 10<sup>9</sup>/л
+        {% endif %}
+    </td>
+    {% if blood_smear.eosinophil < range.diff.eosinophil_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif blood_smear.eosinophil > range.diff.eosinophil_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Базофилы</td>
+    <td>{{ blood_smear.basophil }}</td>
+    <td>{{ range.diff.basophil_min }} - {{ range.diff.basophil_max }}
+        {% if blood_smear.value_type == 'relative' %}
+            %
+        {% elif blood_smear.value_type == 'absolute' %}
+            &#215; 10<sup>9</sup>/л
+        {% endif %}
+    </td>
+    {% if blood_smear.basophil < range.diff.basophil_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif blood_smear.basophil > range.diff.basophil_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Плазмациты</td>
+    <td>{{ blood_smear.plasma_cell }}</td>
+    {% if patient.get_age < 18 %}
+        <td>{{ range.diff.plasma_cell_min }} - {{ range.diff.plasma_cell_max }}
+            {% if blood_smear.value_type == 'relative' %}
+                %
+            {% elif blood_smear.value_type == 'absolute' %}
+                &#215; 10<sup>9</sup>/л
+            {% endif %}
+        </td>
+    {% else %}
+        <td>{{ range.diff.plasma_cell_min }}
+            {% if blood_smear.value_type == 'relative' %}
+                %
+            {% elif blood_smear.value_type == 'absolute' %}
+                &#215; 10<sup>9</sup>/л
+            {% endif %}
+        </td>
+    {% endif %}
+    {% if blood_smear.plasma_cell < range.diff.plasma_cell_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif blood_smear.plasma_cell > range.diff.plasma_cell_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>

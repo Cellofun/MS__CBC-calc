@@ -1,0 +1,69 @@
+<div class="row justify-content-center py-8 px-8 px-md-0">
+    <div class="col-md-10">
+        <h1 class="d-flex justify-content-between pb-10 flex-column flex-md-row">Лейкоцитарные индексы</h1>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="font-weight-bold text-muted text-uppercase">Показатель</th>
+                    <th class="font-weight-bold text-muted text-uppercase">Значение</th>
+                    <th class="font-weight-bold text-muted text-uppercase">Норма</th>
+                    <th class="font-weight-bold text-muted text-uppercase">Комментарий</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="font-weight-boldest">Лейкоцитарный индекс интоксикации Я.Я. Кальф-Калифа</td>
+                    <td>{{ blood_smear.intoxicationKK|floatformat:"2" }}</td>
+                    <td> {{ index_range.intoxicationKK_min }} - {{ index_range.intoxicationKK_max }}</td>
+                    {% if blood_smear.intoxicationKK > index_range.intoxicationKK_max %}
+                        <td class="text-danger font-weight-bolder">Повышено</td>
+                    {% else %}
+                        <td></td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td class="font-weight-boldest">Лейкоцитарный индекс интоксикации В. К. Островского</td>
+                    <td>{{ blood_smear.intoxicationO|floatformat:"2" }}</td>
+                    <td> {{ index_range.intoxicationO_min }} - {{ index_range.intoxicationO_max }}</td>
+                    {% if blood_smear.intoxicationO > index_range.intoxicationO_max %}
+                        <td class="text-danger font-weight-bolder">Повышено</td>
+                    {% else %}
+                        <td></td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td class="font-weight-boldest">Ядерный индекс степени эндотоксикоза Г.Д. Даштаянца</td>
+                    <td>{{ blood_smear.nuclear|floatformat:"2" }}</td>
+                    <td> {{ index_range.nuclear_min }} - {{ index_range.nuclear_max }}</td>
+                    {% if blood_smear.nuclear > index_range.nuclear_max %}
+                        <td class="text-danger font-weight-bolder">Повышено</td>
+                    {% else %}
+                        <td></td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td class="font-weight-boldest">Индекс сдвига лейкоцитов Н. И. Ябучинского</td>
+                    <td>{{ blood_smear.shift|floatformat:"2" }}</td>
+                    <td> {{ index_range.shift_min }} - {{ index_range.shift_max }}</td>
+                    {% if blood_smear.shift > index_range.shift_max %}
+                        <td class="text-danger font-weight-bolder">Повышено</td>
+                    {% else %}
+                        <td></td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td class="font-weight-boldest">Индекс аллергизации</td>
+                    <td>{{ blood_smear.allergy|floatformat:"2" }}</td>
+                    <td> {{ index_range.allergy_min }} - {{ index_range.allergy_max }}</td>
+                    {% if blood_smear.allergy > index_range.allergy_max %}
+                        <td class="text-danger font-weight-bolder">Повышено</td>
+                    {% else %}
+                        <td></td>
+                    {% endif %}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

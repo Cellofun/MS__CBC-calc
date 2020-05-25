@@ -1,0 +1,85 @@
+var intoxicationKK_arr = [
+    {% for item in blood_smear reversed %}
+        {
+            "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
+            "value": parseFloat({{ item.intoxicationKK|stringformat:".2f" }}),
+            "type": parseInt({{ item.cbc.type }}),
+            "pk": parseInt({{ item.cbc.pk }})
+        },
+    {% endfor %}
+];
+
+var intoxicationO_arr = [
+    {% for item in blood_smear reversed %}
+        {
+            "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
+            "value": parseFloat({{ item.intoxicationO|stringformat:".2f" }}),
+            "type": parseInt({{ item.cbc.type }}),
+            "pk": parseInt({{ item.cbc.pk }})
+        },
+    {% endfor %}
+];
+
+var nuclear_arr = [
+    {% for item in blood_smear reversed %}
+        {
+            "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
+            "value": parseFloat({{ item.nuclear|stringformat:".2f" }}),
+            "type": parseInt({{ item.cbc.type }}),
+            "pk": parseInt({{ item.cbc.pk }})
+        },
+    {% endfor %}
+];
+
+var shift_arr = [
+    {% for item in blood_smear reversed %}
+        {
+            "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
+            "value": parseFloat({{ item.shift|stringformat:".2f" }}),
+            "type": parseInt({{ item.cbc.type }}),
+            "pk": parseInt({{ item.cbc.pk }})
+        },
+    {% endfor %}
+];
+
+var allergy_arr = [
+    {% for item in blood_smear reversed %}
+        {
+            "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
+            "value": parseFloat({{ item.allergy|stringformat:".2f" }}),
+            "type": parseInt({{ item.cbc.type }}),
+            "pk": parseInt({{ item.cbc.pk }})
+        },
+    {% endfor %}
+];
+
+var intoxicationKK_ran = [
+    parseFloat({{ range.intoxicationKK_min|stringformat:".2f" }}),
+    parseFloat({{ range.intoxicationKK_max|stringformat:".2f" }})
+];
+
+var intoxicationO_ran = [
+    parseFloat({{ range.intoxicationO_min|stringformat:".2f" }}),
+    parseFloat({{ range.intoxicationO_max|stringformat:".2f" }})
+];
+
+var nuclear_ran = [
+    parseFloat({{ range.nuclear_min|stringformat:".2f" }}),
+    parseFloat({{ range.nuclear_max|stringformat:".2f" }})
+];
+
+var shift_ran = [
+    parseFloat({{ range.shift_min|stringformat:".2f" }}),
+    parseFloat({{ range.shift_max|stringformat:".2f" }})
+];
+
+var allergy_ran = [
+    parseFloat({{ range.allergy_min|stringformat:".2f" }}),
+    parseFloat({{ range.allergy_max|stringformat:".2f" }})
+];
+
+charts("intoxicationKK", intoxicationKK_arr, intoxicationKK_ran);
+charts("intoxicationO", intoxicationO_arr, intoxicationO_ran);
+charts("nuclear", nuclear_arr, nuclear_ran);
+charts("shift", shift_arr, shift_ran);
+charts("allergy", allergy_arr, allergy_ran);

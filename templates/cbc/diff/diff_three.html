@@ -1,0 +1,54 @@
+<tr>
+    <td class="font-weight-boldest">Нейтрофилы</td>
+    <td>{{ three_dif.neutrophil }}</td>
+    <td>{{ range.diff.neutrophil_min }} - {{ range.diff.neutrophil_max }}
+        {% if three_dif.value_type == 'relative' %}
+            %
+        {% elif three_dif.value_type == 'absolute' %}
+            &#215; 10<sup>9</sup>/л
+        {% endif %}
+    </td>
+    {% if three_dif.neutrophil < range.diff.neutrophil_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif three_dif.neutrophil > range.diff.neutrophil_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Лимфоциты</td>
+    <td>{{ three_dif.lymphocyte }}</td>
+    <td>{{ range.diff.lymphocyte_min }} - {{ range.diff.lymphocyte_max }}
+        {% if three_dif.value_type == 'relative' %}
+            %
+        {% elif three_dif.value_type == 'absolute' %}
+            &#215; 10<sup>9</sup>/л
+        {% endif %}
+    </td>
+    {% if three_dif.lymphocyte < range.diff.lymphocyte_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif three_dif.lymphocyte > range.diff.lymphocyte_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Моноциты</td>
+    <td>{{ three_dif.monocyte }}</td>
+    <td>{{ range.diff.monocyte_min }} - {{ range.diff.monocyte_max }}
+        {% if three_dif.value_type == 'relative' %}
+            %
+        {% elif three_dif.value_type == 'absolute' %}
+            &#215; 10<sup>9</sup>/л
+        {% endif %}
+    </td>
+    {% if three_dif.monocyte < range.diff.monocyte_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif three_dif.monocyte > range.diff.monocyte_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>

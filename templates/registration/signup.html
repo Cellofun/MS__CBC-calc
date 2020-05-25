@@ -1,0 +1,47 @@
+{% extends "registration/accounts_index.html" %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}Зарегистрироваться{% endblock %}
+
+{% block content %}
+    <div class="login-signin">
+        <div class="mb-20">
+            <h3>Регистрация</h3>
+            <p class="opacity-60 font-weight-bold">Введите свои данные, чтобы создать аккаунт</p>
+        </div>
+        <form class="form" method="POST" action="{% url 'patient:register' %}">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="form-group text-center mt-10">
+                <button type="submit" class="btn btn-pill btn-outline-white font-weight-bold opacity-90 px-15 py-3 mr-2">Зарегистрироваться</button>
+                <button type="button" onclick="location.href='/'" class="btn btn-pill btn-outline-white font-weight-bold opacity-90 px-15 py-3">Отмена</button>
+            </div>
+        </form>
+        <div class="mt-10">
+            <span class="opacity-70 mr-4">Уже есть аккаунт?</span>
+            <a href="{% url 'patient:login' %}" id="kt_login_signup" class="text-white font-weight-bold">Войдите</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_script %}
+<script>
+    $(document).ready(function() {
+        let email_error = $('.login-signin .alert-danger li');
+        let email_input = $('#id_email');
+
+        if (email_error.text() === 'Пользователь с таким email уже существует.') {
+            email_input.addClass('is-invalid');
+            email_input.after('<p id="error_1_id_password2" class="invalid-feedback"><strong>Пользователь с таким email уже существует.</strong></p>');
+
+            if (email_error.parent().length === 1) {
+                email_error.parent().parent().css('display', 'none');
+            }
+
+            email_error.css('display', 'none');
+        }
+    })
+</script>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "registration/accounts_index.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}Войти{% endblock %}
+
+{% block content %}
+    <div class="login-signin">
+        <div class="mb-20">
+            <h3>Вход</h3>
+            <p class="opacity-60 font-weight-bold">Введите свои данные, чтобы войти в аккаунт</p>
+        </div>
+        <form class="form" method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="form-group text-center mt-10">
+                <button type="submit" class="btn btn-pill btn-outline-white font-weight-bold opacity-90 px-15 py-3 mr-2">Войти</button>
+                <button type="button" onclick="location.href='/'" class="btn btn-pill btn-outline-white font-weight-bold opacity-90 px-15 py-3">Отмена</button>
+            </div>
+        </form>
+        <div class="mt-10">
+            <span class="opacity-70 mr-4">Еще нет аккаунта?</span>
+            <a href="{% url 'patient:register' %}" id="kt_login_signup" class="text-white font-weight-bold">Зарегистрируйтесь</a>
+        </div>
+    </div>
+{% endblock %}

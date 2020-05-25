@@ -1,0 +1,148 @@
+{% load static %}
+
+<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/modules/parallax.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'plugins/global/plugins.bundle.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/scripts.bundle.js' %}"></script>
+
+<script type="text/javascript">
+    var KTAppSettings = {
+    "breakpoints": {
+        "sm": 576,
+        "md": 768,
+        "lg": 992,
+        "xl": 1200,
+        "xxl": 1200
+    },
+    "colors": {
+        "theme": {
+            "base": {
+                "white": "#ffffff",
+                "primary": "#6993FF",
+                "secondary": "#E5EAEE",
+                "success": "#1BC5BD",
+                "info": "#8950FC",
+                "warning": "#FFA800",
+                "danger": "#F64E60",
+                "light": "#F3F6F9",
+                "dark": "#212121"
+            },
+            "light": {
+                "white": "#ffffff",
+                "primary": "#E1E9FF",
+                "secondary": "#ECF0F3",
+                "success": "#C9F7F5",
+                "info": "#EEE5FF",
+                "warning": "#FFF4DE",
+                "danger": "#FFE2E5",
+                "light": "#F3F6F9",
+                "dark": "#D6D6E0"
+            },
+            "inverse": {
+                "white": "#ffffff",
+                "primary": "#ffffff",
+                "secondary": "#212121",
+                "success": "#ffffff",
+                "info": "#ffffff",
+                "warning": "#ffffff",
+                "danger": "#ffffff",
+                "light": "#464E5F",
+                "dark": "#ffffff"
+            }
+        },
+        "gray": {
+            "gray-100": "#F3F6F9",
+            "gray-200": "#ECF0F3",
+            "gray-300": "#E5EAEE",
+            "gray-400": "#D6D6E0",
+            "gray-500": "#B5B5C3",
+            "gray-600": "#80808F",
+            "gray-700": "#464E5F",
+            "gray-800": "#1B283F",
+            "gray-900": "#212121"
+        }
+    },
+    "font-family": "Poppins"
+};
+
+    // Select all links with hashes
+    $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+            // On-page links
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                 // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, function() {
+                    // Callback after animation
+                    // Must change focus!
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                    });
+                }
+            }
+        });
+
+    var KTBootstrapDatepicker = function () {
+        var arrows;
+        if (KTUtil.isRTL()) {
+            arrows = {
+                leftArrow: '<i class="la la-angle-right"></i>',
+                rightArrow: '<i class="la la-angle-left"></i>'
+            }
+        } else {
+            arrows = {
+                leftArrow: '<i class="la la-angle-left"></i>',
+                rightArrow: '<i class="la la-angle-right"></i>'
+            }
+        }
+
+        // Private functions
+        var demos = function() {
+            $('#analysis_date, #date_of_birth').datepicker({
+                rtl: KTUtil.isRTL(),
+                todayHighlight: true,
+                orientation: "bottom left",
+                templates: arrows,
+                format: "dd.mm.yyyy",
+                weekStart: 1,
+                language: moment.locale('ru')
+            });
+        };
+
+        return {
+            // public functions
+            init: function() {
+                demos();
+            }
+        };
+    }();
+
+    $(document).ready(function(){
+        KTBootstrapDatepicker.init();
+
+        $('body').css('display', 'none');
+        $('body').fadeIn(500);
+
+    });
+</script>

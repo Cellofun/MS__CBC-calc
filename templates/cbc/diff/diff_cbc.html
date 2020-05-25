@@ -1,0 +1,72 @@
+<table class="table">
+    <thead>
+    <tr>
+        <th class="font-weight-bold text-muted text-uppercase">Показатель</th>
+        <th class="font-weight-bold text-muted text-uppercase">Значение</th>
+        <th class="font-weight-bold text-muted text-uppercase">Норма</th>
+        <th class="font-weight-bold text-muted text-uppercase">Комментарий</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="font-weight-boldest">Лейкоциты</td>
+        <td>{{ object.leukocyte }}</td>
+        <td>{{ range.cbc.leukocyte_min }} - {{ range.cbc.leukocyte_max }} &#215; 10<sup>9</sup>/л</td>
+        {% if object.leukocyte < range.cbc.leukocyte_min %}
+            <td class="text-danger font-weight-bolder">Понижено</td>
+        {% elif object.leukocyte > range.cbc.leukocyte_max %}
+            <td class="text-danger font-weight-bolder">Повышено</td>
+        {% else %}
+            <td></td>
+        {% endif %}
+    </tr>
+    <tr>
+        <td class="font-weight-boldest">Эритроциты</td>
+        <td>{{ object.erythrocyte }}</td>
+        <td>{{ range.cbc.erythrocyte_min }} - {{ range.cbc.erythrocyte_max }} &#215; 10<sup>12</sup>/л</td>
+        {% if object.erythrocyte < range.cbc.erythrocyte_min %}
+            <td class="text-danger font-weight-bolder">Понижено</td>
+        {% elif object.erythrocyte > range.cbc.erythrocyte_max %}
+            <td class="text-danger font-weight-bolder">Повышено</td>
+        {% else %}
+            <td></td>
+        {% endif %}
+    </tr>
+    <tr>
+        <td class="font-weight-boldest">Гемоглобин</td>
+        <td>{{ object.hemoglobin }}</td>
+        <td>{{ range.cbc.hemoglobin_min }} - {{ range.cbc.hemoglobin_max }} г/л</td>
+        {% if object.hemoglobin < range.cbc.hemoglobin_min %}
+            <td class="text-danger font-weight-bolder">Понижено</td>
+        {% elif object.hemoglobin > range.cbc.hemoglobin_max %}
+            <td class="text-danger font-weight-bolder">Повышено</td>
+        {% else %}
+            <td></td>
+        {% endif %}
+    </tr>
+    <tr>
+        <td class="font-weight-boldest">Гематокрит</td>
+        <td>{{ object.hematocrit }}</td>
+        <td>{{ range.cbc.hematocrit_min }} - {{ range.cbc.hematocrit_max }} %</td>
+        {% if object.hematocrit < range.cbc.hematocrit_min %}
+            <td class="text-danger font-weight-bolder">Понижено</td>
+        {% elif object.hematocrit > range.cbc.hematocrit_max %}
+            <td class="text-danger font-weight-bolder">Повышено</td>
+        {% else %}
+            <td></td>
+        {% endif %}
+    </tr>
+    <tr>
+        <td class="font-weight-boldest">СОЭ</td>
+        <td>{{ object.sed_rate }}</td>
+        <td>{{ range.cbc.sed_rate_min }} - {{ range.cbc.sed_rate_max }} мм/ч</td>
+        {% if object.sed_rate < range.cbc.sed_rate_min %}
+            <td class="text-danger font-weight-bolder">Понижено</td>
+        {% elif object.sed_rate > range.cbc.sed_rate_max %}
+            <td class="text-danger font-weight-bolder">Повышено</td>
+        {% else %}
+            <td></td>
+        {% endif %}
+    </tr>
+    </tbody>
+</table>

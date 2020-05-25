@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block head_title %}{% endblock %}</title>
+    {% include "utils/head.html" %}
+    <link href="{% static 'css/pages/users/login-2.css' %}" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="kt_body" class="header-static" data-gr-c-s-loaded="true">
+	<div class="d-flex flex-column flex-root">
+        <div class="login login-signin-on login-2 d-flex flex-row-fluid" id="kt_login">
+	        <div class="d-flex flex-center bgi-size-cover bgi-no-repeat flex-row-fluid" style="background-image: url('{% static "img/bg-1.jpg" %}');">
+		        <div class="login-form text-center text-white p-7 position-relative overflow-hidden">
+
+                    {% block content %}{% endblock content %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "utils/scroll.html" %}
+
+    {% include "utils/scripts.html" %}
+
+    {% block extra_script %}{% endblock %}
+
+</body>
+</html>

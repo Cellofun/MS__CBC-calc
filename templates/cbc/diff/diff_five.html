@@ -1,0 +1,90 @@
+<tr>
+    <td class="font-weight-boldest">Нейтрофилы</td>
+    <td>{{ five_dif.neutrophil }}</td>
+    <td>{{ range.diff.neutrophil_min }} - {{ range.diff.neutrophil_max }}
+        {% if five_dif.value_type == 'relative' %}
+            %
+        {% elif five_dif.value_type == 'absolute' %}
+            &#215; 10<sup>9</sup>/л
+        {% endif %}
+    </td>
+    {% if five_dif.neutrophil < range.diff.neutrophil_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif five_dif.neutrophil > range.diff.neutrophil_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Лимфоциты</td>
+    <td>{{ five_dif.lymphocyte }}</td>
+    <td>{{ range.diff.lymphocyte_min }} - {{ range.diff.lymphocyte_max }}
+        {% if five_dif.value_type == 'relative' %}
+            %
+        {% elif five_dif.value_type == 'absolute' %}
+            &#215; 10<sup>9</sup>/л
+        {% endif %}
+    </td>
+    {% if five_dif.lymphocyte < range.diff.lymphocyte_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif five_dif.lymphocyte > range.diff.lymphocyte_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Моноциты</td>
+    <td>{{ five_dif.monocyte }}</td>
+    <td>{{ range.diff.monocyte_min }} - {{ range.diff.monocyte_max }}
+        {% if five_dif.value_type == 'relative' %}
+            %
+        {% elif five_dif.value_type == 'absolute' %}
+            &#215; 10<sup>9</sup>/л
+        {% endif %}
+    </td>
+    {% if five_dif.monocyte < range.diff.monocyte_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif five_dif.monocyte > range.diff.monocyte_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Эозинофилы</td>
+    <td>{{ five_dif.eosinophil }}</td>
+    <td>{{ range.diff.eosinophil_min }} - {{ range.diff.eosinophil_max }}
+        {% if five_dif.value_type == 'relative' %}
+            %
+        {% elif five_dif.value_type == 'absolute' %}
+            &#215; 10<sup>9</sup>/л
+        {% endif %}
+    </td>
+    {% if five_dif.eosinophil < range.diff.eosinophil_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif five_dif.eosinophil > range.diff.eosinophil_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
+<tr>
+    <td class="font-weight-boldest">Базофилы</td>
+    <td>{{ five_dif.basophil }}</td>
+    <td>{{ range.diff.basophil_min }} - {{ range.diff.basophil_max }}
+        {% if five_dif.value_type == 'relative' %}
+            %
+        {% elif five_dif.value_type == 'absolute' %}
+            &#215; 10<sup>9</sup>/л
+        {% endif %}
+    </td>
+    {% if five_dif.basophil < range.diff.basophil_min %}
+        <td class="text-danger font-weight-bolder">Понижено</td>
+    {% elif five_dif.basophil > range.diff.basophil_max %}
+        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+</tr>
