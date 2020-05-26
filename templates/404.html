@@ -5,6 +5,7 @@
 <head>
 	<title>404</title>
     {% include "utils/head.html" %}
+    <link href="{% static 'css/pages/error/error-3.css' %}" rel="stylesheet" type="text/css">
 </head>
 
 <body id="kt_body" class="header-static" data-gr-c-s-loaded="true">
@@ -21,12 +22,14 @@
 	</div>
 
     <div class="d-flex flex-column flex-root">
-         <div class="error error-6 d-flex flex-row-fluid bgi-size-cover bgi-position-center" style="background-image: url('{% static "img/404.jpg" %}');">
-            <div class="d-flex flex-column flex-row-fluid text-center">
-                <h1 class="error-title font-weight-boldest text-white mb-12" style="margin-top: 12rem;">404</h1>
-                <p class="display-4 font-weight-bold text-white">Страница не найдена</p>
-             </div>
-         </div>
+        <div class="error error-3 d-flex flex-row-fluid bgi-size-cover bgi-position-center" style="background-image: url('{% static "img/404.jpg" %}');">
+            <div class="px-10 px-md-30 py-10 py-md-0 d-flex flex-column justify-content-md-center">
+                <h1 class="error-title text-stroke text-transparent">404</h1>
+                <p class="display-4 font-weight-boldest text-white mb-12">
+                    Страница не найдена
+                </p>
+            </div>
+        </div>
 	</div>
 </body>
 </html>
