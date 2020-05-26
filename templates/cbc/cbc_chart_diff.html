@@ -155,22 +155,11 @@
                                 <h3 class="card-title">Лейкоцитарная формула</h3>
                             </div>
                             <div class="card-body">
-                                {% if cbc %}
-                                    <div class="row justify-content-center py-8 px-8 px-md-0">
-                                        <div class="col-12">
-                                            <div id="diff" class="row chart" style="height: 600px;"></div>
-                                        </div>
-                                    </div>
-                                {% else %}
-                                <div class="row">
-                                    <div class="col-xl-3 col-lg-3"></div>
-                                    <div class="col-lg-9 col-xl-6">
-                                        <p>
-                                            Нет проанализированных результатов общего анализа крови
-                                        </p>
+                                <div class="row justify-content-center py-8 px-8 px-md-0">
+                                    <div class="col-12">
+                                        <div id="diff" class="row chart" style="height: 600px;"></div>
                                     </div>
                                 </div>
-                                {% endif %}
                             </div>
                         </div>
                     </div>

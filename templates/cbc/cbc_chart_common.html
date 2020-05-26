@@ -176,58 +176,75 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex-row-fluid ml-lg-8">
-                        <div class="card card-custom card-stretch">
-                            <div class="card-header py-3">
-                                <h3 class="card-title">Диаграммы анализа крови</h3>
-                                <div class="card-toolbar">
-                                    <a href="{% url 'cbc:three-dif-create' %}" class="btn btn-success btn-sm mr-2">Новый 3DIFF анализ</a>&nbsp;
-                                    <a href="{% url 'cbc:five-dif-create' %}" class="btn btn-success btn-sm mr-2">Новый 5DIFF анализ</a>
-                                    <a href="{% url 'cbc:blood-smear-create' %}" class="btn btn-success btn-sm">Новый анализ микроскопии</a>
+                    <div class="row ml-lg-8">
+                        <div class="col-12 mb-8">
+                            <div class="card card-custom card-stretch">
+                                <div class="card-header py-3">
+                                    <h3 id="leukocyte_link" class="card-title">Лейкоциты</h3>
                                 </div>
-                            </div>
-                            <div class="card-body">
-                                {% if cbc %}
+                                <div class="card-body">
                                     <div class="row justify-content-center py-8 px-8 px-md-0">
-                                        <div class="col-md-12">
-                                            <h1 id="leukocyte_link" class="title-custom pb-10">Лейкоциты</h1>
+                                        <div class="col-12">
                                             <div id="leukocyte" class="row chart"></div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-8">
+                            <div class="card card-custom card-stretch">
+                                <div class="card-header py-3">
+                                    <h3 id="erythrocyte_link" class="card-title">Эритроциты</h3>
+                                </div>
+                                <div class="card-body">
                                     <div class="row justify-content-center py-8 px-8 px-md-0">
-                                        <div class="col-md-12">
-                                            <h1 id="erythrocyte_link" class="title-custom pb-10">Эритроциты</h1>
+                                        <div class="col-12">
                                             <div id="erythrocyte" class="row chart"></div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-8">
+                            <div class="card card-custom card-stretch">
+                                <div class="card-header py-3">
+                                    <h3 id="hemoglobin_link" class="card-title">Гемоглобин</h3>
+                                </div>
+                                <div class="card-body">
                                     <div class="row justify-content-center py-8 px-8 px-md-0">
-                                        <div class="col-md-12">
-                                            <h1 id="hemoglobin_link" class="title-custom pb-10">Гемоглобин</h1>
+                                        <div class="col-12">
                                             <div id="hemoglobin" class="row chart"></div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-8">
+                            <div class="card card-custom card-stretch">
+                                <div class="card-header py-3">
+                                    <h3 id="hematocrit_link" class="card-title">Гематокрит</h3>
+                                </div>
+                                <div class="card-body">
                                     <div class="row justify-content-center py-8 px-8 px-md-0">
-                                        <div class="col-md-12">
-                                            <h1 id="hematocrit_link" class="title-custom pb-10">Гематокрит</h1>
+                                        <div class="col-12">
                                             <div id="hematocrit" class="row chart"></div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card card-custom card-stretch">
+                                <div class="card-header py-3">
+                                    <h3 id="sed_rate_link" class="card-title">СОЭ</h3>
+                                </div>
+                                <div class="card-body">
                                     <div class="row justify-content-center py-8 px-8 px-md-0">
-                                        <div class="col-md-12">
-                                            <h1 id="sed_rate_link" class="title-custom pb-10">СОЭ</h1>
+                                        <div class="col-12">
                                             <div id="sed_rate" class="row chart"></div>
                                         </div>
                                     </div>
-                                {% else %}
-                                <div class="row">
-                                    <div class="col-xl-3 col-lg-3"></div>
-                                    <div class="col-lg-9 col-xl-6">
-                                        <p>
-                                            Нет проанализированных результатов общего анализа крови
-                                        </p>
-                                    </div>
                                 </div>
-                                {% endif %}
                             </div>
                         </div>
                     </div>

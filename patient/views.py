@@ -35,6 +35,6 @@ class EditProfileView(generic.UpdateView):
     def get_context_data(self, **kwargs):
         context = super(EditProfileView, self).get_context_data(**kwargs)
         context['patient'] = Patient.objects.get(user=self.request.user)
-        context['cbc'] = CompleteBloodCount.objects.filter(cbc__user=self.request.user, cbc__isnull=False)
+        context['cbc'] = CompleteBloodCount.objects.filter(user=self.request.user)
         context['blood_smear'] = BloodSmear.objects.filter(cbc__user=self.request.user, cbc__isnull=False)
         return context

@@ -176,69 +176,76 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex-row-fluid ml-lg-8">
-                        <div class="card card-custom card-stretch">
-                            <div class="card-header py-3">
-                                <h3 class="card-title">Диаграммы лейкоцитарных индексов</h3>
-                                <div class="card-toolbar">
-                                    <a href="{% url 'cbc:three-dif-create' %}" class="btn btn-success btn-sm mr-2">Новый 3DIFF анализ</a>&nbsp;
-                                    <a href="{% url 'cbc:five-dif-create' %}" class="btn btn-success btn-sm mr-2">Новый 5DIFF анализ</a>
-                                    <a href="{% url 'cbc:blood-smear-create' %}" class="btn btn-success btn-sm">Новый анализ микроскопии</a>
+
+                    <div class="row ml-lg-8">
+                        <div class="col-12 mb-8">
+                            <div class="card card-custom card-stretch">
+                                <div class="card-header py-3">
+                                    <h3 id="intoxicationKK_link" class="card-title">Лейкоцитарный индекс интоксикации Я.Я. Кальф-Калифа</h3>
                                 </div>
-                            </div>
-                            <div class="card-body">
-                                {% if cbc %}
-                                    {% if blood_smear %}
-                                        <div class="row justify-content-center py-8 px-8 px-md-0">
-                                            <div class="col-md-12">
-                                                <h1 id="intoxicationKK_link" class="title-custom pb-10">Лейкоцитарный индекс интоксикации Я.Я. Кальф-Калифа</h1>
-                                                <div id="intoxicationKK" class="row chart"></div>
-                                            </div>
+                                <div class="card-body">
+                                    <div class="row justify-content-center py-8 px-8 px-md-0">
+                                        <div class="col-12">
+                                            <div id="intoxicationKK" class="row chart"></div>
                                         </div>
-                                        <div class="row justify-content-center py-8 px-8 px-md-0">
-                                            <div class="col-md-12">
-                                                <h1 id="intoxicationO_link" class="title-custom pb-10">Лейкоцитарный индекс интоксикации В. К. Островского</h1>
-                                                <div id="intoxicationO" class="row chart"></div>
-                                            </div>
-                                        </div>
-                                        <div class="row justify-content-center py-8 px-8 px-md-0">
-                                            <div class="col-md-12">
-                                                <h1 id="nuclear_link" class="title-custom pb-10">Ядерный индекс степени эндотоксикоза Г.Д. Даштаянца</h1>
-                                                <div id="nuclear" class="row chart"></div>
-                                            </div>
-                                        </div>
-                                        <div class="row justify-content-center py-8 px-8 px-md-0">
-                                            <div class="col-md-12">
-                                                <h1 id="shift_link" class="title-custom pb-10">Индекс сдвига лейкоцитов Н. И. Ябучинского</h1>
-                                                <div id="shift" class="row chart"></div>
-                                            </div>
-                                        </div>
-                                        <div class="row justify-content-center py-8 px-8 px-md-0">
-                                            <div class="col-md-12">
-                                                <h1 id="allergy_link" class="title-custom pb-10">Индекс аллергизации</h1>
-                                                <div id="allergy" class="row chart"></div>
-                                            </div>
-                                        </div>
-                                    {% else %}
-                                        <div class="row">
-                                            <div class="col-xl-3 col-lg-3"></div>
-                                            <div class="col-lg-9 col-xl-6">
-                                                <p>
-                                                    Нет проанализированных результатов микроскопии мазка крови
-                                                </p>
-                                            </div>
-                                        </div>
-                                    {% endif %}
-                                {% else %}
-                                <div class="row">
-                                    <div class="col-xl-3 col-lg-3"></div>
-                                    <div class="col-lg-9 col-xl-6">
-                                        <p>
-                                            Нет проанализированных результатов общего анализа крови
-                                        </p>
                                     </div>
                                 </div>
-                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-12 mb-8">
+                            <div class="card card-custom card-stretch">
+                                <div class="card-header py-3">
+                                    <h3 id="intoxicationO_link" class="card-title">Лейкоцитарный индекс интоксикации В. К. Островского</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row justify-content-center py-8 px-8 px-md-0">
+                                        <div class="col-12">
+                                            <div id="intoxicationO" class="row chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-8">
+                            <div class="card card-custom card-stretch">
+                                <div class="card-header py-3">
+                                    <h3 id="nuclear_link" class="card-title">Ядерный индекс степени эндотоксикоза Г.Д. Даштаянца</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row justify-content-center py-8 px-8 px-md-0">
+                                        <div class="col-12">
+                                            <div id="nuclear" class="row chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-8">
+                            <div class="card card-custom card-stretch">
+                                <div class="card-header py-3">
+                                    <h3 id="shift_link" class="card-title">Индекс сдвига лейкоцитов Н. И. Ябучинского</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row justify-content-center py-8 px-8 px-md-0">
+                                        <div class="col-12">
+                                            <div id="shift" class="row chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card card-custom card-stretch">
+                                <div class="card-header py-3">
+                                    <h3 id="allergy_link" class="card-title">Индекс аллергизации</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row justify-content-center py-8 px-8 px-md-0">
+                                        <div class="col-12">
+                                            <div id="allergy" class="row chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
