@@ -1,7 +1,7 @@
 <tr>
     <td class="font-weight-boldest">Промиелоциты</td>
     <td>{{ blood_smear.promyelocyte }}</td>
-    {% if patient.get_age < 18 %}
+    {% if range.diff.promyelocyte_min != range.diff.promyelocyte_max %}
         <td>{{ range.diff.promyelocyte_min }} - {{ range.diff.promyelocyte_max }}
             {% if blood_smear.value_type == 'relative' %}
                 %
@@ -29,7 +29,7 @@
 <tr>
     <td class="font-weight-boldest">Миелоциты</td>
     <td>{{ blood_smear.myelocyte }}</td>
-    {% if patient.get_age < 18 %}
+    {% if range.diff.myelocyte_min != range.diff.myelocyte_max %}
         <td>{{ range.diff.myelocyte_min }} - {{ range.diff.myelocyte_max }}
             {% if blood_smear.value_type == 'relative' %}
                 %
@@ -57,7 +57,7 @@
 <tr>
     <td class="font-weight-boldest">Метамиелоциты</td>
     <td>{{ blood_smear.metamyelocyte }}</td>
-    {% if patient.get_age < 18 %}
+    {% if range.diff.metamyelocyte_min != range.diff.metamyelocyte_max %}
         <td>{{ range.diff.metamyelocyte_min }} - {{ range.diff.metamyelocyte_max }}
             {% if blood_smear.value_type == 'relative' %}
                 %
@@ -193,7 +193,7 @@
 <tr>
     <td class="font-weight-boldest">Плазмациты</td>
     <td>{{ blood_smear.plasma_cell }}</td>
-    {% if patient.get_age < 18 %}
+    {% if range.diff.plasma_cell_min != range.diff.plasma_cell_max %}
         <td>{{ range.diff.plasma_cell_min }} - {{ range.diff.plasma_cell_max }}
             {% if blood_smear.value_type == 'relative' %}
                 %
