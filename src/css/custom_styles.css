@@ -53,6 +53,10 @@ tspan {
   border-bottom: none;
 }
 
+.header.header__transparent a:hover {
+  color: #F64E60 !important;
+}
+
 .hp__content {
   position: absolute;
   top: 0;

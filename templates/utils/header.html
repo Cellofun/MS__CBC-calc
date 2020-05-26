@@ -4,12 +4,9 @@
 	<div class="container d-flex align-items-stretch justify-content-between">
 		<div class="d-none d-lg-flex align-items-center">
 			<a href="/"><img alt="Logo" src="{% static 'img/icon.png' %}" class="logo-sticky max-h-35px mr-8"></a>
-            {% if request.user.is_authenticated %}
-            {% else %}
-                <a href="{% url 'cbc:three-dif-create' %}" class="text-danger opacity-90 font-size-base d-none d-md-inline mx-4">Новый 3DIFF анализ</a>
-                <a href="{% url 'cbc:five-dif-create' %}" class="text-danger opacity-90 font-size-base d-none d-md-inline mx-4">Новый 5DIFF анализ</a>
-                <a href="{% url 'cbc:blood-smear-create' %}" class="text-danger opacity-90 font-size-base d-none d-md-inline mx-4">Новый анализ микроскопии</a>
-            {% endif %}
+            <a href="{% url 'cbc:three-dif-create' %}" class="text-danger opacity-90 font-size-base d-none d-md-inline mx-4">Новый 3DIFF анализ</a>
+            <a href="{% url 'cbc:five-dif-create' %}" class="text-danger opacity-90 font-size-base d-none d-md-inline mx-4">Новый 5DIFF анализ</a>
+            <a href="{% url 'cbc:blood-smear-create' %}" class="text-danger opacity-90 font-size-base d-none d-md-inline mx-4">Новый анализ микроскопии</a>
         </div>
         <div class="topbar">
             {% if request.user.is_authenticated %}
