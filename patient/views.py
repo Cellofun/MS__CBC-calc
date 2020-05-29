@@ -7,7 +7,7 @@ from cbc.models import CompleteBloodCount, BloodSmear
 
 
 class LoginView(generic.FormView):
-    template_name = 'patient/login.html'
+    template_name = 'registration/login.html'
     form_class = LoginForm
     success_url = '/'
 
@@ -17,7 +17,7 @@ class LoginView(generic.FormView):
 
 
 class RegisterView(generic.FormView):
-    template_name = 'patient/signup.html'
+    template_name = 'registration/signup.html'
     form_class = RegistrationForm
     success_url = '/accounts/login'
 

@@ -67,7 +67,7 @@ class RegistrationForm(UserCreationForm):
         label='',
         widget=forms.PasswordInput(
             attrs={
-                'placeholder': 'Повтор пароля',
+                'placeholder': 'Подтверждение пароля',
                 'class': 'form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5',
             }
         )

@@ -99,7 +99,7 @@ tspan {
   height: 400px;
 }
 
-.alert.alert-block ul {
+.alert.alert-block ul, #hint_id_new_password1 ul {
   list-style: none;
   padding-inline-start: 0;
 }
