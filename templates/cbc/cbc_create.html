@@ -64,13 +64,15 @@
                                                 style="background-image:url('{% static 'img/male.png' %}'); background-color: transparent;"
                                             {% elif patient.sex == 'female' %}
                                                 style="background-image:url('{% static 'img/female.png' %}'); background-color: transparent;"
-                                            {% else %}
-                                                style="background-image:url('{% static 'img/question.png' %}'); background-color: transparent;"
                                             {% endif %}
                                         ></div>
                                     </div>
                                     <div>
-                                        <a href="#" class="font-weight-bolder font-size-h5 text-dark-75 text-hover-primary">{{ patient.firstname }} {{ patient.lastname }}</a>
+                                        {% if patient.firstname or patient.lastname %}
+                                            <span class="font-weight-bolder font-size-h5 text-dark-75">{{ patient.firstname }} {{ patient.lastname }}</span>
+                                        {% else %}
+                                            <span class="font-weight-bolder font-size-h5 text-dark-75">{{ patient.user.username }}</span>
+                                        {% endif %}
                                         <div class="text-muted">{{ patient.date_of_birth }}</div>
                                     </div>
                                 </div>
@@ -102,7 +104,7 @@
                                             <span class="navi-text font-size-lg">Результаты анализов</span>
                                         </a>
                                     </div>
-                                    {% if object %}
+                                    {% if cbc %}
                                         <div class="navi-item mb-2">
                                             <a href="{% url 'cbc:cbc-charts-common' %}" class="navi-link py-4">
                                                 <span class="navi-icon mr-2">
@@ -137,7 +139,7 @@
                                                 <span class="navi-text font-size-lg">Диаграмма лейкограммы</span>
                                             </a>
                                         </div>
-                                        {% if blood_smear %}
+                                        {% if blood_diagram %}
                                             <div class="navi-item mb-2">
                                             <a href="{% url 'cbc:cbc-charts-index' %}" class="navi-link py-4">
                                                 <span class="navi-icon mr-2">
@@ -179,20 +181,7 @@
                             <form class="form" method="POST">
                                 {% csrf_token %}
                                 <div class="card-body">
-                                    {% if request.user.is_authenticated %}
-                                        {% if patient.firstname == "" and patient.lastname == "" and patient.phone == "" %}
-                                            <div class="row">
-                                                <div class="col-xl-3 col-lg-3"></div>
-                                                <div class="col-lg-9 col-xl-6">
-                                                    <div class="alert alert-secondary mb-10">
-                                                        Похоже, Вы не заполнили личные данные. Пожалуйста,
-                                                        <a href="{% url 'patient:edit_profile' pk=patient.id %}">укажите Ваши пол и возраст.</a>
-                                                        Это необходимо для более точного расчета показателей общего анализа крови.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        {% endif %}
-                                    {% else %}
+                                    {% if not request.user.is_authenticated %}
                                         <div class="row">
                                             <div class="col-xl-3 col-lg-3"></div>
                                             <div class="col-lg-9 col-xl-6">
@@ -234,15 +223,13 @@
                                             {% endif %}
                                         </div>
                                     </div>
-                                    {% if form.errors %}
+                                    {% if form.sum.errors %}
                                         <div class="row">
                                             <div class="col-xl-3 col-lg-3"></div>
                                             <div class="col-lg-9 col-xl-6">
                                                 <div class="alert alert-custom alert-light-primary mb-10">
                                                     <div class="alert-text">
-                                                        {% for field in form %}
-                                                            {{ field.errors }}
-                                                        {% endfor %}
+                                                        {{ form.sum.errors }}
                                                     </div>
                                                 </div>
                                             </div>

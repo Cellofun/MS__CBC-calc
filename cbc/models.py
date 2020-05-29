@@ -75,6 +75,17 @@ class ThreeDiff (models.Model):
         (ABSOLUTE_CHOICE, 'Абсолютное')
     )
 
+    cbc = models.OneToOneField(
+        CompleteBloodCount,
+        on_delete=models.CASCADE,
+        verbose_name="Общий анализ крови"
+    )
+    value_type = models.CharField(
+        verbose_name="Тип значения результатов",
+        max_length=50,
+        choices=VALUE_CHOICES,
+        default=VALUE_CHOICES[0][0]
+    )
     neutrophil = models.FloatField(
         verbose_name="Нейтрофилы"
     )
@@ -83,17 +94,6 @@ class ThreeDiff (models.Model):
     )
     monocyte = models.FloatField(
         verbose_name="Моноциты"
-    )
-    value_type = models.CharField(
-        verbose_name="Тип значения результатов",
-        max_length=50,
-        choices=VALUE_CHOICES,
-        default=VALUE_CHOICES[0][0]
-    )
-    cbc = models.ForeignKey(
-        CompleteBloodCount,
-        on_delete=models.CASCADE,
-        verbose_name="Общий анализ крови"
     )
 
     class Meta:
@@ -113,6 +113,17 @@ class FiveDiff (models.Model):
         (ABSOLUTE_CHOICE, 'Абсолютное')
     )
 
+    cbc = models.OneToOneField(
+        CompleteBloodCount,
+        on_delete=models.CASCADE,
+        verbose_name="Общий анализ крови"
+    )
+    value_type = models.CharField(
+        verbose_name="Тип значения результатов",
+        max_length=50,
+        choices=VALUE_CHOICES,
+        default=VALUE_CHOICES[0][0]
+    )
     neutrophil = models.FloatField(
         verbose_name="Нейтрофилы"
     )
@@ -127,17 +138,6 @@ class FiveDiff (models.Model):
     )
     basophil = models.FloatField(
         verbose_name="Базофилы"
-    )
-    value_type = models.CharField(
-        verbose_name="Тип значения результатов",
-        max_length=50,
-        choices=VALUE_CHOICES,
-        default=VALUE_CHOICES[0][0]
-    )
-    cbc = models.ForeignKey(
-        CompleteBloodCount,
-        on_delete=models.CASCADE,
-        verbose_name="Общий анализ крови"
     )
 
     class Meta:
@@ -157,6 +157,17 @@ class BloodSmear (models.Model):
         (ABSOLUTE_CHOICE, 'Абсолютное')
     )
 
+    cbc = models.OneToOneField(
+        CompleteBloodCount,
+        on_delete=models.CASCADE,
+        verbose_name="Общий анализ крови"
+    )
+    value_type = models.CharField(
+        verbose_name="Тип значения результатов",
+        max_length=50,
+        choices=VALUE_CHOICES,
+        default=VALUE_CHOICES[0][0]
+    )
     promyelocyte = models.FloatField(
         verbose_name="Промиелоциты"
     )
@@ -186,17 +197,6 @@ class BloodSmear (models.Model):
     )
     plasma_cell = models.FloatField(
         verbose_name="Плазмациты"
-    )
-    value_type = models.CharField(
-        verbose_name="Тип значения результатов",
-        max_length=50,
-        choices=VALUE_CHOICES,
-        default=VALUE_CHOICES[0][0]
-    )
-    cbc = models.ForeignKey(
-        CompleteBloodCount,
-        on_delete=models.CASCADE,
-        verbose_name="Общий анализ крови"
     )
 
     def intoxicationKK(self):

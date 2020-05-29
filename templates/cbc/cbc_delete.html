@@ -62,13 +62,15 @@
                                                 style="background-image:url('{% static 'img/male.png' %}'); background-color: transparent;"
                                             {% elif patient.sex == 'female' %}
                                                 style="background-image:url('{% static 'img/female.png' %}'); background-color: transparent;"
-                                            {% else %}
-                                                style="background-image:url('{% static 'img/question.png' %}'); background-color: transparent;"
                                             {% endif %}
                                         ></div>
                                     </div>
                                     <div>
-                                        <a href="#" class="font-weight-bolder font-size-h5 text-dark-75 text-hover-primary">{{ patient.firstname }} {{ patient.lastname }}</a>
+                                        {% if patient.firstname or patient.lastname %}
+                                            <span class="font-weight-bolder font-size-h5 text-dark-75">{{ patient.firstname }} {{ patient.lastname }}</span>
+                                        {% else %}
+                                            <span class="font-weight-bolder font-size-h5 text-dark-75">{{ patient.user.username }}</span>
+                                        {% endif %}
                                         <div class="text-muted">{{ patient.date_of_birth }}</div>
                                     </div>
                                 </div>
@@ -134,7 +136,7 @@
                                             <span class="navi-text font-size-lg">Диаграмма лейкограммы</span>
                                         </a>
                                     </div>
-                                    {% if blood_smear %}
+                                    {% if blood_diagram %}
                                         <div class="navi-item mb-2">
                                         <a href="{% url 'cbc:cbc-charts-index' %}" class="navi-link py-4">
                                             <span class="navi-icon mr-2">

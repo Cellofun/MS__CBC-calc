@@ -1,4 +1,4 @@
-{% extends "registration/accounts_index.html" %}
+{% extends "patient/accounts_index.html" %}
 {% load static %}
 {% load i18n %}
 {% load crispy_forms_tags %}
@@ -24,24 +24,4 @@
             <a href="{% url 'patient:login' %}" id="kt_login_signup" class="text-white font-weight-bold">Войдите</a>
         </div>
     </div>
-{% endblock %}
-
-{% block extra_script %}
-<script>
-    $(document).ready(function() {
-        let email_error = $('.login-signin .alert-danger li');
-        let email_input = $('#id_email');
-
-        if (email_error.text() === 'Пользователь с таким email уже существует.') {
-            email_input.addClass('is-invalid');
-            email_input.after('<p id="error_1_id_password2" class="invalid-feedback"><strong>Пользователь с таким email уже существует.</strong></p>');
-
-            if (email_error.parent().length === 1) {
-                email_error.parent().parent().css('display', 'none');
-            }
-
-            email_error.css('display', 'none');
-        }
-    })
-</script>
 {% endblock %}

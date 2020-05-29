@@ -11,7 +11,7 @@
 <script type="text/javascript" src="{% static 'js/scripts.bundle.js' %}"></script>
 
 <script type="text/javascript">
-    var KTAppSettings = {
+    let KTAppSettings = {
     "breakpoints": {
         "sm": 576,
         "md": 768,
@@ -79,7 +79,7 @@
             // On-page links
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 // Figure out element to scroll to
-                var target = $(this.hash);
+                let target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                  // Does a scroll target exist?
                 if (target.length) {
@@ -103,8 +103,8 @@
             }
         });
 
-    var KTBootstrapDatepicker = function () {
-        var arrows;
+    let KTBootstrapDatepicker = function () {
+        let arrows;
         if (KTUtil.isRTL()) {
             arrows = {
                 leftArrow: '<i class="la la-angle-right"></i>',
@@ -118,8 +118,8 @@
         }
 
         // Private functions
-        var demos = function() {
-            $('#analysis_date, #date_of_birth').datepicker({
+        let demos = function() {
+            $('#analysis_date, #date_of_birth, #id_date_of_birth').datepicker({
                 rtl: KTUtil.isRTL(),
                 todayHighlight: true,
                 orientation: "bottom left",
@@ -138,11 +138,38 @@
         };
     }();
 
+    let addDateIcon = function(el) {
+        if (!el.hasClass('is-invalid')) {
+            el.wrap( "<div class='input-icon input-icon-right'></div>" );
+            el.after('<span><i class="la la-calendar"></i></span>');
+        }
+    };
+
+    let addSelectIcon = function() {
+        let select = $('.select');
+
+        select.each(function () {
+            $(this).parent().addClass('input-icon input-icon-right');
+            $(this).after('<span><i class="ki ki-arrow-down"></i></span>');
+        })
+    };
+
+    let animateBody = function() {
+        let body = $('body');
+
+        body.css('display', 'none');
+        body.fadeIn(500);
+    };
+
     $(document).ready(function(){
         KTBootstrapDatepicker.init();
 
-        $('body').css('display', 'none');
-        $('body').fadeIn(500);
+        animateBody();
 
+        addDateIcon($('#analysis_date'));
+        addDateIcon($('#date_of_birth'));
+        addDateIcon($('#id_date_of_birth'));
+
+        addSelectIcon();
     });
 </script>

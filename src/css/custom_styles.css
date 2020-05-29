@@ -1,11 +1,19 @@
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
+  appearance: none;
+  -moz-appearance: none;
   -webkit-appearance: none;
   margin: 0;
 }
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 tspan {
@@ -104,6 +112,10 @@ tspan {
   display: none !important;
 }
 
+#div_id_sed_rate {
+  margin-bottom: 0 !important;
+}
+
 .errorlist {
   list-style: none;
   padding-inline-start: 0;
@@ -117,4 +129,9 @@ tspan {
 
 .title-custom {
   text-align: center !important;
+}
+
+.login-signin .input-icon-right span i {
+  margin-right: 1rem;
+  color: #fff;
 }

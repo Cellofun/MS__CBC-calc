@@ -3,13 +3,13 @@
         let inputs = $('input');
         let divs = $('div');
         let sum_input = $('#id_sum');
-        let three_type = $('#id_threediff_set-0-value_type');
-        let five_type = $('#id_fivediff_set-0-value_type');
-        let blood_type = $('#id_bloodsmear_set-0-value_type');
+        let three_type = $('#id_threediff-0-value_type');
+        let five_type = $('#id_fivediff-0-value_type');
+        let blood_type = $('#id_bloodsmear-0-value_type');
         let change_range = function () {
-            let three_diff_selected = $('#id_threediff_set-0-value_type option:selected').val();
-            let five_diff_selected = $('#id_fivediff_set-0-value_type option:selected').val();
-            let blood_smear_selected = $('#id_bloodsmear_set-0-value_type option:selected').val();
+            let three_diff_selected = $('#id_threediff-0-value_type option:selected').val();
+            let five_diff_selected = $('#id_fivediff-0-value_type option:selected').val();
+            let blood_smear_selected = $('#id_bloodsmear-0-value_type option:selected').val();
             if(three_diff_selected === 'relative' || five_diff_selected === 'relative' || blood_smear_selected === 'relative') {
                 $('.value-type .range__label').each(function() {
                     $(this).html('%');
@@ -25,18 +25,18 @@
         $('#div_id_hemoglobin label').append('<span class="range__label">г/л</div>');
         $('#div_id_hematocrit label').append('<span class="range__label">%</div>');
         $('#div_id_sed_rate label').append('<span class="range__label">мм/ч</div>');
-        divs.filter('div[id*="div_id_threediff_set-0"]').each(function() {
+        divs.filter('div[id*="div_id_threediff-0"]').each(function() {
             $(this).addClass('value-type');
         });
-        $('#div_id_threediff_set-0-value_type').removeClass('value-type');
-        divs.filter('div[id*="div_id_fivediff_set-0"]').each(function() {
+        $('#div_id_threediff-0-value_type').removeClass('value-type');
+        divs.filter('div[id*="div_id_fivediff-0"]').each(function() {
             $(this).addClass('value-type');
         });
-        $('#div_id_fivediff_set-0-value_type').removeClass('value-type');
-        divs.filter('div[id*="div_id_bloodsmear_set-0"]').each(function() {
+        $('#div_id_fivediff-0-value_type').removeClass('value-type');
+        divs.filter('div[id*="div_id_bloodsmear-0"]').each(function() {
             $(this).addClass('value-type');
         });
-        $('#div_id_bloodsmear_set-0-value_type').removeClass('value-type');
+        $('#div_id_bloodsmear-0-value_type').removeClass('value-type');
         $('.value-type').each(function() {
             $(this).find('label').append('<span class="range__label"></div>');
         });
@@ -50,34 +50,34 @@
         blood_type.on('change', function() {
             change_range();
         });
-        inputs.filter('[id*="id_bloodsmear_set-0"]').each(function() {
+        inputs.filter('[id*="id_bloodsmear-0"]').each(function() {
             $(this).prop('required',true);
         });
-        inputs.filter('[id*="id_fivediff_set-0"]').each(function() {
+        inputs.filter('[id*="id_fivediff-0"]').each(function() {
             $(this).prop('required',true);
         });
-        inputs.filter('[id*="id_threediff_set-0"]').each(function() {
+        inputs.filter('[id*="id_threediff-0"]').each(function() {
             $(this).prop('required',true);
         });
         if ($('.errorlist li').text().length > 0) {
-            inputs.filter('[id*="id_bloodsmear_set-0"]').each(function() {
+            inputs.filter('[id*="id_bloodsmear-0"]').each(function() {
                 $(this).addClass('is-invalid');
             });
         }
         blood_type.on('change', function() {
-            inputs.filter('[id*="id_bloodsmear_set-0"]').each(function() {
+            inputs.filter('[id*="id_bloodsmear-0"]').each(function() {
                 $(this).removeClass('is-invalid');
             });
         });
         inputs.on('focus', function() {
-            $(this).filter('[id*="id_bloodsmear_set-0"]').each(function() {
+            $(this).filter('[id*="id_bloodsmear-0"]').each(function() {
                 $(this).removeClass('is-invalid');
             });
         });
         inputs.on('change', function() {
             if(blood_type.val() === 'relative') {
                 let sum = +$('#id_sum').val();
-                $(this).filter('[id*="id_bloodsmear_set-0"]').each(function() {
+                $(this).filter('[id*="id_bloodsmear-0"]').each(function() {
                     sum += +this.value;
                 });
                 sum_input.val(sum.toFixed(2));
@@ -87,7 +87,7 @@
         });
         blood_type.on('change', function() {
             sum_input.val(0);
-            $('input').filter('[id*="id_bloodsmear_set-0"]').each(function() {
+            $('input').filter('[id*="id_bloodsmear-0"]').each(function() {
                 $(this).val('');
             });
         });

@@ -7,7 +7,7 @@ from cbc.models import CompleteBloodCount, BloodSmear
 
 
 class LoginView(generic.FormView):
-    template_name = 'registration/login.html'
+    template_name = 'patient/login.html'
     form_class = LoginForm
     success_url = '/'
 
@@ -17,7 +17,7 @@ class LoginView(generic.FormView):
 
 
 class RegisterView(generic.FormView):
-    template_name = 'registration/signup.html'
+    template_name = 'patient/signup.html'
     form_class = RegistrationForm
     success_url = '/accounts/login'
 
@@ -36,5 +36,5 @@ class EditProfileView(generic.UpdateView):
         context = super(EditProfileView, self).get_context_data(**kwargs)
         context['patient'] = Patient.objects.get(user=self.request.user)
         context['cbc'] = CompleteBloodCount.objects.filter(user=self.request.user)
-        context['blood_smear'] = BloodSmear.objects.filter(cbc__user=self.request.user, cbc__isnull=False)
+        context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=self.request.user)
         return context

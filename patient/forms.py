@@ -4,6 +4,8 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.forms import ModelForm
 
+from datetime import datetime
+
 from .models import Patient
 
 
@@ -33,6 +35,16 @@ class LoginForm(AuthenticationForm):
 
 
 class RegistrationForm(UserCreationForm):
+    SEX = ''
+    MALE_CHOICE = 'male'
+    FEMALE_CHOICE = 'female'
+
+    SEX_CHOICES = (
+        (SEX, 'Пол'),
+        (MALE_CHOICE, 'Мужской'),
+        (FEMALE_CHOICE, 'Женский')
+    )
+
     username = forms.CharField(
         label='',
         widget=forms.TextInput(
@@ -69,10 +81,28 @@ class RegistrationForm(UserCreationForm):
             }
         )
     )
+    date_of_birth = forms.CharField(
+        label='',
+        widget=forms.TextInput(
+            attrs={
+                'placeholder': 'День рождения',
+                'class': 'form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5',
+            }
+        )
+    )
+    sex = forms.ChoiceField(
+        choices=SEX_CHOICES,
+        label='',
+        widget=forms.Select(
+            attrs={
+                'class': 'form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5',
+            }
+        )
+    )
 
     class Meta:
         model = User
-        fields = ('username', 'email')
+        fields = ('username', 'email', 'date_of_birth', 'sex')
 
     def save(self, **kwargs):
         user = super().save()
@@ -80,13 +110,29 @@ class RegistrationForm(UserCreationForm):
         Patient.objects.create(
             user=user,
             email=self.cleaned_data["email"],
+            date_of_birth=datetime.strptime(self.cleaned_data["date_of_birth"], '%d.%m.%Y'),
+            sex=self.cleaned_data["sex"]
         )
         return user
 
     def clean(self):
         email = self.cleaned_data.get('email')
+        username = self.cleaned_data.get('username')
+        sex = self.cleaned_data.get('email')
+        errors = {}
+
+        if User.objects.filter(username=username).exists():
+            errors['username'] = ValidationError("Пользователь с таким именем уже существует.")
+
         if User.objects.filter(email=email).exists():
-            raise ValidationError("Пользователь с таким email уже существует.")
+            errors['email'] = ValidationError("Пользователь с таким email уже существует.")
+
+        if sex == '':
+            errors['sex'] = ValidationError("Пожалуйста, укажите пол.")
+
+        if errors:
+            raise ValidationError(errors)
+
         return self.cleaned_data
 
 
@@ -108,12 +154,10 @@ class EditProfileForm(ModelForm):
     )
     sex = forms.ChoiceField(
         label="Пол",
-        required=False,
         choices=Patient.SEX_CHOICES
     )
     date_of_birth = forms.DateField(
         label="День рождения",
-        required=False,
         widget=forms.DateInput(
             attrs={
                 'type': 'text',

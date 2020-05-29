@@ -26,6 +26,7 @@ class BloodSmearCreateView(CreateView):
             context['blood_smear'] = BloodSmearFormSet()
         if self.request.user.is_authenticated:
             context['patient'] = Patient.objects.get(user=self.request.user)
+            context['cbc'] = CompleteBloodCount.objects.filter(user=self.request.user)
         return context
 
     def form_valid(self, form):
@@ -111,7 +112,7 @@ class BloodSmearDetailView(DetailView):
         blood_smear = BloodSmear.objects.get(cbc_id=self.object.id)
         context['blood_smear'] = blood_smear
         context['index_range'] = IndexRange.objects.filter().last()
-        context['leukocyte_index'] = BloodSmear.objects.filter(cbc__user=self.request.user, pk=self.object.id)
+        context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=self.request.user, pk=self.object.id)
         if self.request.user.is_authenticated:
             patient = Patient.objects.get(user=self.request.user)
             age = patient.get_age()

@@ -1,4 +1,5 @@
 from django import forms
+from django.core.exceptions import ValidationError
 from django.forms.models import inlineformset_factory
 
 from .models import CompleteBloodCount, ThreeDiff, FiveDiff, BloodSmear
@@ -28,20 +29,32 @@ class CBCModelForm(forms.ModelForm):
             'sed_rate': forms.NumberInput()
         }
 
-    def __init__(self, *args, **kwargs):
-        self.user = kwargs.pop('user', None)
+    def __init__(self, user, *args, **kwargs):
+        self.user = user
         super(CBCModelForm, self).__init__(*args, **kwargs)
         if self.user.is_authenticated:
             del self.fields['age']
             del self.fields['sex']
         self.label_suffix = ""
 
-    def clean_sum(self):
-        _sum = self.cleaned_data['sum']
-        if 98 > _sum > 102:
-            raise forms.ValidationError('Сумма компонентов лейкоцитарной формулы не равна 100%. Пожалуйста, проверьте '
-                                        'введенные значения и повторите попытку')
-        return _sum
+    def clean(self):
+        date = self.cleaned_data.get('analysis_date')
+        _sum = self.cleaned_data.get('sum')
+        errors = {}
+
+        if self.user.is_authenticated:
+            if CompleteBloodCount.objects.filter(user=self.user, analysis_date=date).exists():
+                date_formated = date.strftime('%d.%m.%Y')
+                errors['analysis_date'] = ValidationError('Результаты анализа за %s уже добавлены.' % date_formated)
+
+        if _sum < 98 or _sum > 102:
+            errors['sum'] = ValidationError('Сумма компонентов лейкоцитарной формулы не равна 100%. Пожалуйста, '
+                                             'проверьте введенные значения и повторите попытку')
+
+        if errors:
+            raise ValidationError(errors)
+
+        return self.cleaned_data
 
 
 ThreeDiffFormSet = inlineformset_factory(

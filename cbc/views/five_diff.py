@@ -26,7 +26,8 @@ class FiveDifCreateView(CreateView):
             context['five_dif'] = FiveDiffFormSet()
         if self.request.user.is_authenticated:
             context['patient'] = Patient.objects.get(user=self.request.user)
-            context['blood_smear'] = BloodSmear.objects.filter(cbc__user=self.request.user, cbc__isnull=False)
+            context['cbc'] = CompleteBloodCount.objects.filter(user=self.request.user)
+            context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=self.request.user)
         return context
 
     def form_valid(self, form):
@@ -80,7 +81,7 @@ class FiveDifUpdateView(UpdateView):
             context['five_dif'] = FiveDiffFormSet(instance=self.object)
         if self.request.user.is_authenticated:
             context['patient'] = Patient.objects.get(user=self.request.user)
-            context['blood_smear'] = BloodSmear.objects.filter(cbc__user=self.request.user, cbc__isnull=False)
+            context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=self.request.user)
         return context
 
     def form_valid(self, form):
@@ -110,7 +111,7 @@ class FiveDifDetailView(DetailView):
         five_diff = FiveDiff.objects.get(cbc_id=self.object.id)
         context['five_dif'] = five_diff
         if self.request.user.is_authenticated:
-            context['blood_smear'] = BloodSmear.objects.filter(cbc__user=self.request.user, cbc__isnull=False)
+            context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=self.request.user)
             patient = Patient.objects.get(user=self.request.user)
             age = patient.get_age()
             context['patient'] = patient
