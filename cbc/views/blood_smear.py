@@ -102,7 +102,7 @@ class BloodSmearDetailView(DetailView):
         blood_smear = BloodSmear.objects.get(cbc_id=self.object.id)
         context['blood_smear'] = blood_smear
         context['index_range'] = IndexRange.objects.filter().last()
-        context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=user, pk=self.object.id)
+        context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=user)
         if user.is_authenticated:
             age = user.patient.get_age()
             context['range'] = ReferenceRange.objects.get(
