@@ -27,6 +27,7 @@ class BloodSmearCreateView(CreateView):
             context['blood_smear'] = BloodSmearFormSet()
         if user.is_authenticated:
             context['cbc'] = CompleteBloodCount.objects.filter(user=user)
+            context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=user)
         return context
 
     def form_valid(self, form):
@@ -68,11 +69,14 @@ class BloodSmearUpdateView(UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super(BloodSmearUpdateView, self).get_context_data(**kwargs)
+        user = self.request.user
         post = self.request.POST
         if post:
             context['blood_smear'] = BloodSmearFormSet(post, instance=self.object)
         else:
             context['blood_smear'] = BloodSmearFormSet(instance=self.object)
+        if user.is_authenticated:
+            context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=user)
         return context
 
     def form_valid(self, form):
