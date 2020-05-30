@@ -141,7 +141,7 @@
     let addDateIcon = function(el) {
         if (!el.hasClass('is-invalid')) {
             el.wrap( "<div class='input-icon input-icon-right'></div>" );
-            el.after('<span><i class="la la-calendar"></i></span>');
+            el.after('<span><i class="far fa-calendar-alt"></i></span>');
         }
     };
 
@@ -150,8 +150,8 @@
 
         select.each(function () {
             $(this).parent().addClass('input-icon input-icon-right');
-            $(this).after('<span><i class="ki ki-arrow-down"></i></span>');
-        })
+            $(this).after('<span><i class="fas fa-chevron-down"></i></span>');
+        });
     };
 
     let animateBody = function() {
@@ -168,5 +168,15 @@
         addDateIcon($('#id_date_of_birth'));
 
         addSelectIcon();
+        
+        $('#transparent-container').mouseenter(function () {
+            $(this).find('.transparent-text').each(function () {
+                $(this).removeClass('svg-icon-white text-white').addClass('svg-icon-primary text-primary');
+            });
+        }).mouseleave(function () {
+            $(this).find('.transparent-text').each(function () {
+                $(this).removeClass('svg-icon-primary text-primary').addClass('svg-icon-white text-white');
+            });
+        });
     });
 </script>

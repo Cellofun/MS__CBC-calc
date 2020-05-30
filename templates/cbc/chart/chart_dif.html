@@ -164,7 +164,6 @@ var charts = function(id, arr) {
         {% endfor %}
     ];
 
-
     function mergeSorted(a, b) {
         let answer = new Array(a.length + b.length), i = 0, j = 0, k = 0;
         while (i < a.length && j < b.length) {
@@ -189,6 +188,7 @@ var charts = function(id, arr) {
         }
         return answer;
     }
+
     let mergeAll = function(){
         return Array.prototype.slice.call(arguments).reduce(mergeSorted);
     };
@@ -209,10 +209,7 @@ var charts = function(id, arr) {
         return [day, month, year].join('.');
     };
 
-
     let arr = mergeAll(three_dif_arr, five_diff_arr, blood_smear_arr);
-
-    console.log(arr);
 
     arr.map(function(obj) {
         obj.date = formatDate(obj.date);
@@ -231,7 +228,7 @@ var charts = function(id, arr) {
         }
     });
 
-    console.log(arr);
-
     charts('diff', arr);
+
+    $('#nav_chart-diff').addClass('active');
 </script>

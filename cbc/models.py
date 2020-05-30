@@ -21,15 +21,12 @@ class CompleteBloodCount (models.Model):
         verbose_name="Пациент"
     )
     age = models.IntegerField(
-        verbose_name="Возраст",
-        null=True,
-        blank=True
+        verbose_name="Возраст"
     )
     sex = models.CharField(
         verbose_name="Пол",
         max_length=50,
         choices=SEX_CHOICES,
-        null=True,
         default=''
     )
     analysis_date = models.DateField(

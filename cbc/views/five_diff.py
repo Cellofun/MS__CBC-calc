@@ -5,7 +5,6 @@ from django.views.generic import CreateView, DetailView, UpdateView
 
 from cbc.models import CompleteBloodCount, FiveDiff, BloodSmear
 from range.models import ReferenceRange
-from patient.models import Patient
 
 from cbc.forms import CBCModelForm, FiveDiffFormSet
 
@@ -20,14 +19,15 @@ class FiveDifCreateView(CreateView):
 
     def get_context_data(self, **kwargs):
         context = super(FiveDifCreateView, self).get_context_data(**kwargs)
-        if self.request.POST:
-            context['five_dif'] = FiveDiffFormSet(self.request.POST)
+        user = self.request.user
+        post = self.request.POST
+        if post:
+            context['five_dif'] = FiveDiffFormSet(post)
         else:
             context['five_dif'] = FiveDiffFormSet()
-        if self.request.user.is_authenticated:
-            context['patient'] = Patient.objects.get(user=self.request.user)
-            context['cbc'] = CompleteBloodCount.objects.filter(user=self.request.user)
-            context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=self.request.user)
+        if user.is_authenticated:
+            context['cbc'] = CompleteBloodCount.objects.filter(user=user)
+            context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=user)
         return context
 
     def form_valid(self, form):
@@ -41,22 +41,15 @@ class FiveDifCreateView(CreateView):
             cbc.type = 5
             if user.is_authenticated:
                 cbc.user = user
-
-                patient = Patient.objects.get(user=user)
-                cbc.age = patient.get_age()
-                cbc.sex = patient.sex
-
+                cbc.age = user.patient.get_age()
+                cbc.sex = user.patient.sex
             self.object = form.save()
-
             if five_dif.is_valid():
                 five_dif.instance = self.object
                 five_dif.save()
-
                 fd_object = FiveDiff.objects.get(cbc_id=self.object.id)
                 cbc.object_id = fd_object.id
-
             self.object = form.save()
-
         return super(FiveDifCreateView, self).form_valid(form)
 
     def get_form_kwargs(self):
@@ -75,13 +68,14 @@ class FiveDifUpdateView(UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super(FiveDifUpdateView, self).get_context_data(**kwargs)
-        if self.request.POST:
-            context['five_dif'] = FiveDiffFormSet(self.request.POST, instance=self.object)
+        user = self.request.user
+        post = self.request.POST
+        if post:
+            context['five_dif'] = FiveDiffFormSet(post, instance=self.object)
         else:
             context['five_dif'] = FiveDiffFormSet(instance=self.object)
-        if self.request.user.is_authenticated:
-            context['patient'] = Patient.objects.get(user=self.request.user)
-            context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=self.request.user)
+        if user.is_authenticated:
+            context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=user)
         return context
 
     def form_valid(self, form):
@@ -89,11 +83,9 @@ class FiveDifUpdateView(UpdateView):
         five_dif = context['five_dif']
         with transaction.atomic():
             self.object = form.save()
-
             if five_dif.is_valid():
                 five_dif.instance = self.object
                 five_dif.save()
-
         return super(FiveDifUpdateView, self).form_valid(form)
 
     def get_form_kwargs(self):
@@ -108,15 +100,14 @@ class FiveDifDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(FiveDifDetailView, self).get_context_data(**kwargs)
+        user = self.request.user
         five_diff = FiveDiff.objects.get(cbc_id=self.object.id)
         context['five_dif'] = five_diff
-        if self.request.user.is_authenticated:
-            context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=self.request.user)
-            patient = Patient.objects.get(user=self.request.user)
-            age = patient.get_age()
-            context['patient'] = patient
+        if user.is_authenticated:
+            context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=user)
+            age = user.patient.get_age()
             context['range'] = ReferenceRange.objects.get(
-                cbc__sex=patient.sex,
+                cbc__sex=user.patient.sex,
                 cbc__age_min__lt=age,
                 cbc__age_max__gt=age,
                 diff__value_type=five_diff.value_type

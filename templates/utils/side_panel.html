@@ -1,0 +1,108 @@
+{% load static %}
+
+<div class="flex-row-auto offcanvas-mobile w-250px w-xxl-350px" id="kt_profile_aside">
+    <div class="card card-custom card-stretch">
+        <div class="card-body pt-8">
+            <div class="d-flex align-items-center">
+                <div class="symbol symbol-30 symbol-xxl-60 mr-5 align-self-start align-self-xxl-center">
+                    <div class="symbol-label"
+                            {% if user.patient.sex == 'male' %}
+                         style="background-image:url('{% static 'img/male.png' %}'); background-color: transparent;"
+                            {% elif user.patient.sex == 'female' %}
+                         style="background-image:url('{% static 'img/female.png' %}'); background-color: transparent;"
+                            {% endif %}
+                    ></div>
+                </div>
+                <div>
+                    {% if user.patient.firstname or user.patient.lastname %}
+                        <span class="font-weight-bolder font-size-h5 text-dark-75">{{ user.patient.firstname }} {{ user.patient.lastname }}</span>
+                    {% else %}
+                        <span class="font-weight-bolder font-size-h5 text-dark-75">{{ user.patient.user.username }}</span>
+                    {% endif %}
+                    <div class="text-muted">{{ user.patient.date_of_birth }}</div>
+                </div>
+            </div>
+            <div class="py-9">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <span class="font-weight-bold mr-2">E-mail</span>
+                    <span class="text-muted">{{ user.patient.email }}</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <span class="font-weight-bold mr-2">Телефон</span>
+                    <span class="text-muted">{{ user.patient.phone }}</span>
+                </div>
+            </div>
+            <div class="navi navi-bold navi-hover navi-active navi-link-rounded">
+                <div class="navi-item mb-2">
+                    <a href="{% url 'cbc:cbc-list' %}" class="navi-link py-4" id="nav_cbc-list">
+                        <span class="navi-icon mr-2">
+                            <span class="svg-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect x="0" y="0" width="24" height="24"/>
+                                        <rect fill="#000000" opacity="0.3" x="2" y="3" width="20" height="18" rx="2"/>
+                                        <path d="M9.9486833,13.3162278 C9.81256925,13.7245699 9.43043041,14 9,14 L5,14 C4.44771525,14 4,13.5522847 4,13 C4,12.4477153 4.44771525,12 5,12 L8.27924078,12 L10.0513167,6.68377223 C10.367686,5.73466443 11.7274983,5.78688777 11.9701425,6.75746437 L13.8145063,14.1349195 L14.6055728,12.5527864 C14.7749648,12.2140024 15.1212279,12 15.5,12 L19,12 C19.5522847,12 20,12.4477153 20,13 C20,13.5522847 19.5522847,14 19,14 L16.118034,14 L14.3944272,17.4472136 C13.9792313,18.2776054 12.7550291,18.143222 12.5298575,17.2425356 L10.8627389,10.5740611 L9.9486833,13.3162278 Z" fill="#000000" fill-rule="nonzero"/>
+                                        <circle fill="#000000" opacity="0.3" cx="19" cy="6" r="1"/>
+                                    </g>
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="navi-text font-size-lg">Результаты анализов</span>
+                    </a>
+                </div>
+                <div class="navi-item mb-2">
+                    <a href="{% url 'cbc:cbc-charts-common' %}" class="navi-link py-4" id="nav_chart_common">
+                        <span class="navi-icon mr-2">
+                            <span class="svg-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect x="0" y="0" width="24" height="24"/>
+                                        <path d="M5,19 L20,19 C20.5522847,19 21,19.4477153 21,20 C21,20.5522847 20.5522847,21 20,21 L4,21 C3.44771525,21 3,20.5522847 3,20 L3,4 C3,3.44771525 3.44771525,3 4,3 C4.55228475,3 5,3.44771525 5,4 L5,19 Z" fill="#000000" fill-rule="nonzero"/>
+                                        <path d="M8.7295372,14.6839411 C8.35180695,15.0868534 7.71897114,15.1072675 7.31605887,14.7295372 C6.9131466,14.3518069 6.89273254,13.7189711 7.2704628,13.3160589 L11.0204628,9.31605887 C11.3857725,8.92639521 11.9928179,8.89260288 12.3991193,9.23931335 L15.358855,11.7649545 L19.2151172,6.88035571 C19.5573373,6.44687693 20.1861655,6.37289714 20.6196443,6.71511723 C21.0531231,7.05733733 21.1271029,7.68616551 20.7848828,8.11964429 L16.2848828,13.8196443 C15.9333973,14.2648593 15.2823707,14.3288915 14.8508807,13.9606866 L11.8268294,11.3801628 L8.7295372,14.6839411 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(14.000019, 10.749981) scale(1, -1) translate(-14.000019, -10.749981) "/>
+                                    </g>
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="navi-text font-size-lg">Диаграммы анализа крови</span>
+                    </a>
+                </div>
+                <div class="navi-item mb-2">
+                    <a href="{% url 'cbc:cbc-charts-diff' %}" class="navi-link py-4" id="nav_chart-diff">
+                        <span class="navi-icon mr-2">
+                            <span class="svg-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect x="0" y="0" width="24" height="24"/>
+                                        <rect fill="#000000" opacity="0.3" x="12" y="4" width="3" height="13" rx="1.5"/>
+                                        <rect fill="#000000" opacity="0.3" x="7" y="9" width="3" height="8" rx="1.5"/>
+                                        <path d="M5,19 L20,19 C20.5522847,19 21,19.4477153 21,20 C21,20.5522847 20.5522847,21 20,21 L4,21 C3.44771525,21 3,20.5522847 3,20 L3,4 C3,3.44771525 3.44771525,3 4,3 C4.55228475,3 5,3.44771525 5,4 L5,19 Z" fill="#000000" fill-rule="nonzero"/>
+                                        <rect fill="#000000" opacity="0.3" x="17" y="11" width="3" height="6" rx="1.5"/>
+                                    </g>
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="navi-text font-size-lg">Диаграмма лейкограммы</span>
+                    </a>
+                </div>
+                {% if blood_diagram %}
+                    <div class="navi-item mb-2">
+                        <a href="{% url 'cbc:cbc-charts-index' %}" class="navi-link py-4" id="chart_index">
+                            <span class="navi-icon mr-2">
+                                <span class="svg-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24"/>
+                                            <path d="M5,19 L20,19 C20.5522847,19 21,19.4477153 21,20 C21,20.5522847 20.5522847,21 20,21 L4,21 C3.44771525,21 3,20.5522847 3,20 L3,4 C3,3.44771525 3.44771525,3 4,3 C4.55228475,3 5,3.44771525 5,4 L5,19 Z" fill="#000000" fill-rule="nonzero"/>
+                                            <path d="M8.7295372,14.6839411 C8.35180695,15.0868534 7.71897114,15.1072675 7.31605887,14.7295372 C6.9131466,14.3518069 6.89273254,13.7189711 7.2704628,13.3160589 L11.0204628,9.31605887 C11.3857725,8.92639521 11.9928179,8.89260288 12.3991193,9.23931335 L15.358855,11.7649545 L19.2151172,6.88035571 C19.5573373,6.44687693 20.1861655,6.37289714 20.6196443,6.71511723 C21.0531231,7.05733733 21.1271029,7.68616551 20.7848828,8.11964429 L16.2848828,13.8196443 C15.9333973,14.2648593 15.2823707,14.3288915 14.8508807,13.9606866 L11.8268294,11.3801628 L8.7295372,14.6839411 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="navi-text font-size-lg">Диаграммы индексов</span>
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

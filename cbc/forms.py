@@ -49,7 +49,7 @@ class CBCModelForm(forms.ModelForm):
 
         if _sum < 98 or _sum > 102:
             errors['sum'] = ValidationError('Сумма компонентов лейкоцитарной формулы не равна 100%. Пожалуйста, '
-                                             'проверьте введенные значения и повторите попытку')
+                                             'проверьте введенные значения и повторите попытку.')
 
         if errors:
             raise ValidationError(errors)

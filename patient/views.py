@@ -1,3 +1,4 @@
+from django.db import transaction
 from django.urls import reverse_lazy
 from django.views import generic
 
@@ -34,7 +35,13 @@ class EditProfileView(generic.UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super(EditProfileView, self).get_context_data(**kwargs)
-        context['patient'] = Patient.objects.get(user=self.request.user)
         context['cbc'] = CompleteBloodCount.objects.filter(user=self.request.user)
         context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=self.request.user)
         return context
+
+    def form_valid(self, form):
+        with transaction.atomic():
+            CompleteBloodCount.objects\
+                .filter(user=self.request.user)\
+                .update(age=self.request.user.patient.get_age(), sex=self.request.user.patient.sex)
+        return super(EditProfileView, self).form_valid(form)

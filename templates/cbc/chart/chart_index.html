@@ -1,5 +1,5 @@
 var intoxicationKK_arr = [
-    {% for item in blood_smear reversed %}
+    {% for item in blood_diagram reversed %}
         {
             "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
             "value": parseFloat({{ item.intoxicationKK|stringformat:".2f" }}),
@@ -10,7 +10,7 @@ var intoxicationKK_arr = [
 ];
 
 var intoxicationO_arr = [
-    {% for item in blood_smear reversed %}
+    {% for item in blood_diagram reversed %}
         {
             "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
             "value": parseFloat({{ item.intoxicationO|stringformat:".2f" }}),
@@ -21,7 +21,7 @@ var intoxicationO_arr = [
 ];
 
 var nuclear_arr = [
-    {% for item in blood_smear reversed %}
+    {% for item in blood_diagram reversed %}
         {
             "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
             "value": parseFloat({{ item.nuclear|stringformat:".2f" }}),
@@ -32,7 +32,7 @@ var nuclear_arr = [
 ];
 
 var shift_arr = [
-    {% for item in blood_smear reversed %}
+    {% for item in blood_diagram reversed %}
         {
             "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
             "value": parseFloat({{ item.shift|stringformat:".2f" }}),
@@ -43,7 +43,7 @@ var shift_arr = [
 ];
 
 var allergy_arr = [
-    {% for item in blood_smear reversed %}
+    {% for item in blood_diagram reversed %}
         {
             "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
             "value": parseFloat({{ item.allergy|stringformat:".2f" }}),

@@ -4,7 +4,6 @@ from django.views.generic import DeleteView, ListView, TemplateView
 
 from cbc.models import CompleteBloodCount, BloodSmear, FiveDiff, ThreeDiff
 from range.models import CBCRange, IndexRange
-from patient.models import Patient
 
 
 class CBCListView(ListView):
@@ -13,7 +12,6 @@ class CBCListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(CBCListView, self).get_context_data(**kwargs)
-        context['patient'] = Patient.objects.get(user=self.request.user)
         context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=self.request.user)
         return context
 
@@ -31,7 +29,6 @@ class CBCDeleteView(DeleteView):
 
     def get_context_data(self, **kwargs):
         context = super(CBCDeleteView, self).get_context_data(**kwargs)
-        context['patient'] = Patient.objects.get(user=self.request.user)
         context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=self.request.user)
         return context
 
@@ -41,13 +38,12 @@ class CommonChartsTemplateView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(CommonChartsTemplateView, self).get_context_data(**kwargs)
-        context['cbc'] = CompleteBloodCount.objects.filter(user=self.request.user)
-        context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=self.request.user)
-        patient = Patient.objects.get(user=self.request.user)
-        age = patient.get_age()
-        context['patient'] = patient
+        user = self.request.user
+        context['cbc'] = CompleteBloodCount.objects.filter(user=user)
+        context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=user)
+        age = user.patient.get_age()
         context['range'] = CBCRange.objects.filter(
-            sex=patient.sex,
+            sex=user.patient.sex,
             age_min__lt=age,
             age_max__gt=age
         ).first()
@@ -59,9 +55,9 @@ class IndexChartsTemplateView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexChartsTemplateView, self).get_context_data(**kwargs)
-        context['cbc'] = CompleteBloodCount.objects.filter(user=self.request.user)
-        context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=self.request.user)
-        context['patient'] = Patient.objects.get(user=self.request.user)
+        user = self.request.user
+        context['cbc'] = CompleteBloodCount.objects.filter(user=user)
+        context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=user)
         context['range'] = IndexRange.objects.filter().last()
         return context
 
@@ -71,11 +67,13 @@ class DiffChartsTemplateView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(DiffChartsTemplateView, self).get_context_data(**kwargs)
-        context['cbc'] = CompleteBloodCount.objects.filter(user=self.request.user)
-        context['three_dif'] = ThreeDiff.objects.filter(cbc__user=self.request.user)
-        context['five_dif'] = FiveDiff.objects.filter(cbc__user=self.request.user)
-        context['blood_smear'] = BloodSmear.objects.filter(cbc__user=self.request.user)
-        context['patient'] = Patient.objects.get(user=self.request.user)
+        user = self.request.user
+        blood_smear = BloodSmear.objects.filter(cbc__user=user)
+        context['cbc'] = CompleteBloodCount.objects.filter(user=user)
+        context['three_dif'] = ThreeDiff.objects.filter(cbc__user=user)
+        context['five_dif'] = FiveDiff.objects.filter(cbc__user=user)
+        context['blood_smear'] = blood_smear
+        context['blood_diagram'] = blood_smear
         return context
 
 

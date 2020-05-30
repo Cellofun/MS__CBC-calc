@@ -38985,15 +38985,15 @@ code {
 
 @media (min-width: 380px) {
   .dropdown-menu.dropdown-menu-lg {
-    width: 350px; } }
+    width: 250px; } }
 
 @media (min-width: 430px) {
   .dropdown-menu.dropdown-menu-xl {
-    width: 400px; } }
+    width: 250px; } }
 
 @media (min-width: 630px) {
   .dropdown-menu.dropdown-menu-xxl {
-    width: 600px; } }
+    width: 250px; } }
 
 .dropdown-inline {
   display: inline-block; }
