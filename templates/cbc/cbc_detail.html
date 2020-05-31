@@ -46,7 +46,7 @@
                                     {% elif object.type == 9 %}
                                         <a href="{% url 'cbc:blood-smear-update' pk=object.id%}" class="btn btn-warning mr-2">Изменить</a>
                                     {% endif %}
-                                    <a href="{% url 'cbc:cbc-delete' id=object.id%}" class="btn btn-danger">Удалить</a>
+                                    <a href="{% url 'cbc:cbc-delete' pk=object.id%}" class="btn btn-danger">Удалить</a>
                                 </div>
                             {% endif %}
                             </div>

@@ -14,9 +14,8 @@ from cbc.views.five_diff import FiveDifCreateView, FiveDifUpdateView, FiveDifDet
 from cbc.views.blood_smear import BloodSmearCreateView, BloodSmearUpdateView, BloodSmearDetailView
 
 
-class TestUrls(SimpleTestCase):
+class TestUrlsGeneral(SimpleTestCase):
 
-    # General
     def test_url_home(self):
         url = reverse_lazy('cbc:home')
         self.assertEqual(resolve(url).func.view_class, HomeView)
@@ -29,7 +28,9 @@ class TestUrls(SimpleTestCase):
         url = reverse_lazy('cbc:cbc-delete', args=[1])
         self.assertEqual(resolve(url).func.view_class, CBCDeleteView)
 
-    # Charts
+
+class TestUrlsChart(SimpleTestCase):
+
     def test_url_cbc_chart_common(self):
         url = reverse_lazy('cbc:cbc-charts-common')
         self.assertEqual(resolve(url).func.view_class, CommonChartsTemplateView)
@@ -42,7 +43,9 @@ class TestUrls(SimpleTestCase):
         url = reverse_lazy('cbc:cbc-charts-index')
         self.assertEqual(resolve(url).func.view_class, IndexChartsTemplateView)
 
-    # Three Diff
+
+class TestUrlsThreeDiff(SimpleTestCase):
+
     def test_url_cbc_three_diff_create(self):
         url = reverse_lazy('cbc:three-dif-create')
         self.assertEqual(resolve(url).func.view_class, ThreeDifCreateView)
@@ -55,7 +58,9 @@ class TestUrls(SimpleTestCase):
         url = reverse_lazy('cbc:three-dif-update', args=[1])
         self.assertEqual(resolve(url).func.view_class, ThreeDifUpdateView)
 
-    # Five Diff
+
+class TestUrlsFiveDiff(SimpleTestCase):
+
     def test_url_cbc_five_diff_create(self):
         url = reverse_lazy('cbc:five-dif-create')
         self.assertEqual(resolve(url).func.view_class, FiveDifCreateView)
@@ -68,7 +73,9 @@ class TestUrls(SimpleTestCase):
         url = reverse_lazy('cbc:five-dif-update', args=[1])
         self.assertEqual(resolve(url).func.view_class, FiveDifUpdateView)
 
-    # BloodSmear
+
+class TestUrlsBloodSmear(SimpleTestCase):
+
     def test_url_cbc_blood_smear_create(self):
         url = reverse_lazy('cbc:blood-smear-create')
         self.assertEqual(resolve(url).func.view_class, BloodSmearCreateView)

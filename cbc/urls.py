@@ -20,7 +20,7 @@ urlpatterns = [
     path('', HomeView.as_view(), name='home'),
 
     path('cbc/', login_required(CBCListView.as_view()), name='cbc-list'),
-    path('cbc/<int:id>/delete/', login_required(CBCDeleteView.as_view()), name='cbc-delete'),
+    path('cbc/<int:pk>/delete/', login_required(CBCDeleteView.as_view()), name='cbc-delete'),
 
     path('cbc/charts-common', login_required(CommonChartsTemplateView.as_view()), name='cbc-charts-common'),
     path('cbc/charts-diff', login_required(DiffChartsTemplateView.as_view()), name='cbc-charts-diff'),

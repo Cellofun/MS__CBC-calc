@@ -20,12 +20,9 @@ class CBCListView(ListView):
 
 
 class CBCDeleteView(DeleteView):
+    model = CompleteBloodCount
     template_name = 'cbc/cbc_delete.html'
     success_url = reverse_lazy('cbc:cbc-list')
-
-    def get_object(self, **kwargs):
-        id_ = self.kwargs.get('id')
-        return get_object_or_404(CompleteBloodCount, id=id_)
 
     def get_context_data(self, **kwargs):
         context = super(CBCDeleteView, self).get_context_data(**kwargs)
@@ -50,18 +47,6 @@ class CommonChartsTemplateView(TemplateView):
         return context
 
 
-class IndexChartsTemplateView(TemplateView):
-    template_name = 'cbc/cbc_chart_index.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(IndexChartsTemplateView, self).get_context_data(**kwargs)
-        user = self.request.user
-        context['cbc'] = CompleteBloodCount.objects.filter(user=user)
-        context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=user)
-        context['range'] = IndexRange.objects.filter().last()
-        return context
-
-
 class DiffChartsTemplateView(TemplateView):
     template_name = 'cbc/cbc_chart_diff.html'
 
@@ -74,6 +59,18 @@ class DiffChartsTemplateView(TemplateView):
         context['five_dif'] = FiveDiff.objects.filter(cbc__user=user)
         context['blood_smear'] = blood_smear
         context['blood_diagram'] = blood_smear
+        return context
+
+
+class IndexChartsTemplateView(TemplateView):
+    template_name = 'cbc/cbc_chart_index.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexChartsTemplateView, self).get_context_data(**kwargs)
+        user = self.request.user
+        context['cbc'] = CompleteBloodCount.objects.filter(user=user)
+        context['blood_diagram'] = BloodSmear.objects.filter(cbc__user=user)
+        context['range'] = IndexRange.objects.filter().last()
         return context
 
 
