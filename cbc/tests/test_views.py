@@ -80,7 +80,7 @@ class TestViewsGeneral(TestCase):
             type=2,
             sum=100,
             object_id=1,
-            content_type_id=9
+            content_type_id=7
         )
         self.three_diff = ThreeDiff.objects.create(
             cbc=self.cbc_three_diff,
@@ -272,7 +272,7 @@ class TestViewsThreeDiff(TestCase):
             type=2,
             sum=100,
             object_id=1,
-            content_type_id=9
+            content_type_id=7
         )
         self.three_diff = ThreeDiff.objects.create(
             cbc=self.cbc_three_diff,
@@ -452,7 +452,7 @@ class TestViewsFiveDiff(TestCase):
             type=2,
             sum=100,
             object_id=1,
-            content_type_id=9
+            content_type_id=7
         )
         self.five_diff = FiveDiff.objects.create(
             cbc=self.cbc_five_diff,
@@ -625,7 +625,7 @@ class TestViewsBloodSmear(TestCase):
             type=2,
             sum=100,
             object_id=1,
-            content_type_id=9
+            content_type_id=7
         )
         self.blood_smear = BloodSmear.objects.create(
             cbc=self.cbc_blood_smear,

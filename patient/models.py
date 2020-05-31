@@ -1,6 +1,7 @@
+from  datetime import datetime
+
 from django.contrib.auth.models import User
 from django.db import models
-from django.utils.datetime_safe import datetime
 
 from .validators import PhoneRegexValidator
 
