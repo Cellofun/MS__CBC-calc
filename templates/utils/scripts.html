@@ -158,6 +158,12 @@
         $('body').css('display', 'none').fadeIn(500);
     };
 
+    let customizeForm = function(input, div, placeholder) {
+        div.css('display', 'none');
+        input.attr('placeholder', placeholder);
+        input.removeClass().addClass('form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5')
+    };
+
     $(document).ready(function(){
         KTBootstrapDatepicker.init();
 

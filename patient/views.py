@@ -2,19 +2,9 @@ from django.db import transaction
 from django.urls import reverse_lazy
 from django.views import generic
 
-from .forms import LoginForm, RegistrationForm, EditProfileForm
+from .forms import RegistrationForm, EditProfileForm
 from .models import Patient
 from cbc.models import CompleteBloodCount, BloodSmear
-
-
-class LoginView(generic.FormView):
-    template_name = 'registration/login.html'
-    form_class = LoginForm
-    success_url = '/'
-
-    def form_valid(self, form):
-        form.save()
-        return super().form_valid(form)
 
 
 class RegisterView(generic.FormView):

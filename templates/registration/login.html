@@ -27,3 +27,13 @@
         </div>
     </div>
 {% endblock %}
+
+
+{% block extra_script %}
+<script>
+    $(document).ready(function(){
+        customizeForm($('#id_username'), $('#div_id_username label'), 'Имя пользователя');
+        customizeForm($('#id_password'), $('#div_id_password label'), 'Пароль');
+    });
+</script>
+{% endblock %}

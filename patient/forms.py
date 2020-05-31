@@ -1,37 +1,12 @@
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from datetime import datetime
+
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
 from django.core.exceptions import ValidationError
 from django.forms import ModelForm
 
-from datetime import datetime
-
 from .models import Patient
-
-
-class LoginForm(AuthenticationForm):
-    username = forms.CharField(
-        label='',
-        widget=forms.TextInput(
-            attrs={
-                'placeholder': 'Имя пользователя',
-                'class': 'form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5',
-            }
-        )
-    )
-    password = forms.CharField(
-        label='',
-        widget=forms.PasswordInput(
-            attrs={
-                'placeholder': 'Пароль',
-                'class': 'form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5',
-            }
-        )
-    )
-
-    class Meta:
-        model = User
-        fields = ('username', 'password')
 
 
 class RegistrationForm(UserCreationForm):

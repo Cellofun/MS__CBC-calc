@@ -1,11 +1,9 @@
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import LoginView
 from django.urls import path
 
-from .views import (
-    LoginView,
-    RegisterView,
-    EditProfileView
-)
+from .views import RegisterView, EditProfileView
+
 
 app_name = 'patient'
 
