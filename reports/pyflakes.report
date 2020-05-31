@@ -1,0 +1,10 @@
+blood/lib/python3.7/site-packages/django/contrib/messages/__init__.py:1:1 'from django.contrib.messages.api import *' used; unable to detect undefined names
+blood/lib/python3.7/site-packages/django/contrib/messages/__init__.py:1:1 'django.contrib.messages.api.*' imported but unused
+blood/lib/python3.7/site-packages/django/contrib/messages/__init__.py:2:1 'from django.contrib.messages.constants import *' used; unable to detect undefined names
+blood/lib/python3.7/site-packages/django/contrib/messages/__init__.py:2:1 'django.contrib.messages.constants.*' imported but unused
+blood/lib/python3.7/site-packages/crispy_forms/compatibility.py:6:5 'functools.lru_cache' imported but unused
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13:1 'from crispy_forms.templatetags.crispy_forms_filters import *' used; unable to detect undefined names
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13:1 'crispy_forms.templatetags.crispy_forms_filters.*' imported but unused
+cbc/tests/test_forms.py:6:1 'cbc.forms.CBCModelForm' imported but unused
+cbc/views/general.py:1:1 'django.shortcuts.get_object_or_404' imported but unused
+range/views.py:1:1 'django.shortcuts.render' imported but unused

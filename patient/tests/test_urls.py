@@ -5,7 +5,7 @@ from django.contrib.auth.views import LoginView
 from patient.views import RegisterView, EditProfileView
 
 
-class TestUrls(SimpleTestCase):
+class TestUrlsPatient(SimpleTestCase):
 
     def test_url_patient_login(self):
         url = reverse_lazy('patient:login')

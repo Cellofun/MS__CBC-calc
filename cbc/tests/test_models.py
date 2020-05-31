@@ -7,7 +7,7 @@ from cbc.models import CompleteBloodCount, BloodSmear
 from patient.models import Patient
 
 
-class TestModel(TestCase):
+class TestModelCBC(TestCase):
 
     def setUp(self):
         self.user = User.objects.create(

@@ -3,11 +3,11 @@ import datetime
 from django.contrib.auth.models import User
 from django.test import TestCase
 
-from cbc.forms import CBCModelForm, ThreeDiffFormSet, FiveDiffFormSet, BloodSmearFormSet
+from cbc.forms import ThreeDiffFormSet, FiveDiffFormSet, BloodSmearFormSet
 from patient.models import Patient
 
 
-class TestForms(TestCase):
+class TestFormsCBC(TestCase):
 
     def setUp(self):
         self.user = User.objects.create(

@@ -1,0 +1,1216 @@
+************* Module django.contrib.admin.options
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:356: [W0511(fixme), ] TODO: this should be handled by some parameter to the ChangeList.
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1: [C0302(too-many-lines), ] Too many lines in module (2182/500)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:65: [C0415(import-outside-toplevel), get_content_type_for_model] Import outside toplevel (django.contrib.contenttypes.models.ContentType)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:165: [E1101(no-member), BaseModelAdmin.formfield_for_dbfield] Instance of 'BaseModelAdmin' has no 'admin_site' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:175: [E1101(no-member), BaseModelAdmin.formfield_for_dbfield] Instance of 'BaseModelAdmin' has no 'admin_site' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:214: [E1101(no-member), BaseModelAdmin.get_field_queryset] Instance of 'BaseModelAdmin' has no 'admin_site' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:229: [E1101(no-member), BaseModelAdmin.formfield_for_foreignkey] Instance of 'BaseModelAdmin' has no 'admin_site' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:231: [E1101(no-member), BaseModelAdmin.formfield_for_foreignkey] Instance of 'BaseModelAdmin' has no 'admin_site' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:257: [E1101(no-member), BaseModelAdmin.formfield_for_manytomany] Instance of 'BaseModelAdmin' has no 'admin_site' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:259: [E1101(no-member), BaseModelAdmin.formfield_for_manytomany] Instance of 'BaseModelAdmin' has no 'admin_site' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:290: [R1705(no-else-return), BaseModelAdmin.get_view_on_site_url] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:291: [E1102(not-callable), BaseModelAdmin.get_view_on_site_url] self.view_on_site is not callable
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:286: [R1710(inconsistent-return-statements), BaseModelAdmin.get_view_on_site_url] Either all return statements in a function should return an expression, or none of them should.
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:306: [E1101(no-member), BaseModelAdmin.get_empty_value_display] Instance of 'BaseModelAdmin' has no 'admin_site' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:321: [E1101(no-member), BaseModelAdmin.get_fields] Instance of 'BaseModelAdmin' has no '_get_form_for_get_fields' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:355: [E1101(no-member), BaseModelAdmin.get_queryset] Instance of 'BaseModelAdmin' has no 'model' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:364: [E1101(no-member), BaseModelAdmin.get_sortable_by] Instance of 'BaseModelAdmin' has no 'get_list_display' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:367: [C0415(import-outside-toplevel), BaseModelAdmin.lookup_allowed] Import outside toplevel (django.contrib.admin.filters.SimpleListFilter)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:369: [E1101(no-member), BaseModelAdmin.lookup_allowed] Instance of 'BaseModelAdmin' has no 'model' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:405: [E1101(no-member), BaseModelAdmin.lookup_allowed] Instance of 'BaseModelAdmin' has no 'date_hierarchy' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:406: [E1101(no-member), BaseModelAdmin.lookup_allowed] Instance of 'BaseModelAdmin' has no 'list_filter' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:417: [W0631(undefined-loop-variable), BaseModelAdmin.lookup_allowed] Using possibly undefined loop variable 'part'
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:425: [E1101(no-member), BaseModelAdmin.to_field_allowed] Instance of 'BaseModelAdmin' has no 'model' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:446: [E1101(no-member), BaseModelAdmin.to_field_allowed] Instance of 'BaseModelAdmin' has no 'admin_site' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:470: [E1101(no-member), BaseModelAdmin.has_add_permission] Instance of 'BaseModelAdmin' has no 'opts' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:485: [E1101(no-member), BaseModelAdmin.has_change_permission] Instance of 'BaseModelAdmin' has no 'opts' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:500: [E1101(no-member), BaseModelAdmin.has_delete_permission] Instance of 'BaseModelAdmin' has no 'opts' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:515: [E1101(no-member), BaseModelAdmin.has_view_permission] Instance of 'BaseModelAdmin' has no 'opts' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:537: [E1101(no-member), BaseModelAdmin.has_module_permission] Instance of 'BaseModelAdmin' has no 'opts' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:602: [C0415(import-outside-toplevel), ModelAdmin.get_urls] Import outside toplevel (django.urls.path)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:689: [E1101(no-member), ModelAdmin.get_form] Class 'ModelForm' has no 'declared_fields' member
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:716: [C0415(import-outside-toplevel), ModelAdmin.get_changelist] Import outside toplevel (django.contrib.admin.views.main.ChangeList)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:799: [W0622(redefined-builtin), ModelAdmin.log_addition] Redefining built-in 'object'
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:805: [C0415(import-outside-toplevel), ModelAdmin.log_addition] Import outside toplevel (django.contrib.admin.models.LogEntry, django.contrib.admin.models.ADDITION)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:815: [W0622(redefined-builtin), ModelAdmin.log_change] Redefining built-in 'object'
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:821: [C0415(import-outside-toplevel), ModelAdmin.log_change] Import outside toplevel (django.contrib.admin.models.LogEntry, django.contrib.admin.models.CHANGE)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:831: [W0622(redefined-builtin), ModelAdmin.log_deletion] Redefining built-in 'object'
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:838: [C0415(import-outside-toplevel), ModelAdmin.log_deletion] Import outside toplevel (django.contrib.admin.models.LogEntry, django.contrib.admin.models.DELETION)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:871: [W0622(redefined-builtin), ModelAdmin._filter_actions_by_permissions] Redefining built-in 'callable'
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:899: [W0102(dangerous-default-value), ModelAdmin.get_action_choices] Dangerous default value BLANK_CHOICE_DASH (builtins.list) as argument
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:905: [W0612(unused-variable), ModelAdmin.get_action_choices] Unused variable 'func'
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:953: [R1705(no-else-return), ModelAdmin.get_list_display_links] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:987: [R1705(no-else-return), ModelAdmin.get_search_results.construct_search] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1188: [R1705(no-else-return), ModelAdmin.response_add] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1274: [R1705(no-else-return), ModelAdmin.response_change] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1402: [R1705(no-else-return), ModelAdmin.response_action] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1473: [R0914(too-many-locals), ModelAdmin.get_inline_formsets] Too many local variables (16/15)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1524: [R0914(too-many-locals), ModelAdmin._changeform_view] Too many local variables (25/15)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1564: [R1705(no-else-return), ModelAdmin._changeform_view] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1524: [R0912(too-many-branches), ModelAdmin._changeform_view] Too many branches (23/12)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1524: [R0915(too-many-statements), ModelAdmin._changeform_view] Too many statements (64/50)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1661: [R0914(too-many-locals), ModelAdmin.changelist_view] Too many local variables (23/15)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1665: [C0415(import-outside-toplevel), ModelAdmin.changelist_view] Import outside toplevel (django.contrib.admin.views.main.ERROR_FLAG)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1699: [R1705(no-else-return), ModelAdmin.changelist_view] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1715: [R1705(no-else-return), ModelAdmin.changelist_view] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1661: [R0911(too-many-return-statements), ModelAdmin.changelist_view] Too many return statements (7/6)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1661: [R0912(too-many-branches), ModelAdmin.changelist_view] Too many branches (24/12)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1661: [R0915(too-many-statements), ModelAdmin.changelist_view] Too many statements (65/50)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1827: [R0914(too-many-locals), ModelAdmin._delete_view] Too many local variables (18/15)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1887: [C0415(import-outside-toplevel), ModelAdmin.history_view] Import outside toplevel (django.contrib.admin.models.LogEntry)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1924: [R0914(too-many-locals), ModelAdmin._create_formsets] Too many local variables (16/15)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:1953: [W0640(cell-var-from-loop), ModelAdmin._create_formsets.user_deleted_form] Cell variable inline defined in loop
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:540: [R0904(too-many-public-methods), ModelAdmin] Too many public methods (53/50)
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:2010: [E1135(unsupported-membership-test), InlineModelAdmin.media] Value 'self.classes' doesn't support membership test
+blood/lib/python3.7/site-packages/django/contrib/admin/options.py:2147: [W0221(arguments-differ), InlineModelAdmin.has_add_permission] Parameters differ from overridden 'has_add_permission' method
+************* Module django.contrib.admin.models
+blood/lib/python3.7/site-packages/django/contrib/admin/models.py:75: [R1705(no-else-return), LogEntry.__str__] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/models.py:101: [R1705(no-else-return), LogEntry.get_change_message] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/models.py:101: [E1136(unsubscriptable-object), LogEntry.get_change_message] Value 'self.change_message' is unsubscriptable
+blood/lib/python3.7/site-packages/django/contrib/admin/models.py:138: [E1101(no-member), LogEntry.get_edited_object] Instance of 'ForeignKey' has no 'get_object_for_this_type' member
+blood/lib/python3.7/site-packages/django/contrib/admin/models.py:145: [E1101(no-member), LogEntry.get_admin_url] Instance of 'ForeignKey' has no 'app_label' member
+************* Module django.contrib.admin.checks
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:903: [C0330(bad-continuation), ] Wrong continued indentation (remove 2 spaces).
+                    obj.list_display_links is not None):
+                  | ^
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:1: [C0302(too-many-lines), ] Too many lines in module (1129/500)
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:53: [C0415(import-outside-toplevel), check_admin_app] Import outside toplevel (django.contrib.admin.sites.all_sites)
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:150: [R1705(no-else-return), BaseModelAdminChecks._check_autocomplete_fields] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:175: [R1705(no-else-return), BaseModelAdminChecks._check_autocomplete_fields_item] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:205: [R1705(no-else-return), BaseModelAdminChecks._check_raw_id_fields] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:223: [R1705(no-else-return), BaseModelAdminChecks._check_raw_id_fields_item] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:233: [R1705(no-else-return), BaseModelAdminChecks._check_fields] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:264: [R1705(no-else-return), BaseModelAdminChecks._check_fieldsets] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:279: [R1705(no-else-return), BaseModelAdminChecks._check_fieldsets_item] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:275: [R0911(too-many-return-statements), BaseModelAdminChecks._check_fieldsets_item] Too many return statements (7/6)
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:315: [R1705(no-else-return), BaseModelAdminChecks._check_field_spec] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:324: [R1705(no-else-return), BaseModelAdminChecks._check_field_spec_item] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:337: [R1705(no-else-return), BaseModelAdminChecks._check_field_spec_item] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:354: [R1705(no-else-return), BaseModelAdminChecks._check_exclude] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:371: [R1705(no-else-return), BaseModelAdminChecks._check_form] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:379: [R1705(no-else-return), BaseModelAdminChecks._check_filter_vertical] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:389: [R1705(no-else-return), BaseModelAdminChecks._check_filter_horizontal] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:406: [R1705(no-else-return), BaseModelAdminChecks._check_filter_item] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:413: [R1705(no-else-return), BaseModelAdminChecks._check_radio_fields] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:431: [R1705(no-else-return), BaseModelAdminChecks._check_radio_fields_key] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:448: [C0415(import-outside-toplevel), BaseModelAdminChecks._check_radio_fields_value] Import outside toplevel (django.contrib.admin.options.HORIZONTAL, django.contrib.admin.options.VERTICAL)
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:450: [R1705(no-else-return), BaseModelAdminChecks._check_radio_fields_value] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:462: [R1705(no-else-return), BaseModelAdminChecks._check_view_on_site_url] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:476: [R1705(no-else-return), BaseModelAdminChecks._check_prepopulated_fields] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:495: [R1705(no-else-return), BaseModelAdminChecks._check_prepopulated_fields_key] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:511: [R1705(no-else-return), BaseModelAdminChecks._check_prepopulated_fields_value] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:534: [R1705(no-else-return), BaseModelAdminChecks._check_ordering] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:553: [R1705(no-else-return), BaseModelAdminChecks._check_ordering_item] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:544: [R0911(too-many-return-statements), BaseModelAdminChecks._check_ordering_item] Too many return statements (7/6)
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:584: [R1705(no-else-return), BaseModelAdminChecks._check_readonly_fields] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:595: [R1705(no-else-return), BaseModelAdminChecks._check_readonly_fields_item] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:642: [R1705(no-else-return), ModelAdminChecks._check_save_as] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:651: [R1705(no-else-return), ModelAdminChecks._check_save_on_top] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:660: [R1705(no-else-return), ModelAdminChecks._check_inlines] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:681: [C0415(import-outside-toplevel), ModelAdminChecks._check_inlines_item] Import outside toplevel (django.contrib.admin.options.InlineModelAdmin)
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:683: [R1705(no-else-return), ModelAdminChecks._check_inlines_item] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:708: [R1705(no-else-return), ModelAdminChecks._check_list_display] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:717: [R1705(no-else-return), ModelAdminChecks._check_list_display_item] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:752: [C0415(import-outside-toplevel), ModelAdminChecks._check_list_display_links] Import outside toplevel (django.contrib.admin.options.ModelAdmin)
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:754: [R1705(no-else-return), ModelAdminChecks._check_list_display_links] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:767: [R1705(no-else-return), ModelAdminChecks._check_list_display_links_item] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:781: [R1705(no-else-return), ModelAdminChecks._check_list_filter] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:798: [C0415(import-outside-toplevel), ModelAdminChecks._check_list_filter_item] Import outside toplevel (django.contrib.admin.ListFilter, django.contrib.admin.FieldListFilter)
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:802: [R1705(no-else-return), ModelAdminChecks._check_list_filter_item] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:819: [R1705(no-else-return), ModelAdminChecks._check_list_filter_item] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:789: [R0911(too-many-return-statements), ModelAdminChecks._check_list_filter_item] Too many return statements (7/6)
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:844: [R1705(no-else-return), ModelAdminChecks._check_list_select_related] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:852: [R1705(no-else-return), ModelAdminChecks._check_list_per_page] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:860: [R1705(no-else-return), ModelAdminChecks._check_list_max_show_all] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:869: [R1705(no-else-return), ModelAdminChecks._check_list_editable] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:883: [R1705(no-else-return), ModelAdminChecks._check_list_editable_item] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:930: [R1705(no-else-return), ModelAdminChecks._check_search_fields] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:938: [R1705(no-else-return), ModelAdminChecks._check_date_hierarchy] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:953: [R1705(no-else-return), ModelAdminChecks._check_date_hierarchy] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:965: [W0612(unused-variable), ModelAdminChecks._check_action_permission_methods] Unused variable 'name'
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:999: [W0221(arguments-differ), InlineModelAdminChecks.check] Parameters differ from overridden 'check' method
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:1027: [R1705(no-else-return), InlineModelAdminChecks._check_exclude_of_parent_model] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:1052: [R1705(no-else-return), InlineModelAdminChecks._check_extra] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:1060: [R1705(no-else-return), InlineModelAdminChecks._check_max_num] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:1070: [R1705(no-else-return), InlineModelAdminChecks._check_min_num] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:1080: [R1705(no-else-return), InlineModelAdminChecks._check_formset] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:1100: [W0622(redefined-builtin), must_be] Redefining built-in 'type'
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:1100: [W0622(redefined-builtin), must_be] Redefining built-in 'id'
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:1110: [W0622(redefined-builtin), must_inherit_from] Redefining built-in 'id'
+blood/lib/python3.7/site-packages/django/contrib/admin/checks.py:1120: [W0622(redefined-builtin), refer_to_missing_field] Redefining built-in 'id'
+************* Module django.contrib.admin.widgets
+blood/lib/python3.7/site-packages/django/contrib/admin/widgets.py:248: [W0511(fixme), ] XXX: The UX does not support multiple selected values.
+blood/lib/python3.7/site-packages/django/contrib/admin/widgets.py:251: [W0511(fixme), ] XXX: The deletion UX can be confusing when dealing with cascading deletion.
+blood/lib/python3.7/site-packages/django/contrib/admin/widgets.py:60: [W0622(redefined-builtin), AdminDateWidget.__init__] Redefining built-in 'format'
+blood/lib/python3.7/site-packages/django/contrib/admin/widgets.py:72: [W0622(redefined-builtin), AdminTimeWidget.__init__] Redefining built-in 'format'
+blood/lib/python3.7/site-packages/django/contrib/admin/widgets.py:87: [W0233(non-parent-init-called), AdminSplitDateTime.__init__] __init__ method from a non direct base class 'MultiWidget' is called
+blood/lib/python3.7/site-packages/django/contrib/admin/widgets.py:83: [W0231(super-init-not-called), AdminSplitDateTime.__init__] __init__ method from base class 'SplitDateTimeWidget' is not called
+blood/lib/python3.7/site-packages/django/contrib/admin/widgets.py:172: [C0415(import-outside-toplevel), ForeignKeyRawIdWidget.url_parameters] Import outside toplevel (django.contrib.admin.views.main.TO_FIELD_VAR)
+blood/lib/python3.7/site-packages/django/contrib/admin/widgets.py:219: [R1710(inconsistent-return-statements), ManyToManyRawIdWidget.value_from_datadict] Either all return statements in a function should return an expression, or none of them should.
+blood/lib/python3.7/site-packages/django/contrib/admin/widgets.py:228: [R0902(too-many-instance-attributes), RelatedFieldWidgetWrapper] Too many instance attributes (10/7)
+blood/lib/python3.7/site-packages/django/contrib/admin/widgets.py:235: [W0231(super-init-not-called), RelatedFieldWidgetWrapper.__init__] __init__ method from base class 'Widget' is not called
+blood/lib/python3.7/site-packages/django/contrib/admin/widgets.py:278: [C0415(import-outside-toplevel), RelatedFieldWidgetWrapper.get_context] Import outside toplevel (django.contrib.admin.views.main.IS_POPUP_VAR, django.contrib.admin.views.main.TO_FIELD_VAR)
+************* Module django.contrib.admin.utils
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:1: [C0302(too-many-lines), ] Too many lines in module (523/500)
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:24: [W0107(unnecessary-pass), FieldIsAForeignKeyColumnName] Unnecessary pass statement
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:96: [W0612(unused-variable), flatten_fieldsets] Unused variable 'name'
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:128: [R1705(no-else-return), get_deleted_objects.format_callback] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:169: [W0221(arguments-differ), NestedObjects.collect] Parameters differ from overridden 'collect' method
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:214: [W0222(signature-differs), NestedObjects.can_fast_delete] Signature differs from overridden 'can_fast_delete' method
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:360: [R1705(no-else-return), label_for_field] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:306: [R0912(too-many-branches), label_for_field] Too many branches (20/12)
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:379: [C0415(import-outside-toplevel), display_for_field] Import outside toplevel (django.contrib.admin.templatetags.admin_list._boolean_icon)
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:381: [R1705(no-else-return), display_for_field] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:378: [R0911(too-many-return-statements), display_for_field] Too many return statements (9/6)
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:404: [C0415(import-outside-toplevel), display_for_value] Import outside toplevel (django.contrib.admin.templatetags.admin_list._boolean_icon)
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:406: [R1705(no-else-return), display_for_value] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:403: [R0911(too-many-return-statements), display_for_value] Too many return statements (8/6)
+blood/lib/python3.7/site-packages/django/contrib/admin/utils.py:429: [R1705(no-else-return), get_model_from_relation] Unnecessary "else" after "return"
+************* Module django.contrib.admin.sites
+blood/lib/python3.7/site-packages/django/contrib/admin/sites.py:1: [C0302(too-many-lines), ] Too many lines in module (537/500)
+blood/lib/python3.7/site-packages/django/contrib/admin/sites.py:218: [C0415(import-outside-toplevel), AdminSite.admin_view.inner] Import outside toplevel (django.contrib.auth.views.redirect_to_login)
+blood/lib/python3.7/site-packages/django/contrib/admin/sites.py:233: [C0415(import-outside-toplevel), AdminSite.get_urls] Import outside toplevel (django.urls.include, django.urls.path, django.urls.re_path)
+blood/lib/python3.7/site-packages/django/contrib/admin/sites.py:237: [C0415(import-outside-toplevel), AdminSite.get_urls] Import outside toplevel (django.contrib.contenttypes.views)
+blood/lib/python3.7/site-packages/django/contrib/admin/sites.py:310: [C0415(import-outside-toplevel), AdminSite.password_change] Import outside toplevel (django.contrib.admin.forms.AdminPasswordChangeForm)
+blood/lib/python3.7/site-packages/django/contrib/admin/sites.py:311: [C0415(import-outside-toplevel), AdminSite.password_change] Import outside toplevel (django.contrib.auth.views.PasswordChangeView)
+blood/lib/python3.7/site-packages/django/contrib/admin/sites.py:327: [C0415(import-outside-toplevel), AdminSite.password_change_done] Import outside toplevel (django.contrib.auth.views.PasswordChangeDoneView)
+blood/lib/python3.7/site-packages/django/contrib/admin/sites.py:352: [C0415(import-outside-toplevel), AdminSite.logout] Import outside toplevel (django.contrib.auth.views.LogoutView)
+blood/lib/python3.7/site-packages/django/contrib/admin/sites.py:377: [C0415(import-outside-toplevel), AdminSite.login] Import outside toplevel (django.contrib.auth.views.LoginView)
+blood/lib/python3.7/site-packages/django/contrib/admin/sites.py:381: [C0415(import-outside-toplevel), AdminSite.login] Import outside toplevel (django.contrib.admin.forms.AdminAuthenticationForm)
+************* Module django.contrib.admin.exceptions
+blood/lib/python3.7/site-packages/django/contrib/admin/exceptions.py:6: [W0107(unnecessary-pass), DisallowedModelAdminLookup] Unnecessary pass statement
+blood/lib/python3.7/site-packages/django/contrib/admin/exceptions.py:11: [W0107(unnecessary-pass), DisallowedModelAdminToField] Unnecessary pass statement
+************* Module django.contrib.admin.tests
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:33: [E0611(no-name-in-module), AdminSeleniumTestCase.wait_until] No name 'webdriver' in module 'selenium'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:33: [E0401(import-error), AdminSeleniumTestCase.wait_until] Unable to import 'selenium.webdriver.support.wait'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:33: [C0415(import-outside-toplevel), AdminSeleniumTestCase.wait_until] Import outside toplevel (selenium.webdriver.support.wait.WebDriverWait)
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:47: [E0611(no-name-in-module), AdminSeleniumTestCase.wait_for] No name 'webdriver' in module 'selenium'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:47: [E0401(import-error), AdminSeleniumTestCase.wait_for] Unable to import 'selenium.webdriver.common.by'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:47: [C0415(import-outside-toplevel), AdminSeleniumTestCase.wait_for] Import outside toplevel (selenium.webdriver.common.by.By)
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:48: [E0611(no-name-in-module), AdminSeleniumTestCase.wait_for] No name 'webdriver' in module 'selenium'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:48: [E0401(import-error), AdminSeleniumTestCase.wait_for] Unable to import 'selenium.webdriver.support'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:48: [C0415(import-outside-toplevel), AdminSeleniumTestCase.wait_for] Import outside toplevel (selenium.webdriver.support.expected_conditions)
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:58: [E0611(no-name-in-module), AdminSeleniumTestCase.wait_for_text] No name 'webdriver' in module 'selenium'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:58: [E0401(import-error), AdminSeleniumTestCase.wait_for_text] Unable to import 'selenium.webdriver.common.by'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:58: [C0415(import-outside-toplevel), AdminSeleniumTestCase.wait_for_text] Import outside toplevel (selenium.webdriver.common.by.By)
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:59: [E0611(no-name-in-module), AdminSeleniumTestCase.wait_for_text] No name 'webdriver' in module 'selenium'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:59: [E0401(import-error), AdminSeleniumTestCase.wait_for_text] Unable to import 'selenium.webdriver.support'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:59: [C0415(import-outside-toplevel), AdminSeleniumTestCase.wait_for_text] Import outside toplevel (selenium.webdriver.support.expected_conditions)
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:70: [E0611(no-name-in-module), AdminSeleniumTestCase.wait_for_value] No name 'webdriver' in module 'selenium'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:70: [E0401(import-error), AdminSeleniumTestCase.wait_for_value] Unable to import 'selenium.webdriver.common.by'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:70: [C0415(import-outside-toplevel), AdminSeleniumTestCase.wait_for_value] Import outside toplevel (selenium.webdriver.common.by.By)
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:71: [E0611(no-name-in-module), AdminSeleniumTestCase.wait_for_value] No name 'webdriver' in module 'selenium'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:71: [E0401(import-error), AdminSeleniumTestCase.wait_for_value] Unable to import 'selenium.webdriver.support'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:71: [C0415(import-outside-toplevel), AdminSeleniumTestCase.wait_for_value] Import outside toplevel (selenium.webdriver.support.expected_conditions)
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:82: [E0611(no-name-in-module), AdminSeleniumTestCase.wait_until_visible] No name 'webdriver' in module 'selenium'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:82: [E0401(import-error), AdminSeleniumTestCase.wait_until_visible] Unable to import 'selenium.webdriver.common.by'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:82: [C0415(import-outside-toplevel), AdminSeleniumTestCase.wait_until_visible] Import outside toplevel (selenium.webdriver.common.by.By)
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:83: [E0611(no-name-in-module), AdminSeleniumTestCase.wait_until_visible] No name 'webdriver' in module 'selenium'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:83: [E0401(import-error), AdminSeleniumTestCase.wait_until_visible] Unable to import 'selenium.webdriver.support'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:83: [C0415(import-outside-toplevel), AdminSeleniumTestCase.wait_until_visible] Import outside toplevel (selenium.webdriver.support.expected_conditions)
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:93: [E0611(no-name-in-module), AdminSeleniumTestCase.wait_until_invisible] No name 'webdriver' in module 'selenium'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:93: [E0401(import-error), AdminSeleniumTestCase.wait_until_invisible] Unable to import 'selenium.webdriver.common.by'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:93: [C0415(import-outside-toplevel), AdminSeleniumTestCase.wait_until_invisible] Import outside toplevel (selenium.webdriver.common.by.By)
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:94: [E0611(no-name-in-module), AdminSeleniumTestCase.wait_until_invisible] No name 'webdriver' in module 'selenium'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:94: [E0401(import-error), AdminSeleniumTestCase.wait_until_invisible] Unable to import 'selenium.webdriver.support'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:94: [C0415(import-outside-toplevel), AdminSeleniumTestCase.wait_until_invisible] Import outside toplevel (selenium.webdriver.support.expected_conditions)
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:104: [E0611(no-name-in-module), AdminSeleniumTestCase.wait_page_loaded] No name 'common' in module 'selenium'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:104: [E0401(import-error), AdminSeleniumTestCase.wait_page_loaded] Unable to import 'selenium.common.exceptions'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:104: [C0415(import-outside-toplevel), AdminSeleniumTestCase.wait_page_loaded] Import outside toplevel (selenium.common.exceptions.TimeoutException)
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:141: [E0611(no-name-in-module), AdminSeleniumTestCase.get_select_option] No name 'common' in module 'selenium'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:141: [E0401(import-error), AdminSeleniumTestCase.get_select_option] Unable to import 'selenium.common.exceptions'
+blood/lib/python3.7/site-packages/django/contrib/admin/tests.py:141: [C0415(import-outside-toplevel), AdminSeleniumTestCase.get_select_option] Import outside toplevel (selenium.common.exceptions.NoSuchElementException)
+************* Module django.contrib.admin.helpers
+blood/lib/python3.7/site-packages/django/contrib/admin/helpers.py:193: [C0415(import-outside-toplevel), AdminReadonlyField.contents] Import outside toplevel (django.contrib.admin.templatetags.admin_list._boolean_icon)
+blood/lib/python3.7/site-packages/django/contrib/admin/helpers.py:223: [R0902(too-many-instance-attributes), InlineAdminFormSet] Too many instance attributes (11/7)
+blood/lib/python3.7/site-packages/django/contrib/admin/helpers.py:227: [R0913(too-many-arguments), InlineAdminFormSet.__init__] Too many arguments (11/10)
+blood/lib/python3.7/site-packages/django/contrib/admin/helpers.py:277: [W0612(unused-variable), InlineAdminFormSet.fields] Unused variable 'i'
+blood/lib/python3.7/site-packages/django/contrib/admin/helpers.py:366: [R1705(no-else-return), InlineAdminForm.fk_field] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/helpers.py:372: [C0415(import-outside-toplevel), InlineAdminForm.deletion_field] Import outside toplevel (django.forms.formsets.DELETION_FIELD_NAME)
+blood/lib/python3.7/site-packages/django/contrib/admin/helpers.py:376: [C0415(import-outside-toplevel), InlineAdminForm.ordering_field] Import outside toplevel (django.forms.formsets.ORDERING_FIELD_NAME)
+************* Module django.contrib.admin.filters
+blood/lib/python3.7/site-packages/django/contrib/admin/filters.py:118: [W0223(abstract-method), FieldListFilter] Method 'choices' is abstract in class 'ListFilter' but is not overridden
+blood/lib/python3.7/site-packages/django/contrib/admin/filters.py:118: [W0223(abstract-method), FieldListFilter] Method 'expected_parameters' is abstract in class 'ListFilter' but is not overridden
+blood/lib/python3.7/site-packages/django/contrib/admin/filters.py:156: [R1710(inconsistent-return-statements), FieldListFilter.create] Either all return statements in a function should return an expression, or none of them should.
+blood/lib/python3.7/site-packages/django/contrib/admin/filters.py:162: [R0902(too-many-instance-attributes), RelatedFieldListFilter] Too many instance attributes (8/7)
+blood/lib/python3.7/site-packages/django/contrib/admin/filters.py:379: [W0612(unused-variable), AllValuesFieldListFilter.__init__] Unused variable 'reverse_path'
+************* Module django.contrib.admin.decorators
+blood/lib/python3.7/site-packages/django/contrib/admin/decorators.py:12: [C0415(import-outside-toplevel), register] Import outside toplevel (django.contrib.admin.ModelAdmin)
+blood/lib/python3.7/site-packages/django/contrib/admin/decorators.py:13: [C0415(import-outside-toplevel), register] Import outside toplevel (django.contrib.admin.sites.site, django.contrib.admin.sites.AdminSite)
+************* Module django.contrib.admin.templatetags.admin_list
+blood/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py:34: [R1705(no-else-return), paginator_number] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py:105: [R0914(too-many-locals), result_headers] Too many local variables (20/15)
+blood/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py:204: [R1705(no-else-return), _coerce_field_name] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py:211: [R0914(too-many-locals), items_for_result] Too many local variables (21/15)
+blood/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py:211: [R0912(too-many-branches), items_for_result] Too many branches (21/12)
+blood/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py:211: [R0915(too-many-statements), items_for_result] Too many statements (57/50)
+blood/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py:320: [W0612(unused-variable), result_hidden_fields] Unused variable 'res'
+blood/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py:380: [R1705(no-else-return), date_hierarchy] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py:353: [R1710(inconsistent-return-statements), date_hierarchy] Either all return statements in a function should return an expression, or none of them should.
+************* Module django.contrib.admin.templatetags.admin_modify
+blood/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_modify.py:106: [W0612(unused-variable), cell_count] Unused variable 'field'
+************* Module django.contrib.admin.templatetags.base
+blood/lib/python3.7/site-packages/django/contrib/admin/templatetags/base.py:12: [R0914(too-many-locals), InclusionAdminNode.__init__] Too many local variables (16/15)
+************* Module django.contrib.admin.templatetags.admin_urls
+blood/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_urls.py:47: [C0415(import-outside-toplevel), add_preserved_filters] Import outside toplevel (django.contrib.admin.options.IS_POPUP_VAR)
+blood/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_urls.py:50: [C0415(import-outside-toplevel), add_preserved_filters] Import outside toplevel (django.contrib.admin.options.TO_FIELD_VAR)
+************* Module django.contrib.admin.views.autocomplete
+blood/lib/python3.7/site-packages/django/contrib/admin/views/autocomplete.py:38: [W0222(signature-differs), AutocompleteJsonView.get_paginator] Signature differs from overridden 'get_paginator' method
+blood/lib/python3.7/site-packages/django/contrib/admin/views/autocomplete.py:26: [W0201(attribute-defined-outside-init), AutocompleteJsonView.get] Attribute 'term' defined outside __init__
+blood/lib/python3.7/site-packages/django/contrib/admin/views/autocomplete.py:28: [W0201(attribute-defined-outside-init), AutocompleteJsonView.get] Attribute 'object_list' defined outside __init__
+************* Module django.contrib.admin.views.main
+blood/lib/python3.7/site-packages/django/contrib/admin/views/main.py:38: [R0902(too-many-instance-attributes), ChangeList] Too many instance attributes (36/7)
+blood/lib/python3.7/site-packages/django/contrib/admin/views/main.py:39: [R0913(too-many-arguments), ChangeList.__init__] Too many arguments (14/10)
+blood/lib/python3.7/site-packages/django/contrib/admin/views/main.py:39: [R0914(too-many-locals), ChangeList.__init__] Too many local variables (16/15)
+blood/lib/python3.7/site-packages/django/contrib/admin/views/main.py:105: [R0914(too-many-locals), ChangeList.get_filters] Too many local variables (19/15)
+blood/lib/python3.7/site-packages/django/contrib/admin/views/main.py:105: [R0912(too-many-branches), ChangeList.get_filters] Too many branches (19/12)
+blood/lib/python3.7/site-packages/django/contrib/admin/views/main.py:287: [W0612(unused-variable), ChangeList.get_ordering] Unused variable 'none'
+blood/lib/python3.7/site-packages/django/contrib/admin/views/main.py:308: [R0912(too-many-branches), ChangeList._get_deterministic_ordering] Too many branches (13/12)
+blood/lib/python3.7/site-packages/django/contrib/admin/views/main.py:394: [W0612(unused-variable), ChangeList.get_ordering_field_columns] Unused variable 'none'
+blood/lib/python3.7/site-packages/django/contrib/admin/views/main.py:362: [R0912(too-many-branches), ChangeList.get_ordering_field_columns] Too many branches (13/12)
+blood/lib/python3.7/site-packages/django/contrib/admin/views/main.py:442: [R1705(no-else-return), ChangeList.get_queryset] Unnecessary "else" after "return"
+************* Module django.contrib.auth
+blood/lib/python3.7/site-packages/django/contrib/auth/__init__.py:68: [W1505(deprecated-method), authenticate] Using deprecated method getcallargs()
+blood/lib/python3.7/site-packages/django/contrib/auth/__init__.py:156: [C0415(import-outside-toplevel), logout] Import outside toplevel (django.contrib.auth.models.AnonymousUser)
+blood/lib/python3.7/site-packages/django/contrib/auth/__init__.py:179: [C0415(import-outside-toplevel), get_user] Import outside toplevel (models.AnonymousUser)
+************* Module django.contrib.auth.password_validation
+blood/lib/python3.7/site-packages/django/contrib/auth/password_validation.py:62: [W0621(redefined-outer-name), password_changed] Redefining name 'password_changed' from outer scope (line 54)
+************* Module django.contrib.auth.models
+blood/lib/python3.7/site-packages/django/contrib/auth/models.py:75: [E1101(no-member), Permission.__str__] Instance of 'ForeignKey' has no 'app_label' member
+blood/lib/python3.7/site-packages/django/contrib/auth/models.py:81: [E1101(no-member), Permission.natural_key] Instance of 'ForeignKey' has no 'natural_key' member
+blood/lib/python3.7/site-packages/django/contrib/auth/models.py:125: [E0307(invalid-str-returned), Group.__str__] __str__ does not return str
+************* Module django.contrib.auth.base_user
+blood/lib/python3.7/site-packages/django/contrib/auth/base_user.py:65: [W0222(signature-differs), AbstractBaseUser.save] Signature differs from overridden 'save' method
+blood/lib/python3.7/site-packages/django/contrib/auth/base_user.py:73: [E1101(no-member), AbstractBaseUser.get_username] Instance of 'AbstractBaseUser' has no 'USERNAME_FIELD' member
+blood/lib/python3.7/site-packages/django/contrib/auth/base_user.py:76: [E1101(no-member), AbstractBaseUser.clean] Instance of 'AbstractBaseUser' has no 'USERNAME_FIELD' member
+************* Module django.contrib.auth.apps
+blood/lib/python3.7/site-packages/django/contrib/auth/apps.py:25: [C0415(import-outside-toplevel), AuthConfig.ready] Import outside toplevel (models.update_last_login)
+************* Module django.contrib.auth.forms
+blood/lib/python3.7/site-packages/django/contrib/auth/forms.py:176: [W1113(keyword-arg-before-vararg), AuthenticationForm.__init__] Keyword argument before variable positional arguments list in the definition of __init__ function
+blood/lib/python3.7/site-packages/django/contrib/auth/forms.py:197: [R1720(no-else-raise), AuthenticationForm.clean] Unnecessary "else" after "raise"
+blood/lib/python3.7/site-packages/django/contrib/auth/forms.py:265: [R0914(too-many-locals), PasswordResetForm.save] Too many local variables (16/15)
+blood/lib/python3.7/site-packages/django/contrib/auth/forms.py:419: [W0236(invalid-overridden-method), AdminPasswordChangeForm.changed_data] Method 'changed_data' was expected to be 'method', found it instead as 'property'
+************* Module django.contrib.auth.backends
+blood/lib/python3.7/site-packages/django/contrib/auth/backends.py:16: [R1710(inconsistent-return-statements), ModelBackend.authenticate] Either all return statements in a function should return an expression, or none of them should.
+blood/lib/python3.7/site-packages/django/contrib/auth/backends.py:128: [W0221(arguments-differ), RemoteUserBackend.authenticate] Parameters differ from overridden 'authenticate' method
+blood/lib/python3.7/site-packages/django/contrib/auth/backends.py:152: [W1505(deprecated-method), RemoteUserBackend.authenticate] Using deprecated method getcallargs()
+blood/lib/python3.7/site-packages/django/contrib/auth/backends.py:128: [R1710(inconsistent-return-statements), RemoteUserBackend.authenticate] Either all return statements in a function should return an expression, or none of them should.
+************* Module django.contrib.auth.context_processors
+blood/lib/python3.7/site-packages/django/contrib/auth/context_processors.py:57: [C0415(import-outside-toplevel), auth] Import outside toplevel (django.contrib.auth.models.AnonymousUser)
+************* Module django.contrib.auth.admin
+blood/lib/python3.7/site-packages/django/contrib/auth/admin.py:72: [W0221(arguments-differ), UserAdmin.get_form] Parameters differ from overridden 'get_form' method
+blood/lib/python3.7/site-packages/django/contrib/auth/admin.py:129: [W0622(redefined-builtin), UserAdmin.user_change_password] Redefining built-in 'id'
+************* Module django.contrib.auth.hashers
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:331: [C0330(bad-continuation), ] Wrong continued indentation (remove 3 spaces).
+            salt, data) = self._decode(encoded)
+         |  ^
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:346: [C0330(bad-continuation), ] Wrong continued indentation (remove 3 spaces).
+            salt, data) = self._decode(encoded)
+         |  ^
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:1: [C0302(too-many-lines), ] Too many lines in module (637/500)
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:113: [R1705(no-else-return), get_hasher] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:150: [W0622(redefined-builtin), mask_hash] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:175: [W0612(unused-variable), BasePasswordHasher._load_library] Unused variable 'name'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:246: [W0622(redefined-builtin), PBKDF2PasswordHasher.encode] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:242: [W0221(arguments-differ), PBKDF2PasswordHasher.encode] Parameters differ from overridden 'encode' method
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:251: [W0622(redefined-builtin), PBKDF2PasswordHasher.verify] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:251: [W0612(unused-variable), PBKDF2PasswordHasher.verify] Unused variable 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:257: [W0622(redefined-builtin), PBKDF2PasswordHasher.safe_summary] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:267: [W0622(redefined-builtin), PBKDF2PasswordHasher.must_update] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:267: [W0612(unused-variable), PBKDF2PasswordHasher.must_update] Unused variable 'algorithm'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:267: [W0612(unused-variable), PBKDF2PasswordHasher.must_update] Unused variable 'salt'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:267: [W0612(unused-variable), PBKDF2PasswordHasher.must_update] Unused variable 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:271: [W0622(redefined-builtin), PBKDF2PasswordHasher.harden_runtime] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:271: [W0612(unused-variable), PBKDF2PasswordHasher.harden_runtime] Unused variable 'algorithm'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:271: [W0612(unused-variable), PBKDF2PasswordHasher.harden_runtime] Unused variable 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:345: [W0612(unused-variable), Argon2PasswordHasher.must_update] Unused variable 'variety'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:346: [W0612(unused-variable), Argon2PasswordHasher.must_update] Unused variable 'salt'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:346: [W0612(unused-variable), Argon2PasswordHasher.must_update] Unused variable 'data'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:426: [W0612(unused-variable), BCryptSHA256PasswordHasher.safe_summary] Unused variable 'empty'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:426: [W0612(unused-variable), BCryptSHA256PasswordHasher.safe_summary] Unused variable 'algostr'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:437: [W0612(unused-variable), BCryptSHA256PasswordHasher.must_update] Unused variable 'algorithm'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:437: [W0612(unused-variable), BCryptSHA256PasswordHasher.must_update] Unused variable 'empty'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:437: [W0612(unused-variable), BCryptSHA256PasswordHasher.must_update] Unused variable 'algostr'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:437: [W0612(unused-variable), BCryptSHA256PasswordHasher.must_update] Unused variable 'data'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:477: [W0622(redefined-builtin), SHA1PasswordHasher.encode] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:481: [W0622(redefined-builtin), SHA1PasswordHasher.verify] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:481: [W0612(unused-variable), SHA1PasswordHasher.verify] Unused variable 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:487: [W0622(redefined-builtin), SHA1PasswordHasher.safe_summary] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:508: [W0622(redefined-builtin), MD5PasswordHasher.encode] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:512: [W0622(redefined-builtin), MD5PasswordHasher.verify] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:512: [W0612(unused-variable), MD5PasswordHasher.verify] Unused variable 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:518: [W0622(redefined-builtin), MD5PasswordHasher.safe_summary] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:546: [W0622(redefined-builtin), UnsaltedSHA1PasswordHasher.encode] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:555: [W0622(redefined-builtin), UnsaltedSHA1PasswordHasher.safe_summary] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/auth/hashers.py:623: [W0612(unused-variable), CryptPasswordHasher.verify] Unused variable 'salt'
+************* Module django.contrib.auth.middleware
+blood/lib/python3.7/site-packages/django/contrib/auth/middleware.py:69: [R1705(no-else-return), RemoteUserMiddleware.process_request] Unnecessary "else" after "return"
+************* Module django.contrib.auth.views
+blood/lib/python3.7/site-packages/django/contrib/auth/views.py:172: [W0622(redefined-builtin), redirect_to_login] Redefining built-in 'next'
+blood/lib/python3.7/site-packages/django/contrib/auth/views.py:260: [W0201(attribute-defined-outside-init), PasswordResetConfirmView.dispatch] Attribute 'validlink' defined outside __init__
+blood/lib/python3.7/site-packages/django/contrib/auth/views.py:269: [W0201(attribute-defined-outside-init), PasswordResetConfirmView.dispatch] Attribute 'validlink' defined outside __init__
+blood/lib/python3.7/site-packages/django/contrib/auth/views.py:261: [W0201(attribute-defined-outside-init), PasswordResetConfirmView.dispatch] Attribute 'user' defined outside __init__
+************* Module django.contrib.auth.decorators
+blood/lib/python3.7/site-packages/django/contrib/auth/decorators.py:31: [C0415(import-outside-toplevel), user_passes_test.decorator._wrapped_view] Import outside toplevel (django.contrib.auth.views.redirect_to_login)
+************* Module django.contrib.auth.management
+blood/lib/python3.7/site-packages/django/contrib/auth/management/__init__.py:35: [R0914(too-many-locals), create_permissions] Too many local variables (16/15)
+blood/lib/python3.7/site-packages/django/contrib/auth/management/__init__.py:114: [C0415(import-outside-toplevel), get_default_username] Import outside toplevel (django.contrib.auth.models)
+blood/lib/python3.7/site-packages/django/contrib/auth/management/__init__.py:140: [E1101(no-member), get_default_username] Function '_default_manager' has no 'get' member
+************* Module django.contrib.contenttypes.models
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/models.py:55: [W0612(unused-variable), ContentTypeManager.get_for_model] Unused variable 'created'
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/models.py:62: [W0621(redefined-outer-name), ContentTypeManager.get_for_models] Redefining name 'models' from outer scope (line 4)
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/models.py:104: [W0622(redefined-builtin), ContentTypeManager.get_for_id] Redefining built-in 'id'
+************* Module django.contrib.contenttypes.fields
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:1: [C0302(too-many-lines), ] Too many lines in module (688/500)
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:18: [R0902(too-many-instance-attributes), GenericForeignKey] Too many instance attributes (8/7)
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:82: [R1705(no-else-return), GenericForeignKey._check_field_name] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:127: [R1705(no-else-return), GenericForeignKey._check_content_type_field] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:161: [W0622(redefined-builtin), GenericForeignKey.get_content_type] Redefining built-in 'id'
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:162: [R1705(no-else-return), GenericForeignKey.get_content_type] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:200: [R1705(no-else-return), GenericForeignKey.get_prefetch_queryset.gfk_key] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:233: [R1705(no-else-return), GenericForeignKey.__get__] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:50: [W0201(attribute-defined-outside-init), GenericForeignKey.contribute_to_class] Attribute 'name' defined outside __init__
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:51: [W0201(attribute-defined-outside-init), GenericForeignKey.contribute_to_class] Attribute 'model' defined outside __init__
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:334: [R1705(no-else-return), GenericRelation._check_generic_foreign_key_existence] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:397: [R1705(no-else-return), GenericRelation.get_path_info] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:428: [W0221(arguments-differ), GenericRelation.contribute_to_class] Parameters differ from overridden 'contribute_to_class' method
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:464: [W0221(arguments-differ), GenericRelation.get_extra_restriction] Parameters differ from overridden 'get_extra_restriction' method
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:431: [W0201(attribute-defined-outside-init), GenericRelation.contribute_to_class] Attribute 'model' defined outside __init__
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:511: [R0902(too-many-instance-attributes), create_generic_related_manager.GenericRelatedObjectManager] Too many instance attributes (8/7)
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/fields.py:504: [R0915(too-many-statements), create_generic_related_manager] Too many statements (89/50)
+************* Module django.contrib.contenttypes.checks
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/checks.py:8: [C0415(import-outside-toplevel), check_generic_foreign_keys] Import outside toplevel (fields.GenericForeignKey)
+************* Module django.contrib.contenttypes.forms
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/forms.py:18: [E1101(no-member), BaseGenericInlineFormSet.__init__] Instance of 'BaseGenericInlineFormSet' has no 'ct_field' member
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/forms.py:18: [E1101(no-member), BaseGenericInlineFormSet.__init__] Instance of 'BaseGenericInlineFormSet' has no 'ct_fk_field' member
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/forms.py:27: [E1101(no-member), BaseGenericInlineFormSet.__init__] Instance of 'BaseGenericInlineFormSet' has no 'ct_field' member
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/forms.py:28: [E1101(no-member), BaseGenericInlineFormSet.__init__] Instance of 'BaseGenericInlineFormSet' has no 'for_concrete_model' member
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/forms.py:29: [E1101(no-member), BaseGenericInlineFormSet.__init__] Instance of 'BaseGenericInlineFormSet' has no 'ct_fk_field' member
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/forms.py:43: [E1101(no-member), BaseGenericInlineFormSet.get_default_prefix] Class 'BaseGenericInlineFormSet' has no 'ct_field' member
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/forms.py:43: [E1101(no-member), BaseGenericInlineFormSet.get_default_prefix] Class 'BaseGenericInlineFormSet' has no 'ct_fk_field' member
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/forms.py:47: [E1101(no-member), BaseGenericInlineFormSet.save_new] Instance of 'BaseGenericInlineFormSet' has no 'ct_field' member
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/forms.py:48: [E1101(no-member), BaseGenericInlineFormSet.save_new] Instance of 'BaseGenericInlineFormSet' has no 'ct_fk_field' member
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/forms.py:52: [R0913(too-many-arguments), generic_inlineformset_factory] Too many arguments (16/10)
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/forms.py:52: [R0914(too-many-locals), generic_inlineformset_factory] Too many local variables (18/15)
+************* Module django.contrib.contenttypes.admin
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/admin.py:28: [R1705(no-else-return), GenericInlineModelAdminChecks._check_relation] Unnecessary "else" after "return"
+************* Module django.contrib.contenttypes.views
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/views.py:84: [R1705(no-else-return), shortcut] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/views.py:9: [R0912(too-many-branches), shortcut] Too many branches (17/12)
+************* Module django.contrib.contenttypes.management
+blood/lib/python3.7/site-packages/django/contrib/contenttypes/management/__init__.py:68: [R1723(no-else-break), inject_rename_contenttypes_operations] Unnecessary "else" after "break"
+************* Module django.contrib.sessions.models
+blood/lib/python3.7/site-packages/django/contrib/sessions/models.py:31: [C0415(import-outside-toplevel), Session.get_session_store_class] Import outside toplevel (django.contrib.sessions.backends.db.SessionStore)
+************* Module django.contrib.sessions.exceptions
+blood/lib/python3.7/site-packages/django/contrib/sessions/exceptions.py:6: [W0107(unnecessary-pass), InvalidSessionKey] Unnecessary pass statement
+blood/lib/python3.7/site-packages/django/contrib/sessions/exceptions.py:11: [W0107(unnecessary-pass), SuspiciousSession] Unnecessary pass statement
+************* Module django.contrib.sessions.base_session
+blood/lib/python3.7/site-packages/django/contrib/sessions/base_session.py:38: [E0307(invalid-str-returned), AbstractBaseSession.__str__] __str__ does not return str
+************* Module django.contrib.sessions.middleware
+blood/lib/python3.7/site-packages/django/contrib/sessions/middleware.py:13: [W0231(super-init-not-called), SessionMiddleware.__init__] __init__ method from base class 'MiddlewareMixin' is not called
+************* Module django.contrib.sessions.backends.signed_cookies
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/signed_cookies.py:22: [W0703(broad-except), SessionStore.load] Catching too general exception Exception
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/signed_cookies.py:59: [W0201(attribute-defined-outside-init), SessionStore.delete] Attribute '_session_cache' defined outside __init__
+************* Module django.contrib.sessions.backends.db
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py:16: [W0235(useless-super-delegation), SessionStore.__init__] Useless super delegation in method '__init__'
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py:23: [C0415(import-outside-toplevel), SessionStore.get_model_class] Import outside toplevel (django.contrib.sessions.models.Session)
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py:74: [R1710(inconsistent-return-statements), SessionStore.save] Either all return statements in a function should return an expression, or none of them should.
+************* Module django.contrib.sessions.backends.cached_db
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/cached_db.py:29: [W0703(broad-except), SessionStore.load] Catching too general exception Exception
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/cached_db.py:44: [R1706(consider-using-ternary), SessionStore.exists] Consider using ternary (self.cache_key_prefix + session_key in self._cache if session_key else super().exists(session_key))
+************* Module django.contrib.sessions.backends.cache
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/cache.py:27: [W0703(broad-except), SessionStore.load] Catching too general exception Exception
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/cache.py:42: [W0612(unused-variable), SessionStore.create] Unused variable 'i'
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/cache.py:54: [R1710(inconsistent-return-statements), SessionStore.save] Either all return statements in a function should return an expression, or none of them should.
+************* Module django.contrib.sessions.backends.file
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/file.py:150: [W0622(redefined-builtin), SessionStore.save] Redefining built-in 'dir'
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/file.py:111: [R1710(inconsistent-return-statements), SessionStore.save] Either all return statements in a function should return an expression, or none of them should.
+************* Module django.contrib.sessions.backends.base
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py:25: [W0107(unnecessary-pass), CreateError] Unnecessary pass statement
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py:32: [W0107(unnecessary-pass), UpdateError] Unnecessary pass statement
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py:73: [R1705(no-else-return), SessionBase.setdefault] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py:96: [W0622(redefined-builtin), SessionBase.encode] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py:103: [W0622(redefined-builtin), SessionBase.decode] Redefining built-in 'hash'
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py:109: [W0703(broad-except), SessionBase.decode] Catching too general exception Exception
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py:105: [R1720(no-else-raise), SessionBase.decode] Unnecessary "else" after "raise"
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py:137: [W0201(attribute-defined-outside-init), SessionBase.clear] Attribute '_session_cache' defined outside __init__
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py:192: [W0201(attribute-defined-outside-init), SessionBase._get_session] Attribute '_session_cache' defined outside __init__
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py:194: [W0201(attribute-defined-outside-init), SessionBase._get_session] Attribute '_session_cache' defined outside __init__
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py:298: [W0201(attribute-defined-outside-init), SessionBase.cycle_key] Attribute '_session_cache' defined outside __init__
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py:175: [W0201(attribute-defined-outside-init), SessionBase._set_session_key] Attribute '__session_key' defined outside __init__
+blood/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py:177: [W0201(attribute-defined-outside-init), SessionBase._set_session_key] Attribute '__session_key' defined outside __init__
+************* Module django.contrib.messages.storage.cookie
+blood/lib/python3.7/site-packages/django/contrib/messages/storage/cookie.py:16: [W0221(arguments-differ), MessageEncoder.default] Parameters differ from overridden 'default' method
+blood/lib/python3.7/site-packages/django/contrib/messages/storage/cookie.py:47: [W0221(arguments-differ), MessageDecoder.decode] Parameters differ from overridden 'decode' method
+blood/lib/python3.7/site-packages/django/contrib/messages/storage/cookie.py:94: [W1113(keyword-arg-before-vararg), CookieStorage._store] Keyword argument before variable positional arguments list in the definition of _store function
+blood/lib/python3.7/site-packages/django/contrib/messages/storage/cookie.py:94: [W0221(arguments-differ), CookieStorage._store] Parameters differ from overridden '_store' method
+blood/lib/python3.7/site-packages/django/contrib/messages/storage/cookie.py:131: [R1710(inconsistent-return-statements), CookieStorage._encode] Either all return statements in a function should return an expression, or none of them should.
+blood/lib/python3.7/site-packages/django/contrib/messages/storage/cookie.py:155: [W0622(redefined-builtin), CookieStorage._decode] Redefining built-in 'hash'
+************* Module django.contrib.messages.storage.base
+blood/lib/python3.7/site-packages/django/contrib/messages/storage/base.py:78: [W0612(unused-variable), BaseStorage._loaded_messages] Unused variable 'all_retrieved'
+blood/lib/python3.7/site-packages/django/contrib/messages/storage/base.py:123: [R1705(no-else-return), BaseStorage.update] Unnecessary "elif" after "return"
+blood/lib/python3.7/site-packages/django/contrib/messages/storage/base.py:115: [R1710(inconsistent-return-statements), BaseStorage.update] Either all return statements in a function should return an expression, or none of them should.
+blood/lib/python3.7/site-packages/django/contrib/messages/storage/base.py:79: [W0201(attribute-defined-outside-init), BaseStorage._loaded_messages] Attribute '_loaded_data' defined outside __init__
+blood/lib/python3.7/site-packages/django/contrib/messages/storage/base.py:155: [W0201(attribute-defined-outside-init), BaseStorage._get_level] Attribute '_level' defined outside __init__
+blood/lib/python3.7/site-packages/django/contrib/messages/storage/base.py:168: [W0201(attribute-defined-outside-init), BaseStorage._set_level] Attribute '_level' defined outside __init__
+************* Module django.contrib.staticfiles.finders
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/finders.py:31: [W0622(redefined-builtin), BaseFinder.find] Redefining built-in 'all'
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/finders.py:53: [W1113(keyword-arg-before-vararg), FileSystemFinder.__init__] Keyword argument before variable positional arguments list in the definition of __init__ function
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/finders.py:96: [W0622(redefined-builtin), FileSystemFinder.find] Redefining built-in 'all'
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/finders.py:111: [R1710(inconsistent-return-statements), FileSystemFinder.find_location] Either all return statements in a function should return an expression, or none of them should.
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/finders.py:129: [W0612(unused-variable), FileSystemFinder.list] Unused variable 'prefix'
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/finders.py:135: [W0223(abstract-method), AppDirectoriesFinder] Method 'check' is abstract in class 'BaseFinder' but is not overridden
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/finders.py:143: [W1113(keyword-arg-before-vararg), AppDirectoriesFinder.__init__] Keyword argument before variable positional arguments list in the definition of __init__ function
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/finders.py:170: [W0622(redefined-builtin), AppDirectoriesFinder.find] Redefining built-in 'all'
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/finders.py:186: [R1710(inconsistent-return-statements), AppDirectoriesFinder.find_in_app] Either all return statements in a function should return an expression, or none of them should.
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/finders.py:199: [W0223(abstract-method), BaseStorageFinder] Method 'check' is abstract in class 'BaseFinder' but is not overridden
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/finders.py:206: [W1113(keyword-arg-before-vararg), BaseStorageFinder.__init__] Keyword argument before variable positional arguments list in the definition of __init__ function
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/finders.py:218: [W0622(redefined-builtin), BaseStorageFinder.find] Redefining built-in 'all'
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/finders.py:244: [W0223(abstract-method), DefaultStorageFinder] Method 'check' is abstract in class 'BaseFinder' but is not overridden
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/finders.py:259: [W0622(redefined-builtin), find] Redefining built-in 'all'
+************* Module django.contrib.staticfiles.handlers
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/handlers.py:54: [C0415(import-outside-toplevel), StaticFilesHandler.get_response] Import outside toplevel (django.http.Http404)
+************* Module django.contrib.staticfiles.utils
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/utils.py:34: [W0622(redefined-builtin), get_files] Redefining built-in 'dir'
+************* Module django.contrib.staticfiles.storage
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/storage.py:1: [C0302(too-many-lines), ] Too many lines in module (501/500)
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/storage.py:29: [W1113(keyword-arg-before-vararg), StaticFilesStorage.__init__] Keyword argument before variable positional arguments list in the definition of __init__ function
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/storage.py:89: [R1706(consider-using-ternary), HashedFilesMixin.hashed_name] Consider using ternary (urlsplit(unquote(filename)).path.strip() if filename else clean_name)
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/storage.py:242: [W0612(unused-variable), HashedFilesMixin.post_process] Unused variable 'i'
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/storage.py:257: [R0914(too-many-locals), HashedFilesMixin._post_process] Too many local variables (25/15)
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/storage.py:257: [R0912(too-many-branches), HashedFilesMixin._post_process] Too many branches (14/12)
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/storage.py:358: [R1705(no-else-return), HashedFilesMixin.stored_name] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/storage.py:354: [W0612(unused-variable), HashedFilesMixin.stored_name] Unused variable 'i'
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/storage.py:401: [W0222(signature-differs), ManifestFilesMixin.post_process] Signature differs from overridden 'post_process' method
+blood/lib/python3.7/site-packages/django/contrib/staticfiles/storage.py:493: [W0107(unnecessary-pass), ManifestStaticFilesStorage] Unnecessary pass statement
+************* Module crispy_forms.bootstrap
+blood/lib/python3.7/site-packages/crispy_forms/bootstrap.py:14: [W1113(keyword-arg-before-vararg), PrependedAppendedText.__init__] Keyword argument before variable positional arguments list in the definition of __init__ function
+blood/lib/python3.7/site-packages/crispy_forms/bootstrap.py:113: [W0221(arguments-differ), InlineCheckboxes.render] Parameters differ from overridden 'render' method
+blood/lib/python3.7/site-packages/crispy_forms/bootstrap.py:128: [W0221(arguments-differ), InlineRadios.render] Parameters differ from overridden 'render' method
+blood/lib/python3.7/site-packages/crispy_forms/bootstrap.py:138: [W0221(arguments-differ), FieldWithButtons.render] Parameters differ from overridden 'render' method
+blood/lib/python3.7/site-packages/crispy_forms/bootstrap.py:158: [R1705(no-else-return), FieldWithButtons.render] Unnecessary "else" after "return"
+************* Module crispy_forms.compatibility
+blood/lib/python3.7/site-packages/crispy_forms/compatibility.py:4: [W0611(unused-import), ] Unused lru_cache imported from django.utils.lru_cache
+************* Module crispy_forms.layout
+blood/lib/python3.7/site-packages/crispy_forms/layout.py:19: [W0622(redefined-builtin), LayoutObject.__getitem__] Redefining built-in 'slice'
+blood/lib/python3.7/site-packages/crispy_forms/layout.py:22: [W0622(redefined-builtin), LayoutObject.__setitem__] Redefining built-in 'slice'
+blood/lib/python3.7/site-packages/crispy_forms/layout.py:25: [W0622(redefined-builtin), LayoutObject.__delitem__] Redefining built-in 'slice'
+blood/lib/python3.7/site-packages/crispy_forms/layout.py:37: [R1705(no-else-return), LayoutObject.__getattr__] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/crispy_forms/layout.py:184: [E1101(no-member), BaseInput.__init__] Instance of 'BaseInput' has no 'field_classes' member
+blood/lib/python3.7/site-packages/crispy_forms/layout.py:301: [R0902(too-many-instance-attributes), MultiField] Too many instance attributes (9/7)
+blood/lib/python3.7/site-packages/crispy_forms/layout.py:358: [E0203(access-member-before-definition), Div.__init__] Access to member 'css_class' before its definition line 360
+blood/lib/python3.7/site-packages/crispy_forms/layout.py:487: [W0231(super-init-not-called), MultiWidgetField.__init__] __init__ method from base class 'Field' is not called
+************* Module crispy_forms.utils
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:29: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+    field,
+    ^   |
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:30: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+    form,
+    ^   |
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:31: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+    form_style,
+    ^   |
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:32: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+    context,
+    ^   |
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:33: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+    template=None,
+    ^   |
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:34: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+    labelclass=None,
+    ^   |
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:35: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+    layout_object=None,
+    ^   |
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:36: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+    attrs=None,
+    ^   |
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:37: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+    template_pack=TEMPLATE_PACK,
+    ^   |
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:38: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+    extra_context=None,
+    ^   |
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:39: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+    **kwargs
+    ^   |
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:28: [R0914(too-many-locals), render_field] Too many local variables (21/15)
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:95: [R1720(no-else-raise), render_field] Unnecessary "else" after "raise"
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:99: [W1201(logging-not-lazy), render_field] Use lazy % formatting in logging functions
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:105: [R1720(no-else-raise), render_field] Unnecessary "else" after "raise"
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:108: [W1201(logging-not-lazy), render_field] Use lazy % formatting in logging functions
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:80: [W0612(unused-variable), render_field] Unused variable 'widget'
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:28: [R0912(too-many-branches), render_field] Too many branches (27/12)
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:28: [R0915(too-many-statements), render_field] Too many statements (56/50)
+blood/lib/python3.7/site-packages/crispy_forms/utils.py:160: [C0415(import-outside-toplevel), render_crispy_form] Import outside toplevel (crispy_forms.templatetags.crispy_forms_tags.CrispyFormNode)
+************* Module crispy_forms.helper
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:309: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+                    self.render_unmentioned_fields
+                    ^   |
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:310: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+                    or (self.render_hidden_fields and form.fields[field].widget.is_hidden)
+                    ^   |
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:311: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+                    or (self.render_required_fields and form.fields[field].widget.is_required)
+                    ^   |
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:380: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+                attribute_name not in items
+                ^   |
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:381: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+                and attribute_name not in ["layout", "inputs"]
+                ^   |
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:382: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+                and not attribute_name.startswith("_")
+                ^   |
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:14: [E1101(no-member), DynamicLayoutHandler._check_layout] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:19: [E1101(no-member), DynamicLayoutHandler._check_layout_and_form] Instance of 'DynamicLayoutHandler' has no 'form' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:27: [E1101(no-member), DynamicLayoutHandler.all] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:27: [E1101(no-member), DynamicLayoutHandler.all] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:36: [E1101(no-member), DynamicLayoutHandler.filter] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:38: [E1101(no-member), DynamicLayoutHandler.filter] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:45: [E1101(no-member), DynamicLayoutHandler.filter_by_widget] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:50: [E1101(no-member), DynamicLayoutHandler.filter_by_widget] Instance of 'DynamicLayoutHandler' has no 'form' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:53: [E1101(no-member), DynamicLayoutHandler.filter_by_widget] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:60: [E1101(no-member), DynamicLayoutHandler.exclude_by_widget] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:65: [E1101(no-member), DynamicLayoutHandler.exclude_by_widget] Instance of 'DynamicLayoutHandler' has no 'form' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:68: [E1101(no-member), DynamicLayoutHandler.exclude_by_widget] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:83: [E1101(no-member), DynamicLayoutHandler.__getitem__] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:91: [E1101(no-member), DynamicLayoutHandler.__getitem__] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:93: [E1101(no-member), DynamicLayoutHandler.__getitem__] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:96: [E1101(no-member), DynamicLayoutHandler.__setitem__] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:99: [E1101(no-member), DynamicLayoutHandler.__delitem__] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:102: [R1705(no-else-return), DynamicLayoutHandler.__len__] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:102: [E1101(no-member), DynamicLayoutHandler.__len__] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:103: [E1101(no-member), DynamicLayoutHandler.__len__] Instance of 'DynamicLayoutHandler' has no 'layout' member
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:108: [R0902(too-many-instance-attributes), FormHelper] Too many instance attributes (10/7)
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:252: [R1710(inconsistent-return-statements), FormHelper.form_style] Either all return statements in a function should return an expression, or none of them should.
+blood/lib/python3.7/site-packages/crispy_forms/helper.py:317: [R0912(too-many-branches), FormHelper.get_attributes] Too many branches (18/12)
+************* Module crispy_forms.layout_slice
+blood/lib/python3.7/site-packages/crispy_forms/layout_slice.py:22: [R1705(no-else-return), LayoutSlice.wrapped_object] Unnecessary "else" after "return"
+blood/lib/python3.7/site-packages/crispy_forms/layout_slice.py:35: [R1705(no-else-return), LayoutSlice.wrapped_object] Unnecessary "else" after "return"
+************* Module crispy_forms.exceptions
+blood/lib/python3.7/site-packages/crispy_forms/exceptions.py:12: [W0107(unnecessary-pass), FormHelpersException] Unnecessary pass statement
+************* Module crispy_forms.base
+blood/lib/python3.7/site-packages/crispy_forms/base.py:19: [W0622(redefined-builtin), KeepContext.__exit__] Redefining built-in 'type'
+************* Module crispy_forms.templatetags.crispy_forms_field
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_field.py:123: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+                template_pack == "bootstrap3"
+                ^   |
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_field.py:124: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+                and not is_checkbox(field)
+                ^   |
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_field.py:125: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+                and not is_file(field)
+                ^   |
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_field.py:126: [C0330(bad-continuation), ] Wrong hanging indentation before block (add 4 spaces).
+                and not is_multivalue(field)
+                ^   |
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_field.py:115: [W0621(redefined-outer-name), CrispyFieldNode.render] Redefining name 'css_class' from outer scope (line 59)
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_field.py:78: [R0912(too-many-branches), CrispyFieldNode.render] Too many branches (18/12)
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_field.py:189: [W0621(redefined-outer-name), crispy_addon] Redefining name 'template' from outer scope (line 1)
+************* Module crispy_forms.templatetags.crispy_forms_filters
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_filters.py:57: [W0621(redefined-outer-name), as_crispy_form] Redefining name 'template' from outer scope (line 1)
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_filters.py:79: [W0621(redefined-outer-name), as_crispy_errors] Redefining name 'template' from outer scope (line 1)
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_filters.py:118: [W0621(redefined-outer-name), as_crispy_field] Redefining name 'template' from outer scope (line 1)
+************* Module crispy_forms.templatetags.crispy_forms_tags
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13: [W0401(wildcard-import), ] Wildcard import crispy_forms.templatetags.crispy_forms_filters
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13: [C0413(wrong-import-position), ] Import "from crispy_forms.templatetags.crispy_forms_filters import *" should be placed at the top of the module
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:40: [C0122(misplaced-comparison-constant), ForLoopSimulator.__init__] Comparison should be self.len_values - 1 == 0
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:106: [W0201(attribute-defined-outside-init), BasicNode.get_render] Attribute 'actual_helper' defined outside __init__
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:206: [W0621(redefined-outer-name), CrispyFormNode.render] Redefining name 'template' from outer scope (line 1)
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13: [W0614(unused-wildcard-import), ] Unused import uni_formset_template from wildcard import
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13: [W0614(unused-wildcard-import), ] Unused import uni_form_template from wildcard import
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13: [W0614(unused-wildcard-import), ] Unused import as_crispy_form from wildcard import
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13: [W0614(unused-wildcard-import), ] Unused import as_crispy_errors from wildcard import
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13: [W0614(unused-wildcard-import), ] Unused import as_crispy_field from wildcard import
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13: [W0614(unused-wildcard-import), ] Unused import flatatt_filter from wildcard import
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13: [W0614(unused-wildcard-import), ] Unused import boundfield from wildcard import
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13: [W0614(unused-wildcard-import), ] Unused import Context from wildcard import
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13: [W0614(unused-wildcard-import), ] Unused import mark_safe from wildcard import
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13: [W0614(unused-wildcard-import), ] Unused import CrispyError from wildcard import
+blood/lib/python3.7/site-packages/crispy_forms/templatetags/crispy_forms_tags.py:13: [W0614(unused-wildcard-import), ] Unused import flatatt from wildcard import
+************* Module crispy_forms.tests.test_utils
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_utils.py:24: [C0415(import-outside-toplevel), test_custom_bound_field] Import outside toplevel (django.forms.boundfield.BoundField)
+************* Module crispy_forms.tests.conftest
+blood/lib/python3.7/site-packages/crispy_forms/tests/conftest.py:1: [E0401(import-error), ] Unable to import 'pytest'
+blood/lib/python3.7/site-packages/crispy_forms/tests/conftest.py:3: [C0411(wrong-import-order), ] third party import "from crispy_forms.layout import HTML, Div, Field, Fieldset, Layout, Submit" should be placed before "import pytest"
+************* Module crispy_forms.tests.test_tags
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_tags.py:1: [E0401(import-error), ] Unable to import 'pytest'
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_tags.py:233: [E1120(no-value-for-parameter), test_crispy_addon] No value for argument 'field' in function call
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_tags.py:3: [C0411(wrong-import-order), ] third party import "from django.forms.boundfield import BoundField" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_tags.py:4: [C0411(wrong-import-order), ] third party import "from django.forms.formsets import formset_factory" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_tags.py:5: [C0411(wrong-import-order), ] third party import "from django.template import Context, Template" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_tags.py:7: [C0411(wrong-import-order), ] third party import "from crispy_forms.exceptions import CrispyError" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_tags.py:8: [C0411(wrong-import-order), ] third party import "from crispy_forms.templatetags.crispy_forms_field import crispy_addon" should be placed before "import pytest"
+************* Module crispy_forms.tests.test_form_helper
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:1: [C0302(too-many-lines), ] Too many lines in module (931/500)
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:3: [E0401(import-error), ] Unable to import 'pytest'
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:309: [R1706(consider-using-ternary), test_template_pack_override_compact] Consider using ternary ('bootstrap' if current_pack == 'uni_form' else 'uni_form')
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:330: [R1706(consider-using-ternary), test_template_pack_override_verbose] Consider using ternary ('bootstrap' if current_pack == 'uni_form' else 'uni_form')
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:498: [C0415(import-outside-toplevel), test_render_hidden_fields] Import outside toplevel (utils.contains_partial)
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:5: [C0411(wrong-import-order), ] third party import "import django" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:6: [C0411(wrong-import-order), ] third party import "from django import forms" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:7: [C0411(wrong-import-order), ] third party import "from django.forms.models import formset_factory" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:8: [C0411(wrong-import-order), ] third party import "from django.middleware.csrf import _get_new_csrf_string" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:9: [C0411(wrong-import-order), ] third party import "from django.template import Context, Template, TemplateSyntaxError" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:10: [C0411(wrong-import-order), ] third party import "from django.test.html import parse_html" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:11: [C0411(wrong-import-order), ] third party import "from django.urls import reverse" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:12: [C0411(wrong-import-order), ] third party import "from django.utils.translation import gettext_lazy as _" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:14: [C0411(wrong-import-order), ] third party import "from crispy_forms.bootstrap import AppendedText, FieldWithButtons, PrependedAppendedText, PrependedText, StrictButton" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:15: [C0411(wrong-import-order), ] third party import "from crispy_forms.helper import FormHelper, FormHelpersException" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:16: [C0411(wrong-import-order), ] third party import "from crispy_forms.layout import Button, Field, Hidden, Layout, MultiField, Reset, Submit" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:17: [C0411(wrong-import-order), ] third party import "from crispy_forms.templatetags.crispy_forms_tags import CrispyFormNode" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_form_helper.py:18: [C0411(wrong-import-order), ] third party import "from crispy_forms.utils import render_crispy_form" should be placed before "import pytest"
+************* Module crispy_forms.tests.test_dynamic_api
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_dynamic_api.py:1: [E0401(import-error), ] Unable to import 'pytest'
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_dynamic_api.py:3: [C0411(wrong-import-order), ] third party import "from django import forms" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_dynamic_api.py:5: [C0411(wrong-import-order), ] third party import "from crispy_forms.bootstrap import AppendedText" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_dynamic_api.py:6: [C0411(wrong-import-order), ] third party import "from crispy_forms.exceptions import DynamicError" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_dynamic_api.py:7: [C0411(wrong-import-order), ] third party import "from crispy_forms.helper import FormHelper, FormHelpersException" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_dynamic_api.py:8: [C0411(wrong-import-order), ] third party import "from crispy_forms.layout import HTML, Div, Field, Fieldset, Layout, MultiField" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_dynamic_api.py:9: [C0411(wrong-import-order), ] third party import "from crispy_forms.tests.forms import SampleForm" should be placed before "import pytest"
+************* Module crispy_forms.tests.test_layout
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_layout.py:1: [C0302(too-many-lines), ] Too many lines in module (600/500)
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_layout.py:1: [E0401(import-error), ] Unable to import 'pytest'
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_layout.py:3: [C0411(wrong-import-order), ] third party import "from django import forms" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_layout.py:4: [C0411(wrong-import-order), ] third party import "from django.forms.models import formset_factory, modelformset_factory" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_layout.py:5: [C0411(wrong-import-order), ] third party import "from django.middleware.csrf import _get_new_csrf_string" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_layout.py:6: [C0411(wrong-import-order), ] third party import "from django.shortcuts import render" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_layout.py:7: [C0411(wrong-import-order), ] third party import "from django.template import Context, Template" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_layout.py:8: [C0411(wrong-import-order), ] third party import "from django.urls import reverse" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_layout.py:9: [C0411(wrong-import-order), ] third party import "from django.utils.translation import gettext_lazy as _" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_layout.py:11: [C0411(wrong-import-order), ] third party import "from crispy_forms.bootstrap import Field, InlineCheckboxes" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_layout.py:12: [C0411(wrong-import-order), ] third party import "from crispy_forms.helper import FormHelper" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_layout.py:13: [C0411(wrong-import-order), ] third party import "from crispy_forms.layout import HTML, ButtonHolder, Column, Div, Fieldset, Layout, MultiField, Row, Submit" should be placed before "import pytest"
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_layout.py:14: [C0411(wrong-import-order), ] third party import "from crispy_forms.utils import render_crispy_form" should be placed before "import pytest"
+************* Module crispy_forms.tests.test_layout_objects
+blood/lib/python3.7/site-packages/crispy_forms/tests/test_layout_objects.py:353: [W0621(redefined-outer-name), TestBootstrapLayoutObjects.test_tab_helper_reuse.SampleForm] Redefining name 'SampleForm' from outer scope (line 27)
+************* Module django_jenkins.runner
+blood/lib/python3.7/site-packages/django_jenkins/runner.py:103: [W0612(unused-variable), EXMLTestResult._add_tb_to_test] Unused variable 'tb'
+blood/lib/python3.7/site-packages/django_jenkins/runner.py:29: [W0201(attribute-defined-outside-init), EXMLTestResult.addSuccess] Attribute 'testcase' defined outside __init__
+blood/lib/python3.7/site-packages/django_jenkins/runner.py:33: [W0201(attribute-defined-outside-init), EXMLTestResult.addFailure] Attribute 'testcase' defined outside __init__
+blood/lib/python3.7/site-packages/django_jenkins/runner.py:39: [W0201(attribute-defined-outside-init), EXMLTestResult.addError] Attribute 'testcase' defined outside __init__
+blood/lib/python3.7/site-packages/django_jenkins/runner.py:45: [W0201(attribute-defined-outside-init), EXMLTestResult.addUnexpectedSuccess] Attribute 'testcase' defined outside __init__
+blood/lib/python3.7/site-packages/django_jenkins/runner.py:51: [W0201(attribute-defined-outside-init), EXMLTestResult.addSkip] Attribute 'testcase' defined outside __init__
+blood/lib/python3.7/site-packages/django_jenkins/runner.py:57: [W0201(attribute-defined-outside-init), EXMLTestResult.addExpectedFailure] Attribute 'testcase' defined outside __init__
+************* Module django_jenkins.apps
+blood/lib/python3.7/site-packages/django_jenkins/apps.py:20: [W0105(pointless-string-statement), JenkinsConfig.__init__] String statement has no effect
+************* Module django_jenkins.tasks.run_csslint
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_csslint.py:10: [R0205(useless-object-inheritance), Reporter] Class 'Reporter' inherits from object, can be safely removed from bases in python3
+************* Module django_jenkins.tasks.run_sloccount
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_sloccount.py:6: [R0205(useless-object-inheritance), Reporter] Class 'Reporter' inherits from object, can be safely removed from bases in python3
+************* Module django_jenkins.tasks.run_pyflakes
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_pyflakes.py:13: [R0205(useless-object-inheritance), Reporter] Class 'Reporter' inherits from object, can be safely removed from bases in python3
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_pyflakes.py:27: [R1702(too-many-nested-blocks), Reporter.run] Too many nested blocks (6/5)
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_pyflakes.py:30: [W0612(unused-variable), Reporter.run] Unused variable 'dirnames'
+************* Module django_jenkins.tasks.run_jshint
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_jshint.py:10: [R0205(useless-object-inheritance), Reporter] Class 'Reporter' inherits from object, can be safely removed from bases in python3
+************* Module django_jenkins.tasks.run_flake8
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_flake8.py:11: [E0401(import-error), ] Unable to import 'flake8.api.legacy'
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_flake8.py:17: [R0205(useless-object-inheritance), Reporter] Class 'Reporter' inherits from object, can be safely removed from bases in python3
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_flake8.py:82: [R1710(inconsistent-return-statements), Reporter.get_config_path] Either all return statements in a function should return an expression, or none of them should.
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_flake8.py:3: [C0411(wrong-import-order), ] standard import "import sys" should be placed before "import pep8"
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_flake8.py:12: [C0411(wrong-import-order), ] third party import "from django.conf import settings" should be placed before "from flake8.api.legacy import get_style_guide"
+************* Module django_jenkins.tasks.run_pep8
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_pep8.py:19: [R1707(trailing-comma-tuple), ] Disallow trailing comma tuple
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_pep8.py:9: [R0205(useless-object-inheritance), Reporter] Class 'Reporter' inherits from object, can be safely removed from bases in python3
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_pep8.py:18: [W0106(expression-not-assigned), Reporter.add_arguments] Expression "(parser.add_argument('--pep8-ignore', dest='pep8-ignore', help='skip errors and warnings (e.g. E4,W)'), )" is assigned to nothing
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_pep8.py:30: [E0213(no-self-argument), Reporter.run.JenkinsReport.error] Method should have "self" as first argument
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_pep8.py:63: [R1710(inconsistent-return-statements), Reporter.get_config_path] Either all return statements in a function should return an expression, or none of them should.
+************* Module django_jenkins.tasks.run_scsslint
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_scsslint.py:10: [R0205(useless-object-inheritance), Reporter] Class 'Reporter' inherits from object, can be safely removed from bases in python3
+************* Module django_jenkins.tasks.with_coverage
+blood/lib/python3.7/site-packages/django_jenkins/tasks/with_coverage.py:56: [C0325(superfluous-parens), ] Unnecessary parens after 'not' keyword
+blood/lib/python3.7/site-packages/django_jenkins/tasks/with_coverage.py:57: [C0325(superfluous-parens), ] Unnecessary parens after 'not' keyword
+blood/lib/python3.7/site-packages/django_jenkins/tasks/with_coverage.py:8: [R0205(useless-object-inheritance), CoverageReporter] Class 'CoverageReporter' inherits from object, can be safely removed from bases in python3
+blood/lib/python3.7/site-packages/django_jenkins/tasks/with_coverage.py:11: [C0415(import-outside-toplevel), CoverageReporter.__init__] Import outside toplevel (coverage)
+************* Module django_jenkins.tasks.run_pylint
+blood/lib/python3.7/site-packages/django_jenkins/tasks/run_pylint.py:19: [R0205(useless-object-inheritance), Reporter] Class 'Reporter' inherits from object, can be safely removed from bases in python3
+************* Module django_jenkins.management.commands.jenkins
+blood/lib/python3.7/site-packages/django_jenkins/management/commands/jenkins.py:55: [R1707(trailing-comma-tuple), ] Disallow trailing comma tuple
+blood/lib/python3.7/site-packages/django_jenkins/management/commands/jenkins.py:58: [R1707(trailing-comma-tuple), ] Disallow trailing comma tuple
+blood/lib/python3.7/site-packages/django_jenkins/management/commands/jenkins.py:61: [R1707(trailing-comma-tuple), ] Disallow trailing comma tuple
+blood/lib/python3.7/site-packages/django_jenkins/management/commands/jenkins.py:65: [R1707(trailing-comma-tuple), ] Disallow trailing comma tuple
+blood/lib/python3.7/site-packages/django_jenkins/management/commands/jenkins.py:69: [R1707(trailing-comma-tuple), ] Disallow trailing comma tuple
+blood/lib/python3.7/site-packages/django_jenkins/management/commands/jenkins.py:72: [R1707(trailing-comma-tuple), ] Disallow trailing comma tuple
+blood/lib/python3.7/site-packages/django_jenkins/management/commands/jenkins.py:13: [W0621(redefined-outer-name), get_runner] Redefining name 'settings' from outer scope (line 7)
+blood/lib/python3.7/site-packages/django_jenkins/management/commands/jenkins.py:54: [W0106(expression-not-assigned), Command.add_arguments] Expression "(parser.add_argument('--output-dir', dest='output_dir', default='reports', help='Report files directory'), )" is assigned to nothing
+blood/lib/python3.7/site-packages/django_jenkins/management/commands/jenkins.py:56: [W0106(expression-not-assigned), Command.add_arguments] Expression "(parser.add_argument('--enable-coverage', action='store_true', default=False, help='Measure code coverage'), )" is assigned to nothing
+blood/lib/python3.7/site-packages/django_jenkins/management/commands/jenkins.py:59: [W0106(expression-not-assigned), Command.add_arguments] Expression "(parser.add_argument('--debug', action='store_true', dest='debug', default=False, help='Do not intercept stdout and stderr, friendly for console debuggers'), )" is assigned to nothing
+blood/lib/python3.7/site-packages/django_jenkins/management/commands/jenkins.py:62: [W0106(expression-not-assigned), Command.add_arguments] Expression "(parser.add_argument('--coverage-rcfile', dest='coverage_rcfile', default='', help='Specify configuration file.'), )" is assigned to nothing
+blood/lib/python3.7/site-packages/django_jenkins/management/commands/jenkins.py:66: [W0106(expression-not-assigned), Command.add_arguments] Expression "(parser.add_argument('--coverage-format', dest='coverage_format', default='xml', help='Specify coverage output formats html,xml,bin'), )" is assigned to nothing
+blood/lib/python3.7/site-packages/django_jenkins/management/commands/jenkins.py:70: [W0106(expression-not-assigned), Command.add_arguments] Expression "(parser.add_argument('--coverage-exclude', action='append', default=[], dest='coverage_excludes', help='Module name to exclude'), )" is assigned to nothing
+************* Module cbc.models
+cbc/models.py:7: [C0326(bad-whitespace), ] No space allowed before bracket
+class CompleteBloodCount (models.Model):
+                         ^
+cbc/models.py:66: [C0326(bad-whitespace), ] No space allowed before bracket
+class ThreeDiff (models.Model):
+                ^
+cbc/models.py:105: [C0326(bad-whitespace), ] No space allowed before bracket
+class FiveDiff (models.Model):
+               ^
+cbc/models.py:150: [C0326(bad-whitespace), ] No space allowed before bracket
+class BloodSmear (models.Model):
+                 ^
+cbc/models.py:102: [E1101(no-member), ThreeDiff.__str__] Instance of 'OneToOneField' has no 'user' member
+cbc/models.py:102: [E1101(no-member), ThreeDiff.__str__] Instance of 'OneToOneField' has no 'analysis_date' member
+cbc/models.py:147: [E1101(no-member), FiveDiff.__str__] Instance of 'OneToOneField' has no 'user' member
+cbc/models.py:147: [E1101(no-member), FiveDiff.__str__] Instance of 'OneToOneField' has no 'analysis_date' member
+cbc/models.py:210: [E1101(no-member), BloodSmear.intoxicationKK] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:211: [E1101(no-member), BloodSmear.intoxicationKK] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:212: [E1101(no-member), BloodSmear.intoxicationKK] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:213: [E1101(no-member), BloodSmear.intoxicationKK] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:214: [E1101(no-member), BloodSmear.intoxicationKK] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:215: [E1101(no-member), BloodSmear.intoxicationKK] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:216: [E1101(no-member), BloodSmear.intoxicationKK] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:217: [E1101(no-member), BloodSmear.intoxicationKK] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:229: [E1101(no-member), BloodSmear.intoxicationO] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:230: [E1101(no-member), BloodSmear.intoxicationO] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:231: [E1101(no-member), BloodSmear.intoxicationO] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:232: [E1101(no-member), BloodSmear.intoxicationO] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:233: [E1101(no-member), BloodSmear.intoxicationO] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:234: [E1101(no-member), BloodSmear.intoxicationO] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:235: [E1101(no-member), BloodSmear.intoxicationO] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:246: [E1101(no-member), BloodSmear.nuclear] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:247: [E1101(no-member), BloodSmear.nuclear] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:248: [E1101(no-member), BloodSmear.nuclear] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:249: [E1101(no-member), BloodSmear.nuclear] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:260: [E1101(no-member), BloodSmear.shift] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:261: [E1101(no-member), BloodSmear.shift] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:262: [E1101(no-member), BloodSmear.shift] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:274: [E1101(no-member), BloodSmear.allergy] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:275: [E1101(no-member), BloodSmear.allergy] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:276: [E1101(no-member), BloodSmear.allergy] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:277: [E1101(no-member), BloodSmear.allergy] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:278: [E1101(no-member), BloodSmear.allergy] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:279: [E1101(no-member), BloodSmear.allergy] Instance of 'OneToOneField' has no 'leukocyte' member
+cbc/models.py:289: [E1101(no-member), BloodSmear.__str__] Instance of 'OneToOneField' has no 'user' member
+cbc/models.py:289: [E1101(no-member), BloodSmear.__str__] Instance of 'OneToOneField' has no 'analysis_date' member
+************* Module cbc.forms
+cbc/forms.py:52: [C0330(bad-continuation), ] Wrong continued indentation (remove 1 space).
+                                             'проверьте введенные значения и повторите попытку.')
+                                            |^
+************* Module cbc.migrations.0004_auto_20200601_0337
+cbc/migrations/0004_auto_20200601_0337.py:17: [C0301(line-too-long), ] Line too long (176/160)
+cbc/migrations/0004_auto_20200601_0337.py:22: [C0301(line-too-long), ] Line too long (174/160)
+cbc/migrations/0004_auto_20200601_0337.py:27: [C0301(line-too-long), ] Line too long (175/160)
+************* Module cbc.migrations.0001_initial
+cbc/migrations/0001_initial.py:34: [C0301(line-too-long), ] Line too long (165/160)
+cbc/migrations/0001_initial.py:49: [C0301(line-too-long), ] Line too long (194/160)
+cbc/migrations/0001_initial.py:66: [C0301(line-too-long), ] Line too long (194/160)
+cbc/migrations/0001_initial.py:88: [C0301(line-too-long), ] Line too long (194/160)
+************* Module cbc.tests.test_forms
+cbc/tests/test_forms.py:6: [W0611(unused-import), ] Unused CBCModelForm imported from cbc.forms
+************* Module cbc.tests.test_views
+cbc/tests/test_views.py:1: [C0302(too-many-lines), ] Too many lines in module (761/500)
+cbc/tests/test_views.py:23: [R0902(too-many-instance-attributes), TestViewsGeneral] Too many instance attributes (17/7)
+cbc/tests/test_views.py:229: [R0902(too-many-instance-attributes), TestViewsThreeDiff] Too many instance attributes (14/7)
+cbc/tests/test_views.py:411: [R0902(too-many-instance-attributes), TestViewsFiveDiff] Too many instance attributes (14/7)
+cbc/tests/test_views.py:597: [R0902(too-many-instance-attributes), TestViewsBloodSmear] Too many instance attributes (12/7)
+cbc/tests/test_views.py:11: [C0412(ungrouped-imports), ] Imports from package cbc are not grouped
+************* Module range.models
+range/models.py:223: [E1101(no-member), ReferenceRange.__str__] Instance of 'ForeignKey' has no 'sex' member
+range/models.py:223: [E1101(no-member), ReferenceRange.__str__] Instance of 'ForeignKey' has no 'age_min' member
+range/models.py:223: [E1101(no-member), ReferenceRange.__str__] Instance of 'ForeignKey' has no 'age_max' member
+range/models.py:223: [E1101(no-member), ReferenceRange.__str__] Instance of 'ForeignKey' has no 'value_type' member
+************* Module range.views
+range/views.py:1: [W0611(unused-import), ] Unused render imported from django.shortcuts
+************* Module range.migrations.0001_initial
+range/migrations/0001_initial.py:45: [C0301(line-too-long), ] Line too long (194/160)
+************* Module patient.models
+patient/models.py:65: [E1101(no-member), Patient.get_age] Instance of 'DateField' has no 'year' member
+************* Module patient.forms
+patient/forms.py:82: [W0221(arguments-differ), RegistrationForm.save] Parameters differ from overridden 'save' method
+************* Module patient.views
+patient/views.py:7: [C0411(wrong-import-order), ] first party import "from cbc.models import CompleteBloodCount, BloodSmear" should be placed before "from .forms import RegistrationForm, EditProfileForm"
+************* Module patient.migrations.0001_initial
+patient/migrations/0001_initial.py:27: [C0301(line-too-long), ] Line too long (162/160)
+************* Module patient.tests.test_urls
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.auth -> django.contrib.auth.models)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.auth.decorators -> django.contrib.auth.views)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.sites)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.templatetags.admin_list -> django.contrib.admin.utils)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.options -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.options -> django.contrib.admin.templatetags.admin_urls)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.helpers -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main -> django.contrib.admin.options)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.actions -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main -> django.contrib.admin.options -> django.contrib.admin.checks -> django.contrib.admin.sites)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.sites -> django.contrib.admin.actions -> django.contrib.admin.helpers -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.options -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.options -> django.contrib.admin.models -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.options -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.filters -> django.contrib.admin.options)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.options -> django.contrib.admin.checks -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.sites -> django.contrib.admin.actions -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.helpers -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main -> django.contrib.admin.utils)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.options -> django.contrib.admin.widgets -> django.contrib.admin.views.main -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.templatetags.admin_urls)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.helpers -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.templatetags.admin_urls -> django.contrib.admin.options)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.options -> django.contrib.admin.checks -> django.contrib.admin.sites)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.decorators)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.helpers -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.helpers -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main -> django.contrib.admin.options)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.sites -> django.contrib.admin.actions -> django.contrib.admin.helpers -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.options -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.decorators -> django.contrib.admin.sites)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.options -> django.contrib.admin.templatetags.admin_urls -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.checks -> django.contrib.admin.options)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.sessions.backends.db -> django.contrib.sessions.models)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (crispy_forms.templatetags.crispy_forms_filters -> crispy_forms.utils -> crispy_forms.templatetags.crispy_forms_tags)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (crispy_forms.bootstrap -> crispy_forms.utils -> crispy_forms.templatetags.crispy_forms_tags -> crispy_forms.helper -> crispy_forms.layout_slice)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (crispy_forms.bootstrap -> crispy_forms.layout -> crispy_forms.utils -> crispy_forms.templatetags.crispy_forms_tags -> crispy_forms.helper -> crispy_forms.layout_slice)
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==cbc.tests.test_views:99
+==patient.tests.test_views:42
+        )
+        self.blood_smear = BloodSmear.objects.create(
+            cbc=self.cbc_blood_smear,
+            value_type='absolute',
+            promyelocyte=3,
+            myelocyte=3,
+            metamyelocyte=3,
+            banded_neutrophil=3,
+            segmented_neutrophil=3,
+            lymphocyte=3,
+            monocyte=3,
+            eosinophil=3,
+            basophil=3,
+            plasma_cell=3
+        )
+
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==cbc.tests.test_models:6
+==patient.tests.test_models:7
+from patient.models import Patient
+
+
+class TestModel(TestCase):
+
+    def setUp(self):
+        self.user = User.objects.create(
+            username='test',
+            password='qwerty123',
+            email='test@gmail.com'
+        )
+        self.patient = Patient.objects.create(
+            user=self.user,
+            email=self.user.email,
+            sex='male',
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 4 files
+==cbc.tests.test_views:282
+==cbc.tests.test_views:464
+==cbc.tests.test_views:628
+==patient.tests.test_views:42
+        )
+        self.blood_smear = BloodSmear.objects.create(
+            cbc=self.cbc_blood_smear,
+            value_type='absolute',
+            promyelocyte=3,
+            myelocyte=3,
+            metamyelocyte=3,
+            banded_neutrophil=3,
+            segmented_neutrophil=3,
+            lymphocyte=3,
+            monocyte=3,
+            eosinophil=3,
+            basophil=3,
+            plasma_cell=3
+        )
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 5 files
+==cbc.tests.test_views:230
+==cbc.tests.test_views:24
+==cbc.tests.test_views:412
+==cbc.tests.test_views:598
+==patient.tests.test_views:13
+    def setUp(self):
+        self.client = Client()
+        self.factory = RequestFactory()
+
+        self.user = User.objects.create(
+            username='test',
+            password='qwerty123',
+            email='test@gmail.com'
+        )
+        self.patient = Patient.objects.create(
+            user=self.user,
+            email=self.user.email,
+            sex='male',
+            date_of_birth=datetime.date(1990, 4, 25)
+        )
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==django_jenkins.tasks.run_flake8:79
+==django_jenkins.tasks.run_pep8:60
+        output.close()
+
+    def get_config_path(self, options):
+        if options['pep8-rcfile']:
+            return options['pep8-rcfile']
+
+        rcfile = getattr(settings, 'PEP8_RCFILE', None)
+        if rcfile:
+            return rcfile
+
+        if os.path.exists('tox.ini'):
+            return 'tox.ini'
+
+        if os.path.exists('setup.cfg'):
+            return 'setup.cfg'
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==cbc.tests.test_views:260
+==patient.tests.test_views:27
+        )
+        self.cbc_blood_smear = CompleteBloodCount.objects.create(
+            user=self.user,
+            sex=self.user.patient.sex,
+            age=self.user.patient.get_age(),
+            analysis_date=datetime.date(2020, 4, 29),
+            leukocyte=2,
+            erythrocyte=2,
+            hemoglobin=2,
+            hematocrit=2,
+            sed_rate=2,
+            type=2,
+            sum=100,
+            object_id=1,
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==django_jenkins.tasks.run_flake8:46
+==django_jenkins.tasks.run_pep8:36
+        config_file = self.get_config_path(options)
+        if config_file is not None:
+            pep8_options['config_file'] = config_file
+
+        set_option(pep8_options, 'exclude', options['pep8-exclude'], config_file,
+                   default=pep8.DEFAULT_EXCLUDE + ",south_migrations", split=',')
+
+        set_option(pep8_options, 'select', options['pep8-select'], config_file, split=',')
+
+        set_option(pep8_options, 'ignore', options['pep8-ignore'], config_file, split=',')
+
+        set_option(pep8_options, 'max_line_length', options['pep8-max-line-length'], config_file,
+                   default=pep8.MAX_LINE_LENGTH)
+
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 4 files
+==cbc.tests.test_views:441
+==cbc.tests.test_views:614
+==cbc.tests.test_views:69
+==patient.tests.test_views:28
+        self.cbc_blood_smear = CompleteBloodCount.objects.create(
+            user=self.user,
+            sex=self.user.patient.sex,
+            age=self.user.patient.get_age(),
+            analysis_date=datetime.date(2020, 4, 29),
+            leukocyte=2,
+            erythrocyte=2,
+            hemoglobin=2,
+            hematocrit=2,
+            sed_rate=2,
+            type=2,
+            sum=100,
+            object_id=1,
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==cbc.tests.test_forms:11
+==cbc.tests.test_models:11
+    def setUp(self):
+        self.user = User.objects.create(
+            username='test',
+            password='qwerty123',
+            email='test@gmail.com'
+        )
+        self.patient = Patient.objects.create(
+            user=self.user,
+            email=self.user.email,
+            sex='male',
+            date_of_birth=datetime.date(1990, 4, 25)
+        )
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 4 files
+==cbc.tests.test_forms:12
+==cbc.tests.test_views:234
+==cbc.tests.test_views:28
+==cbc.tests.test_views:602
+        self.user = User.objects.create(
+            username='test',
+            password='qwerty123',
+            email='test@gmail.com'
+        )
+        self.patient = Patient.objects.create(
+            user=self.user,
+            email=self.user.email,
+            sex='male',
+            date_of_birth=datetime.date(1990, 4, 25)
+        )
+
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==django.contrib.sessions.backends.cache:13
+==django.contrib.sessions.backends.cached_db:15
+    cache_key_prefix = KEY_PREFIX
+
+    def __init__(self, session_key=None):
+        self._cache = caches[settings.SESSION_CACHE_ALIAS]
+        super().__init__(session_key)
+
+    @property
+    def cache_key(self):
+        return self.cache_key_prefix + self._get_or_create_session_key()
+
+    def load(self):
+        try:
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==cbc.tests.test_urls:5
+==cbc.tests.test_views:11
+    CBCListView,
+    CBCDeleteView,
+    CommonChartsTemplateView,
+    DiffChartsTemplateView,
+    IndexChartsTemplateView
+)
+from cbc.views.three_diff import ThreeDifCreateView, ThreeDifUpdateView, ThreeDifDetailView
+from cbc.views.five_diff import FiveDifCreateView, FiveDifUpdateView, FiveDifDetailView
+from cbc.views.blood_smear import BloodSmearCreateView, BloodSmearUpdateView, BloodSmearDetailView
+
+
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 3 files
+==cbc.tests.test_models:12
+==cbc.tests.test_views:234
+==cbc.tests.test_views:28
+        self.user = User.objects.create(
+            username='test',
+            password='qwerty123',
+            email='test@gmail.com'
+        )
+        self.patient = Patient.objects.create(
+            user=self.user,
+            email=self.user.email,
+            sex='male',
+            date_of_birth=datetime.date(1990, 4, 25)
+        )
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 5 files
+==cbc.tests.test_forms:12
+==cbc.tests.test_models:12
+==cbc.tests.test_views:416
+==cbc.tests.test_views:602
+==patient.tests.test_views:17
+        self.user = User.objects.create(
+            username='test',
+            password='qwerty123',
+            email='test@gmail.com'
+        )
+        self.patient = Patient.objects.create(
+            user=self.user,
+            email=self.user.email,
+            sex='male',
+            date_of_birth=datetime.date(1990, 4, 25)
+        )
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 3 files
+==cbc.tests.test_views:431
+==cbc.tests.test_views:59
+==patient.tests.test_views:33
+            leukocyte=2,
+            erythrocyte=2,
+            hemoglobin=2,
+            hematocrit=2,
+            sed_rate=2,
+            type=2,
+            sum=100,
+            object_id=1,
+            content_type_id=9
+        )
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==cbc.tests.test_forms:11
+==patient.tests.test_models:12
+    def setUp(self):
+        self.user = User.objects.create(
+            username='test',
+            password='qwerty123',
+            email='test@gmail.com'
+        )
+        self.patient = Patient.objects.create(
+            user=self.user,
+            email=self.user.email,
+            sex='male',
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==django_jenkins.tasks.run_csslint:1
+==django_jenkins.tasks.run_scsslint:1
+import os
+import subprocess
+import codecs
+
+from django.conf import settings
+from django_jenkins.tasks import static_files_iterator
+
+
+class Reporter(object):
+    def add_arguments(self, parser):
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 6 files
+==cbc.tests.test_views:234
+==cbc.tests.test_views:28
+==cbc.tests.test_views:416
+==cbc.tests.test_views:602
+==patient.tests.test_models:13
+==patient.tests.test_views:17
+        self.user = User.objects.create(
+            username='test',
+            password='qwerty123',
+            email='test@gmail.com'
+        )
+        self.patient = Patient.objects.create(
+            user=self.user,
+            email=self.user.email,
+            sex='male',
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==django_jenkins.tasks.run_flake8:25
+==django_jenkins.tasks.run_pep8:10
+        parser.add_argument("--pep8-exclude",
+                            dest="pep8-exclude",
+                            help="exclude files or directories which match these "
+                            "comma separated patterns (default: %s)" %
+                            (pep8.DEFAULT_EXCLUDE + ",south_migrations"))
+        parser.add_argument("--pep8-select", dest="pep8-select",
+                            help="select errors and warnings (e.g. E,W6)")
+        parser.add_argument("--pep8-ignore", dest="pep8-ignore",
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==django.contrib.auth.migrations.0007_alter_validators_add_error_messages:8
+==django.contrib.auth.migrations.0008_alter_user_username_max_length:8
+    ]
+
+    operations = [
+        migrations.AlterField(
+            model_name='user',
+            name='username',
+            field=models.CharField(
+                error_messages={'unique': 'A user with that username already exists.'},
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==patient.models:35
+==range.models:12
+    sex = models.CharField(
+        verbose_name="Пол",
+        max_length=50,
+        choices=SEX_CHOICES,
+        null=True,
+        default=''
+    )
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==django.contrib.sessions.backends.cache:42
+==django.contrib.sessions.backends.file:102
+            self._session_key = self._get_new_session_key()
+            try:
+                self.save(must_create=True)
+            except CreateError:
+                continue
+            self.modified = True
+            return
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==django.contrib.admin.options:629
+==django.contrib.admin.widgets:25
+    @property
+    def media(self):
+        extra = '' if settings.DEBUG else '.min'
+        js = [
+            'vendor/jquery/jquery%s.js' % extra,
+            'jquery.init.js',
+            'core.js',
+
+-----------------------------------
+Your code has been rated at 8.91/10
+

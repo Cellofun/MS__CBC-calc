@@ -8,7 +8,7 @@ from freezegun import freeze_time
 from patient.models import Patient
 
 
-class TestModel(TestCase):
+class TestModelPatient(TestCase):
 
     def setUp(self):
         self.user = User.objects.create(
