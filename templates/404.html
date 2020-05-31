@@ -6,8 +6,8 @@
 	<title>404</title>
     {% include "utils/head.html" %}
     <link href="{% static 'css/pages/error/error-3.css' %}" rel="stylesheet" type="text/css">
-</head>
 
+</head>
 <body id="kt_body" class="header-static" data-gr-c-s-loaded="true">
     <div class="header-mobile header-mobile-fixed" id="kt_header_mobile">
 		<a href="/"><img alt="Logo" class="logo-default max-h-30px" src="{% static 'img/icon.png' %}"></a>
@@ -20,7 +20,6 @@
 			</g></svg></span></button>
 		</div>
 	</div>
-
     <div class="d-flex flex-column flex-root">
         {% include "utils/header_transparent.html" %}
         <div class="error error-3 d-flex flex-row-fluid bgi-size-cover bgi-position-center" style="background-image: url('{% static "img/404.jpg" %}'); margin-top: -80px;">
@@ -32,5 +31,6 @@
             </div>
         </div>
 	</div>
+    {% include "utils/scripts.html" %}
 </body>
 </html>
