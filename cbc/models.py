@@ -75,6 +75,7 @@ class ThreeDiff (models.Model):
     cbc = models.OneToOneField(
         CompleteBloodCount,
         on_delete=models.CASCADE,
+        related_name="three_diff",
         verbose_name="Общий анализ крови"
     )
     value_type = models.CharField(
@@ -113,6 +114,7 @@ class FiveDiff (models.Model):
     cbc = models.OneToOneField(
         CompleteBloodCount,
         on_delete=models.CASCADE,
+        related_name="five_diff",
         verbose_name="Общий анализ крови"
     )
     value_type = models.CharField(
@@ -157,6 +159,7 @@ class BloodSmear (models.Model):
     cbc = models.OneToOneField(
         CompleteBloodCount,
         on_delete=models.CASCADE,
+        related_name="blood_smear",
         verbose_name="Общий анализ крови"
     )
     value_type = models.CharField(
