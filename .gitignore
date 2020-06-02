@@ -86,3 +86,9 @@ __pycache__/
 local_settings.py
 
 .env
+
+### Jenkins
+
+jenkins/
+reports/
+docker-compose.yml

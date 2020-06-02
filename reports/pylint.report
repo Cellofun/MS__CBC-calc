@@ -801,8 +801,6 @@ cbc/migrations/0001_initial.py:34: [C0301(line-too-long), ] Line too long (165/1
 cbc/migrations/0001_initial.py:49: [C0301(line-too-long), ] Line too long (194/160)
 cbc/migrations/0001_initial.py:66: [C0301(line-too-long), ] Line too long (194/160)
 cbc/migrations/0001_initial.py:88: [C0301(line-too-long), ] Line too long (194/160)
-************* Module cbc.tests.test_forms
-cbc/tests/test_forms.py:6: [W0611(unused-import), ] Unused CBCModelForm imported from cbc.forms
 ************* Module cbc.tests.test_views
 cbc/tests/test_views.py:1: [C0302(too-many-lines), ] Too many lines in module (761/500)
 cbc/tests/test_views.py:23: [R0902(too-many-instance-attributes), TestViewsGeneral] Too many instance attributes (17/7)
@@ -827,40 +825,57 @@ patient/forms.py:82: [W0221(arguments-differ), RegistrationForm.save] Parameters
 patient/views.py:7: [C0411(wrong-import-order), ] first party import "from cbc.models import CompleteBloodCount, BloodSmear" should be placed before "from .forms import RegistrationForm, EditProfileForm"
 ************* Module patient.migrations.0001_initial
 patient/migrations/0001_initial.py:27: [C0301(line-too-long), ] Line too long (162/160)
+************* Module patient.tests.test_forms
+patient/tests/test_forms.py:42: [W1505(deprecated-method), TestFormsPatient.test_form_user_exists] Using deprecated method assertEquals()
+patient/tests/test_forms.py:57: [W1505(deprecated-method), TestFormsPatient.test_form_email_exists] Using deprecated method assertEquals()
 ************* Module patient.tests.test_urls
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.auth -> django.contrib.auth.models)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.auth.decorators -> django.contrib.auth.views)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.sites)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.templatetags.admin_list -> django.contrib.admin.utils)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.options -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.options -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.templatetags.admin_urls)
 patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.options -> django.contrib.admin.templatetags.admin_urls)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.helpers -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main -> django.contrib.admin.options)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.actions -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main -> django.contrib.admin.options -> django.contrib.admin.checks -> django.contrib.admin.sites)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.sites -> django.contrib.admin.actions -> django.contrib.admin.helpers -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.options -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.options -> django.contrib.admin.models -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.options -> django.contrib.admin.views.main)
 patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.filters -> django.contrib.admin.options)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.options -> django.contrib.admin.checks -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.sites -> django.contrib.admin.actions -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.helpers -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main -> django.contrib.admin.utils)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.options -> django.contrib.admin.widgets -> django.contrib.admin.views.main -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.templatetags.admin_urls)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.auth -> django.contrib.auth.models)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.actions -> django.contrib.admin.helpers -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.templatetags.admin_urls -> django.contrib.admin.options -> django.contrib.admin.checks -> django.contrib.admin.sites)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.sites -> django.contrib.admin.actions -> django.contrib.admin.helpers -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.templatetags.admin_urls -> django.contrib.admin.options -> django.contrib.admin.checks)
 patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.helpers -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.templatetags.admin_urls -> django.contrib.admin.options)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.options -> django.contrib.admin.checks -> django.contrib.admin.sites)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.auth.decorators -> django.contrib.auth.views)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.templatetags.admin_list -> django.contrib.admin.templatetags.admin_urls -> django.contrib.admin.utils)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.sites -> django.contrib.admin.actions -> django.contrib.admin.helpers -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.sites)
 patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.decorators)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.helpers -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.helpers -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main -> django.contrib.admin.options)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.sites -> django.contrib.admin.actions -> django.contrib.admin.helpers -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.options -> django.contrib.admin.views.main)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.decorators -> django.contrib.admin.sites)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.options -> django.contrib.admin.templatetags.admin_urls -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.checks -> django.contrib.admin.options)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.models -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.templatetags.admin_urls -> django.contrib.admin.options)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.sites -> django.contrib.admin.actions -> django.contrib.admin.helpers -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.templatetags.admin_urls -> django.contrib.admin.options -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.helpers -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.templatetags.admin_urls -> django.contrib.admin.options -> django.contrib.admin.checks -> django.contrib.admin.sites)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.options -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.options -> django.contrib.admin.widgets -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.helpers -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.templatetags.admin_urls -> django.contrib.admin.options -> django.contrib.admin.checks)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin -> django.contrib.admin.filters -> django.contrib.admin.options -> django.contrib.admin.utils -> django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.admin.templatetags.admin_list -> django.contrib.admin.views.main -> django.contrib.admin.utils)
 patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (django.contrib.sessions.backends.db -> django.contrib.sessions.models)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (crispy_forms.templatetags.crispy_forms_filters -> crispy_forms.utils -> crispy_forms.templatetags.crispy_forms_tags)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (crispy_forms.templatetags.crispy_forms_tags -> crispy_forms.utils)
 patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (crispy_forms.bootstrap -> crispy_forms.utils -> crispy_forms.templatetags.crispy_forms_tags -> crispy_forms.helper -> crispy_forms.layout_slice)
-patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (crispy_forms.bootstrap -> crispy_forms.layout -> crispy_forms.utils -> crispy_forms.templatetags.crispy_forms_tags -> crispy_forms.helper -> crispy_forms.layout_slice)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (crispy_forms.helper -> crispy_forms.layout_slice -> crispy_forms.layout -> crispy_forms.utils -> crispy_forms.templatetags.crispy_forms_tags)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (crispy_forms.helper -> crispy_forms.utils -> crispy_forms.templatetags.crispy_forms_tags)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (crispy_forms.helper -> crispy_forms.layout -> crispy_forms.utils -> crispy_forms.templatetags.crispy_forms_tags)
+patient/tests/test_urls.py:1: [R0401(cyclic-import), ] Cyclic import (crispy_forms.templatetags.crispy_forms_filters -> crispy_forms.utils -> crispy_forms.templatetags.crispy_forms_tags)
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==cbc.tests.test_forms:11
+==patient.tests.test_forms:11
+    def setUp(self):
+        self.user = User.objects.create(
+            username='test',
+            password='qwerty123',
+            email='test@gmail.com'
+        )
+        self.patient = Patient.objects.create(
+            user=self.user,
+            email=self.user.email,
+            sex='male',
+            date_of_birth=datetime.date(1990, 4, 25)
+        )
+
+    def tearDown(self):
+        self.user.delete()
+        self.patient.delete()
+
 patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
 ==cbc.tests.test_views:99
 ==patient.tests.test_views:42
@@ -880,24 +895,6 @@ patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
             plasma_cell=3
         )
 
-patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
-==cbc.tests.test_models:6
-==patient.tests.test_models:7
-from patient.models import Patient
-
-
-class TestModel(TestCase):
-
-    def setUp(self):
-        self.user = User.objects.create(
-            username='test',
-            password='qwerty123',
-            email='test@gmail.com'
-        )
-        self.patient = Patient.objects.create(
-            user=self.user,
-            email=self.user.email,
-            sex='male',
 patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 4 files
 ==cbc.tests.test_views:282
 ==cbc.tests.test_views:464
@@ -1009,9 +1006,10 @@ patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 4 files
             type=2,
             sum=100,
             object_id=1,
-patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 3 files
 ==cbc.tests.test_forms:11
 ==cbc.tests.test_models:11
+==patient.tests.test_forms:11
     def setUp(self):
         self.user = User.objects.create(
             username='test',
@@ -1024,11 +1022,12 @@ patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
             sex='male',
             date_of_birth=datetime.date(1990, 4, 25)
         )
-patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 4 files
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 5 files
 ==cbc.tests.test_forms:12
 ==cbc.tests.test_views:234
 ==cbc.tests.test_views:28
 ==cbc.tests.test_views:602
+==patient.tests.test_forms:12
         self.user = User.objects.create(
             username='test',
             password='qwerty123',
@@ -1085,11 +1084,12 @@ patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 3 files
             sex='male',
             date_of_birth=datetime.date(1990, 4, 25)
         )
-patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 5 files
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 6 files
 ==cbc.tests.test_forms:12
 ==cbc.tests.test_models:12
 ==cbc.tests.test_views:416
 ==cbc.tests.test_views:602
+==patient.tests.test_forms:12
 ==patient.tests.test_views:17
         self.user = User.objects.create(
             username='test',
@@ -1116,8 +1116,10 @@ patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 3 files
             object_id=1,
             content_type_id=9
         )
-patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 4 files
 ==cbc.tests.test_forms:11
+==cbc.tests.test_models:11
+==patient.tests.test_forms:11
 ==patient.tests.test_models:12
     def setUp(self):
         self.user = User.objects.create(
@@ -1211,6 +1213,6 @@ patient/tests/test_urls.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
             'jquery.init.js',
             'core.js',
 
------------------------------------
-Your code has been rated at 8.91/10
+------------------------------------------------------------------
+Your code has been rated at 8.92/10 (previous run: 8.91/10, +0.01)
 
