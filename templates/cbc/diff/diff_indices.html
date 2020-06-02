@@ -17,7 +17,14 @@
                     <td>{{ blood_smear.intoxicationKK|floatformat:"2" }}</td>
                     <td> {{ index_range.intoxicationKK_min }} - {{ index_range.intoxicationKK_max }}</td>
                     {% if blood_smear.intoxicationKK > index_range.intoxicationKK_max %}
-                        <td class="text-danger font-weight-bolder">Повышено</td>
+                        <td class="text-danger font-weight-bolder">
+                            Повышено
+                            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                                    data-content=""
+                            >
+                                <i class="la la-question-circle icon-lg text-danger"></i>
+                            </button>
+                        </td>
                     {% else %}
                         <td></td>
                     {% endif %}
@@ -27,7 +34,14 @@
                     <td>{{ blood_smear.intoxicationO|floatformat:"2" }}</td>
                     <td> {{ index_range.intoxicationO_min }} - {{ index_range.intoxicationO_max }}</td>
                     {% if blood_smear.intoxicationO > index_range.intoxicationO_max %}
-                        <td class="text-danger font-weight-bolder">Повышено</td>
+                        <td class="text-danger font-weight-bolder">
+                            Повышено
+                            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                                    data-content=""
+                            >
+                                <i class="la la-question-circle icon-lg text-danger"></i>
+                            </button>
+                        </td>
                     {% else %}
                         <td></td>
                     {% endif %}
@@ -37,7 +51,14 @@
                     <td>{{ blood_smear.nuclear|floatformat:"2" }}</td>
                     <td> {{ index_range.nuclear_min }} - {{ index_range.nuclear_max }}</td>
                     {% if blood_smear.nuclear > index_range.nuclear_max %}
-                        <td class="text-danger font-weight-bolder">Повышено</td>
+                        <td class="text-danger font-weight-bolder">
+                            Повышено
+                            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                                    data-content=""
+                            >
+                                <i class="la la-question-circle icon-lg text-danger"></i>
+                            </button>
+                        </td>
                     {% else %}
                         <td></td>
                     {% endif %}
@@ -47,7 +68,14 @@
                     <td>{{ blood_smear.shift|floatformat:"2" }}</td>
                     <td> {{ index_range.shift_min }} - {{ index_range.shift_max }}</td>
                     {% if blood_smear.shift > index_range.shift_max %}
-                        <td class="text-danger font-weight-bolder">Повышено</td>
+                        <td class="text-danger font-weight-bolder">
+                            Повышено
+                            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                                    data-content=""
+                            >
+                                <i class="la la-question-circle icon-lg text-danger"></i>
+                            </button>
+                        </td>
                     {% else %}
                         <td></td>
                     {% endif %}
@@ -57,7 +85,14 @@
                     <td>{{ blood_smear.allergy|floatformat:"2" }}</td>
                     <td> {{ index_range.allergy_min }} - {{ index_range.allergy_max }}</td>
                     {% if blood_smear.allergy > index_range.allergy_max %}
-                        <td class="text-danger font-weight-bolder">Повышено</td>
+                        <td class="text-danger font-weight-bolder">
+                            Повышено
+                            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                                    data-content=""
+                            >
+                                <i class="la la-question-circle icon-lg text-danger"></i>
+                            </button>
+                        </td>
                     {% else %}
                         <td></td>
                     {% endif %}

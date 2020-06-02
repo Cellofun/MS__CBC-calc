@@ -27,7 +27,14 @@
         {% endif %}
     </td>
     {% if three_dif.lymphocyte < range.diff.lymphocyte_min %}
-        <td class="text-danger font-weight-bolder">Понижено</td>
+        <td class="text-danger font-weight-bolder">
+            Понижено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content="qwerty"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% elif three_dif.lymphocyte > range.diff.lymphocyte_max %}
         <td class="text-danger font-weight-bolder">Повышено</td>
     {% else %}
@@ -47,7 +54,14 @@
     {% if three_dif.monocyte < range.diff.monocyte_min %}
         <td class="text-danger font-weight-bolder">Понижено</td>
     {% elif three_dif.monocyte > range.diff.monocyte_max %}
-        <td class="text-danger font-weight-bolder">Повышено</td>
+        <td class="text-danger font-weight-bolder">
+            Повышено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content="Повышение СОЭ наблюдается при: <ul class='mt-1 mb-0'><li>различных воспалительных процессах;</li><li>интоксикациях;</li><li>острых и хронических инфекциях;</li><li>инфаркте миокарда;</li><li>опухолях;</li><li>после кровопотерь;</li><li>оперативных вмешательств.</li></ul>"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% else %}
         <td></td>
     {% endif %}

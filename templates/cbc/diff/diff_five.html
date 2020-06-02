@@ -47,7 +47,14 @@
     {% if five_dif.monocyte < range.diff.monocyte_min %}
         <td class="text-danger font-weight-bolder">Понижено</td>
     {% elif five_dif.monocyte > range.diff.monocyte_max %}
-        <td class="text-danger font-weight-bolder">Повышено</td>
+        <td class="text-danger font-weight-bolder">
+            Повышено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true"
+                    data-content="Повышение моноцитов наблюдается при:"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% else %}
         <td></td>
     {% endif %}

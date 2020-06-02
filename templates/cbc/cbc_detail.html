@@ -115,3 +115,13 @@
         </div>
     </div>
 {% endblock %}
+
+{% block extra_scripts %}
+<script>
+    $(document).ready(function(){
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    });
+</script>
+{% endblock %}

@@ -129,7 +129,14 @@
         {% endif %}
     </td>
     {% if blood_smear.lymphocyte < range.diff.lymphocyte_min %}
-        <td class="text-danger font-weight-bolder">Понижено</td>
+        <td class="text-danger font-weight-bolder">
+            Понижено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content=""
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% elif blood_smear.lymphocyte > range.diff.lymphocyte_max %}
         <td class="text-danger font-weight-bolder">Повышено</td>
     {% else %}
@@ -149,7 +156,14 @@
     {% if blood_smear.monocyte < range.diff.monocyte_min %}
         <td class="text-danger font-weight-bolder">Понижено</td>
     {% elif blood_smear.monocyte > range.diff.monocyte_max %}
-        <td class="text-danger font-weight-bolder">Повышено</td>
+        <td class="text-danger font-weight-bolder">
+            Повышено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content=""
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% else %}
         <td></td>
     {% endif %}
@@ -165,7 +179,14 @@
         {% endif %}
     </td>
     {% if blood_smear.eosinophil < range.diff.eosinophil_min %}
-        <td class="text-danger font-weight-bolder">Понижено</td>
+        <td class="text-danger font-weight-bolder">
+            Понижено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content=""
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% elif blood_smear.eosinophil > range.diff.eosinophil_max %}
         <td class="text-danger font-weight-bolder">Повышено</td>
     {% else %}
