@@ -7,7 +7,6 @@ coverage==5.1
 Django==2.2
 django-crispy-forms==1.9.0
 django-jenkins==0.110.0
-django-widget-tweaks==1.4.8
 docker==4.2.0
 docker-compose==1.25.5
 dockerpty==0.4.1
@@ -19,7 +18,6 @@ isort==4.3.21
 jsonschema==3.2.0
 lazy-object-proxy==1.4.3
 mccabe==0.6.1
-mock==4.0.2
 paramiko==2.7.1
 pep8==1.7.1
 psycopg2-binary==2.8.5
