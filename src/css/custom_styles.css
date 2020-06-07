@@ -135,3 +135,7 @@ tspan {
   margin-right: 1rem;
   color: #fff;
 }
+
+.login-signin .checkbox, .login-signin .radio {
+  color: #fff;
+}

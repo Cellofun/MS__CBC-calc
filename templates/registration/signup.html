@@ -25,3 +25,30 @@
         </div>
     </div>
 {% endblock %}
+
+{% block extra_script %}
+<script>
+    let label = $("label[for='id_tos']");
+    let input = $('#id_tos');
+    let div = $('#div_id_tos');
+
+    $(document).ready(function(){
+        div
+            .removeClass()
+            .addClass('checkbox-single');
+
+        label
+            .empty()
+            .removeClass()
+            .addClass('checkbox');
+
+        input
+            .removeClass()
+            .appendTo(label);
+
+        label
+            .append(`Я согласен на <a href="{% url 'patient:tos' %}" class="text-primary font-weight-bold">обработку персональных данных</a>`)
+            .append('<span></span>');
+    });
+</script>
+{% endblock %}

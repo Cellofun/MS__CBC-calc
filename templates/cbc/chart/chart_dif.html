@@ -1,13 +1,13 @@
 <script>
-var charts = function(id, arr) {
+let charts = function(id, arr) {
     am4core.useTheme(am4themes_animated);
 
     // Create chart instance
-    var chart = am4core.create(id, am4charts.XYChart);
+    let chart = am4core.create(id, am4charts.XYChart);
 
     // Add data
-    for (var i=0; i < arr.length; i++) {
-        var pk = arr[i].pk;
+    for (let i=0; i < arr.length; i++) {
+        let pk = arr[i].pk;
         if(arr[i].type === 3) {
             arr[i].url = "{% url 'cbc:three-dif-detail' 999 %}".replace (999, pk);
         } else if(arr[i].type === 5) {
@@ -34,7 +34,7 @@ var charts = function(id, arr) {
     ];
 
     // Create axes
-    var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+    let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
     categoryAxis.dataFields.category = "date";
     categoryAxis.renderer.minGridDistance = 50;
     categoryAxis.renderer.grid.template.location = 0.5;
@@ -43,7 +43,7 @@ var charts = function(id, arr) {
     categoryAxis.renderer.labels.template.fill = am4core.color("#464E5F");
 
 
-    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     valueAxis.renderer.grid.template.stroke = am4core.color("#c5cbe3");
     valueAxis.renderer.grid.template.strokeDasharray = "3,3";
     valueAxis.renderer.labels.template.fill = am4core.color("#464E5F");
@@ -52,7 +52,7 @@ var charts = function(id, arr) {
     function createSeries(field, name) {
 
         // Set up series
-        var series = chart.series.push(new am4charts.ColumnSeries());
+        let series = chart.series.push(new am4charts.ColumnSeries());
         series.name = name;
         series.dataFields.valueY = field;
         series.dataFields.categoryX = "date";
@@ -67,7 +67,7 @@ var charts = function(id, arr) {
         series.columns.template.propertyFields.url = "url";
 
         // Add label
-        var labelBullet = series.bullets.push(new am4charts.LabelBullet());
+        let labelBullet = series.bullets.push(new am4charts.LabelBullet());
         labelBullet.label.text = "{valueY}";
         labelBullet.locationY = 0.5;
         labelBullet.label.hideOversized = true;
@@ -90,7 +90,7 @@ var charts = function(id, arr) {
 
     // Legend
     chart.legend = new am4charts.Legend();
-    var markerTemplate = chart.legend.markers.template;
+    let markerTemplate = chart.legend.markers.template;
     markerTemplate.width = 10;
     markerTemplate.height = 10;
     };

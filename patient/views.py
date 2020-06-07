@@ -1,6 +1,7 @@
 from django.db import transaction
 from django.urls import reverse_lazy
 from django.views import generic
+from django.views.generic import TemplateView
 
 from .forms import RegistrationForm, EditProfileForm
 from .models import Patient
@@ -35,3 +36,7 @@ class EditProfileView(generic.UpdateView):
                 .filter(user=self.request.user)\
                 .update(age=self.request.user.patient.get_age(), sex=self.request.user.patient.sex)
         return super(EditProfileView, self).form_valid(form)
+
+
+class TOSView(TemplateView):
+    template_name = 'registration/tos.html'

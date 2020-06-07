@@ -18,10 +18,19 @@
             {% endif %}
         </td>
     {% endif %}
-    {% if blood_smear.promyelocyte < range.diff.promyelocyte_min %}
-        <td class="text-danger font-weight-bolder">Понижено</td>
-    {% elif blood_smear.promyelocyte > range.diff.promyelocyte_max %}
-        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% if blood_smear.promyelocyte > range.diff.promyelocyte_max %}
+        <td class="text-danger font-weight-bolder">
+            Повышено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content="Повышение содержания промиелоцитов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>инфекционных заболеваниях;</li>
+                    <li>нагноительных процессах.</li>
+                    </ul>"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% else %}
         <td></td>
     {% endif %}
@@ -46,10 +55,19 @@
             {% endif %}
         </td>
     {% endif %}
-    {% if blood_smear.myelocyte < range.diff.myelocyte_min %}
-        <td class="text-danger font-weight-bolder">Понижено</td>
-    {% elif blood_smear.myelocyte > range.diff.myelocyte_max %}
-        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% if blood_smear.myelocyte > range.diff.myelocyte_max %}
+        <td class="text-danger font-weight-bolder">
+            Повышено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content="Повышение содержания миелоцитов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>инфекционных заболеваниях;</li>
+                    <li>нагноительных процессах.</li>
+                    </ul>"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% else %}
         <td></td>
     {% endif %}
@@ -74,10 +92,19 @@
             {% endif %}
         </td>
     {% endif %}
-    {% if blood_smear.metamyelocyte < range.diff.metamyelocyte_min %}
-        <td class="text-danger font-weight-bolder">Понижено</td>
-    {% elif blood_smear.metamyelocyte > range.diff.metamyelocyte_max %}
-        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% if blood_smear.metamyelocyte > range.diff.metamyelocyte_max %}
+        <td class="text-danger font-weight-bolder">
+            Повышено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content="Повышение содержания метамиелоцитов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>инфекционных заболеваниях;</li>
+                    <li>нагноительных процессах.</li>
+                    </ul>"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% else %}
         <td></td>
     {% endif %}
@@ -93,9 +120,50 @@
         {% endif %}
     </td>
     {% if blood_smear.banded_neutrophil < range.diff.banded_neutrophil_min %}
-        <td class="text-danger font-weight-bolder">Понижено</td>
+        <td class="text-danger font-weight-bolder">
+            Понижено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content="Снижение содержания нейтрофилов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>вирусных инфекциях;</li>
+                    <li>хронических инфекциях;</li>
+                    <li>после приема цитостатиков;</li>
+                    <li>после облучения;</li>
+                    <li>анемиях;</li>
+                    <li>агранулоцитозе;</li>
+                    <li>тиреотоксикозе;</li>
+                    <li>последствии химиотерапии;</li>
+                    <li>применении антибактериальных, противовоспалительных, противовирусных препаратов.</li>
+                    </ul>"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% elif blood_smear.banded_neutrophil > range.diff.banded_neutrophil_max %}
-        <td class="text-danger font-weight-bolder">Повышено</td>
+        <td class="text-danger font-weight-bolder">
+            Повышено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content="Повышение содержания нейтрофилов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>острых воспалительных заболеваниях;</li>
+                    <li>интоксикации;</li>
+                    <li>шоке;</li>
+                    <li>кровотечении;</li>
+                    <li>инфаркте миокарда;</li>
+                    <li>гемолитическом кризе;</li>
+                    <li>хроническом миелолейкозе;</li>
+                    <li>сепсисе;</li>
+                    <li>туберкулезе;</li>
+                    <li>злокачественных опухолях с метастазами в костный мозг;</li>
+                    <li>сахарном диабете;</li>
+                    <li>уремии;</li>
+                    <li>использовании иммуностимулирующих препаратов;</li>
+                    <li>как ответная реакция на прививки.</li>
+                    </ul>"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% else %}
         <td></td>
     {% endif %}
@@ -111,9 +179,50 @@
         {% endif %}
     </td>
     {% if blood_smear.segmented_neutrophil < range.diff.segmented_neutrophil_min %}
-        <td class="text-danger font-weight-bolder">Понижено</td>
+        <td class="text-danger font-weight-bolder">
+            Понижено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content="Снижение содержания нейтрофилов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>вирусных инфекциях;</li>
+                    <li>хронических инфекциях;</li>
+                    <li>после приема цитостатиков;</li>
+                    <li>после облучения;</li>
+                    <li>анемиях;</li>
+                    <li>агранулоцитозе;</li>
+                    <li>тиреотоксикозе;</li>
+                    <li>последствии химиотерапии;</li>
+                    <li>применении антибактериальных, противовоспалительных, противовирусных препаратов.</li>
+                    </ul>"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% elif blood_smear.segmented_neutrophil > range.diff.segmented_neutrophil_max %}
-        <td class="text-danger font-weight-bolder">Повышено</td>
+        <td class="text-danger font-weight-bolder">
+            Повышено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content="Повышение содержания нейтрофилов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>острых воспалительных заболеваниях;</li>
+                    <li>интоксикации;</li>
+                    <li>шоке;</li>
+                    <li>кровотечении;</li>
+                    <li>инфаркте миокарда;</li>
+                    <li>гемолитическом кризе;</li>
+                    <li>хроническом миелолейкозе;</li>
+                    <li>сепсисе;</li>
+                    <li>туберкулезе;</li>
+                    <li>злокачественных опухолях с метастазами в костный мозг;</li>
+                    <li>сахарном диабете;</li>
+                    <li>уремии;</li>
+                    <li>использовании иммуностимулирующих препаратов;</li>
+                    <li>как ответная реакция на прививки.</li>
+                    </ul>"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% else %}
         <td></td>
     {% endif %}
@@ -132,13 +241,35 @@
         <td class="text-danger font-weight-bolder">
             Понижено
             <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
-                    data-content=""
+                    data-content="Снижение содержания лимфоцитов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>аномалии развития лимфоидной системы;</li>
+                    <li>торможении лимфопоэза;</li>
+                    <li>ускоренной гибели лимфоцитов.</li>
+                    </ul>"
             >
                 <i class="la la-question-circle icon-lg text-danger"></i>
             </button>
         </td>
     {% elif blood_smear.lymphocyte > range.diff.lymphocyte_max %}
-        <td class="text-danger font-weight-bolder">Повышено</td>
+        <td class="text-danger font-weight-bolder">
+            Повышено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content="Повышение содержания лимфоцитов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>хроническом лимфолейкозе;</li>
+                    <li>хронической лучевой болезни;</li>
+                    <li>бронхиальной астме;</li>
+                    <li>тиреотоксикозе;</li>
+                    <li>коклюше;</li>
+                    <li>туберкулезе;</li>
+                    <li>после спленэктомии;</li>
+                    <li>приеме наркотиков.</li>
+                    </ul>"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% else %}
         <td></td>
     {% endif %}
@@ -154,12 +285,32 @@
         {% endif %}
     </td>
     {% if blood_smear.monocyte < range.diff.monocyte_min %}
-        <td class="text-danger font-weight-bolder">Понижено</td>
+        <td class="text-danger font-weight-bolder">
+            Понижено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content="Снижение содержания моноцитов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>апластической анемии;</li>
+                    <li>волосатоклеточном лейкозе;</li>
+                    <li>гнойных процессах (абсцессы, флегмоны, остеомиелит);</li>
+                    <li>приеме стероидных препаратов;</li>
+                    <li>после хирургических вмешательств.</li>
+                    </ul>"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% elif blood_smear.monocyte > range.diff.monocyte_max %}
         <td class="text-danger font-weight-bolder">
             Повышено
             <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
-                    data-content=""
+                    data-content="Повышение содержания моноцитов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>хронических инфекциях (туберкулез, сифилис, бруцеллез);</li>
+                    <li>острых инфекциях (краснуха, скарлатина, инфекционный паротит, мононуклеоз);</li>
+                    <li>лимфогранулематозе;</li>
+                    <li>эндокардитах (баночная проба Вальдмана).</li>
+                    </ul>"
             >
                 <i class="la la-question-circle icon-lg text-danger"></i>
             </button>
@@ -182,13 +333,35 @@
         <td class="text-danger font-weight-bolder">
             Понижено
             <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
-                    data-content=""
+                    data-content="Снижение содержания эозинофилов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>отравлении тяжелыми металлами;</li>
+                    <li>гнойных процессах;</li>
+                    <li>сепсисе;</li>
+                    <li>начале воспалительного процесса.</li>
+                    </ul>"
             >
                 <i class="la la-question-circle icon-lg text-danger"></i>
             </button>
         </td>
     {% elif blood_smear.eosinophil > range.diff.eosinophil_max %}
-        <td class="text-danger font-weight-bolder">Повышено</td>
+        <td class="text-danger font-weight-bolder">
+            Повышено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content="Повышение содержания эозинофилов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>аллергических реакциях;</li>
+                    <li>бронхиальной астме;</li>
+                    <li>гельминтозах;</li>
+                    <li>опухолях;</li>
+                    <li>лимфогранулематозе;</li>
+                    <li>детских инфекциях (скарлатине);</li>
+                    <li>приеме ряда лекарственных препаратов (антибиотики, сульфаниламиды, ПАСК).</li>
+                    </ul>"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% else %}
         <td></td>
     {% endif %}
@@ -203,10 +376,27 @@
             &#215; 10<sup>9</sup>/л
         {% endif %}
     </td>
-    {% if blood_smear.basophil < range.diff.basophil_min %}
-        <td class="text-danger font-weight-bolder">Понижено</td>
-    {% elif blood_smear.basophil > range.diff.basophil_max %}
-        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% if blood_smear.basophil > range.diff.basophil_max %}
+        <td class="text-danger font-weight-bolder">
+            Повышено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content="Повышение содержания базофилов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>хроническом миелолейкозе;</li>
+                    <li>гипотиреозе;</li>
+                    <li>ветряной оспе;</li>
+                    <li>аллергических реакциях;</li>
+                    <li>нефрозе;</li>
+                    <li>гемолитических анемиях;</li>
+                    <li>спленэктомии;</li>
+                    <li>болезни Ходжкина;</li>
+                    <li>гормональной терапии;</li>
+                    <li>язвенном колите.</li>
+                    </ul>"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% else %}
         <td></td>
     {% endif %}
@@ -231,10 +421,27 @@
             {% endif %}
         </td>
     {% endif %}
-    {% if blood_smear.plasma_cell < range.diff.plasma_cell_min %}
-        <td class="text-danger font-weight-bolder">Понижено</td>
-    {% elif blood_smear.plasma_cell > range.diff.plasma_cell_max %}
-        <td class="text-danger font-weight-bolder">Повышено</td>
+    {% if blood_smear.plasma_cell > range.diff.plasma_cell_max %}
+        <td class="text-danger font-weight-bolder">
+            Повышено
+            <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                    data-content="Повышение содержания плазмацитов наблюдается при:
+                    <ul class='mt-1 mb-0'>
+                    <li>кори;</li>
+                    <li>краснухе;</li>
+                    <li>ветряной оспе;</li>
+                    <li>инфекционном мононуклеозе;</li>
+                    <li>инфекционном гепатите;</li>
+                    <li>аутоиммунных заболеваниях;</li>
+                    <li>туберкулезе;</li>
+                    <li>воздействии ионизирующего излучения;</li>
+                    <li>онкологических заболеваниях;</li>
+                    <li>плазмоцитоме.</li>
+                    </ul>"
+            >
+                <i class="la la-question-circle icon-lg text-danger"></i>
+            </button>
+        </td>
     {% else %}
         <td></td>
     {% endif %}

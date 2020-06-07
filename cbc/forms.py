@@ -22,6 +22,7 @@ class CBCModelForm(forms.ModelForm):
                     'readonly': '',
                     'placeholder': ''
                 }),
+            'sex': forms.RadioSelect(),
             'leukocyte': forms.NumberInput(),
             'erythrocyte': forms.NumberInput(),
             'hemoglobin': forms.NumberInput(),
@@ -66,6 +67,9 @@ ThreeDiffFormSet = inlineformset_factory(
         'lymphocyte',
         'monocyte'
     ],
+    widgets={
+        'value_type': forms.RadioSelect()
+    },
     can_delete=False,
     extra=1,
     max_num=1
@@ -83,6 +87,9 @@ FiveDiffFormSet = inlineformset_factory(
         'eosinophil',
         'basophil'
     ],
+    widgets={
+        'value_type': forms.RadioSelect()
+    },
     can_delete=False,
     extra=1,
     max_num=1
@@ -105,6 +112,9 @@ BloodSmearFormSet = inlineformset_factory(
         'basophil',
         'plasma_cell'
     ],
+    widgets={
+        'value_type': forms.RadioSelect()
+    },
     can_delete=False,
     extra=1,
     max_num=1

@@ -1,13 +1,13 @@
 
-var charts = function(id, arr, ran) {
+let charts = function(id, arr, ran) {
     am4core.useTheme(am4themes_animated);
 
     // Create chart instance
-    var chart = am4core.create(id, am4charts.XYChart);
+    let chart = am4core.create(id, am4charts.XYChart);
     {#chart.paddingRight = 20;#}
 
     // Add data
-    for (var i=0; i < arr.length; i++) {
+    for (let i=0; i < arr.length; i++) {
         if (arr[i].value < ran[0]) {
             arr[i].level = "Понижено"
         } else if (arr[i].value > ran[1]) {
@@ -16,7 +16,7 @@ var charts = function(id, arr, ran) {
             arr[i].level = "Норма"
         }
 
-        var pk = arr[i].pk;
+        let pk = arr[i].pk;
         if(arr[i].type === 3) {
             arr[i].url = "{% url 'cbc:three-dif-detail' 999 %}".replace (999, pk);
         } else if(arr[i].type === 5) {
@@ -31,7 +31,7 @@ var charts = function(id, arr, ran) {
 console.log(arr);
 
     // Create axes
-    var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+    let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
     categoryAxis.dataFields.category = "date";
     categoryAxis.renderer.minGridDistance = 50;
     categoryAxis.renderer.grid.template.location = 0.5;
@@ -40,13 +40,13 @@ console.log(arr);
     categoryAxis.renderer.labels.template.fill = am4core.color("#464E5F");
 
     // Create value axis
-    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     valueAxis.renderer.grid.template.stroke = am4core.color("#c5cbe3");
     valueAxis.renderer.grid.template.strokeDasharray = "3,3";
     valueAxis.renderer.labels.template.fill = am4core.color("#464E5F");
 
     // Create series
-    var series = chart.series.push(new am4charts.LineSeries());
+    let series = chart.series.push(new am4charts.LineSeries());
     series.dataFields.valueY = "value";
     series.dataFields.categoryX = "date";
     series.dataFields.level = "level";
@@ -60,7 +60,7 @@ console.log(arr);
     });
 
     // bullet is added because we add tooltip to a bullet for it to change color
-    var bullet = series.bullets.push(new am4charts.Bullet());
+    let bullet = series.bullets.push(new am4charts.Bullet());
     bullet.tooltipText = "[bold]{level}[/]\n[font-size:14px]{valueY}";
     bullet.adapter.add("fill", function(fill, target){
     if(target.dataItem.level === "Норма"){
@@ -69,12 +69,12 @@ console.log(arr);
     return am4core.color("#dc3545");
     });
 
-    var circle = bullet.createChild(am4core.Circle);
+    let circle = bullet.createChild(am4core.Circle);
     circle.radius = 6;
     circle.strokeOpacity = 0;
     circle.propertyFields.url = "url";
 
-    var range = valueAxis.createSeriesRange(series);
+    let range = valueAxis.createSeriesRange(series);
     range.value = ran[0];
     range.endValue = ran[1];
     range.contents.stroke = am4core.color("#28a745");

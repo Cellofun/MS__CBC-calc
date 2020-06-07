@@ -1,4 +1,4 @@
-var leukocyte_arr = [
+let leukocyte_arr = [
     {% for item in cbc reversed %}
         {
             "date": "{{ item.analysis_date|date:"d.m.y" }}",
@@ -9,7 +9,7 @@ var leukocyte_arr = [
     {% endfor %}
 ];
 
-var erythrocyte_arr = [
+let erythrocyte_arr = [
     {% for item in cbc reversed %}
         {
             "date": "{{ item.analysis_date|date:"d.m.y" }}",
@@ -20,7 +20,7 @@ var erythrocyte_arr = [
     {% endfor %}
 ];
 
-var hemoglobin_arr = [
+let hemoglobin_arr = [
     {% for item in cbc reversed %}
         {
             "date": "{{ item.analysis_date|date:"d.m.y" }}",
@@ -31,7 +31,7 @@ var hemoglobin_arr = [
     {% endfor %}
 ];
 
-var hematocrit_arr = [
+let hematocrit_arr = [
     {% for item in cbc reversed %}
         {
             "date": "{{ item.analysis_date|date:"d.m.y" }}",
@@ -42,7 +42,7 @@ var hematocrit_arr = [
     {% endfor %}
 ];
 
-var sed_rate_arr = [
+let sed_rate_arr = [
     {% for item in cbc reversed %}
         {
             "date": "{{ item.analysis_date|date:"d.m.y" }}",
@@ -53,27 +53,27 @@ var sed_rate_arr = [
     {% endfor %}
 ];
 
-var leukocyte_ran = [
+let leukocyte_ran = [
     parseFloat({{ range.leukocyte_min|stringformat:".2f" }}),
     parseFloat({{ range.leukocyte_max|stringformat:".2f" }})
 ];
 
-var erythrocyte_ran = [
+let erythrocyte_ran = [
     parseFloat({{ range.erythrocyte_min|stringformat:".2f" }}),
     parseFloat({{ range.erythrocyte_max|stringformat:".2f" }})
 ];
 
-var hemoglobin_ran = [
+let hemoglobin_ran = [
     parseInt({{ range.hemoglobin_min }}),
     parseInt({{ range.hemoglobin_max }})
 ];
 
-var hematocrit_ran = [
+let hematocrit_ran = [
     parseFloat({{ range.hematocrit_min|stringformat:".2f" }}),
     parseFloat({{ range.hematocrit_max|stringformat:".2f" }})
 ];
 
-var sed_rate_ran = [
+let sed_rate_ran = [
     parseInt({{ range.sed_rate_min }}),
     parseInt({{ range.sed_rate_max }})
 ];

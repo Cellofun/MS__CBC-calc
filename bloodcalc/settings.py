@@ -127,5 +127,3 @@ LOGOUT_REDIRECT_URL = '/'
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-from .local_settings import *

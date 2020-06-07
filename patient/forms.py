@@ -74,10 +74,13 @@ class RegistrationForm(UserCreationForm):
             }
         )
     )
+    tos = forms.BooleanField(
+        required=True
+    )
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'date_of_birth', 'sex')
+        fields = ('username', 'email', 'date_of_birth', 'sex', 'password1', 'password2', 'tos')
 
     def save(self, **kwargs):
         user = super().save()
@@ -129,7 +132,8 @@ class EditProfileForm(ModelForm):
     )
     sex = forms.ChoiceField(
         label="Пол",
-        choices=Patient.SEX_CHOICES
+        choices=Patient.SEX_CHOICES,
+        widget=forms.RadioSelect()
     )
     date_of_birth = forms.DateField(
         label="День рождения",

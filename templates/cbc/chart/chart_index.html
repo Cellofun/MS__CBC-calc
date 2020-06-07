@@ -1,4 +1,4 @@
-var intoxicationKK_arr = [
+let intoxicationKK_arr = [
     {% for item in blood_diagram reversed %}
         {
             "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
@@ -9,7 +9,7 @@ var intoxicationKK_arr = [
     {% endfor %}
 ];
 
-var intoxicationO_arr = [
+let intoxicationO_arr = [
     {% for item in blood_diagram reversed %}
         {
             "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
@@ -20,7 +20,7 @@ var intoxicationO_arr = [
     {% endfor %}
 ];
 
-var nuclear_arr = [
+let nuclear_arr = [
     {% for item in blood_diagram reversed %}
         {
             "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
@@ -31,7 +31,7 @@ var nuclear_arr = [
     {% endfor %}
 ];
 
-var shift_arr = [
+let shift_arr = [
     {% for item in blood_diagram reversed %}
         {
             "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
@@ -42,7 +42,7 @@ var shift_arr = [
     {% endfor %}
 ];
 
-var allergy_arr = [
+let allergy_arr = [
     {% for item in blood_diagram reversed %}
         {
             "date": "{{ item.cbc.analysis_date|date:"d.m.y" }}",
@@ -53,27 +53,27 @@ var allergy_arr = [
     {% endfor %}
 ];
 
-var intoxicationKK_ran = [
+let intoxicationKK_ran = [
     parseFloat({{ range.intoxicationKK_min|stringformat:".2f" }}),
     parseFloat({{ range.intoxicationKK_max|stringformat:".2f" }})
 ];
 
-var intoxicationO_ran = [
+let intoxicationO_ran = [
     parseFloat({{ range.intoxicationO_min|stringformat:".2f" }}),
     parseFloat({{ range.intoxicationO_max|stringformat:".2f" }})
 ];
 
-var nuclear_ran = [
+let nuclear_ran = [
     parseFloat({{ range.nuclear_min|stringformat:".2f" }}),
     parseFloat({{ range.nuclear_max|stringformat:".2f" }})
 ];
 
-var shift_ran = [
+let shift_ran = [
     parseFloat({{ range.shift_min|stringformat:".2f" }}),
     parseFloat({{ range.shift_max|stringformat:".2f" }})
 ];
 
-var allergy_ran = [
+let allergy_ran = [
     parseFloat({{ range.allergy_min|stringformat:".2f" }}),
     parseFloat({{ range.allergy_max|stringformat:".2f" }})
 ];

@@ -13,12 +13,42 @@
         <td>{{ object.leukocyte }}</td>
         <td>{{ range.cbc.leukocyte_min }} - {{ range.cbc.leukocyte_max }} &#215; 10<sup>9</sup>/л</td>
         {% if object.leukocyte < range.cbc.leukocyte_min %}
-            <td class="text-danger font-weight-bolder">Понижено</td>
+            <td class="text-danger font-weight-bolder">
+                Понижено
+                <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                        data-content="Снижение содержания лейкоцитов наблюдается при:
+                        <ul class='mt-1 mb-0'>
+                        <li>воздействии ряда химических веществ;</li>
+                        <li>после облучения;</li>
+                        <li>гипопластических и апластических процессов;</li>
+                        <li>приеме лекарственных препаратов;</li>
+                        <li>заболеваниях селезенки;</li>
+                        <li>инфекционных заболеваниях;</li>
+                        <li>эндокринных заболеваниях;</li>
+                        <li>лейкозах;</li>
+                        <li>метастазировании новообразований в костный мозг.</li>
+                        </ul>"
+                >
+                    <i class="la la-question-circle icon-lg text-danger"></i>
+                </button>
+            </td>
         {% elif object.leukocyte > range.cbc.leukocyte_max %}
             <td class="text-danger font-weight-bolder">
                 Повышено
                 <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
-                        data-content="Повышение лейкоцитов наблюдается при: "
+                        data-content="Повышение содержания лейкоцитов наблюдается при:
+                        <ul class='mt-1 mb-0'>
+                        <li>различных воспалительных заболеваниях;</li>
+                        <li>инфекционных заболеваниях;</li>
+                        <li>стрессе;</li>
+                        <li>инфарктах различных органов;</li>
+                        <li>обширных ожогах;</li>
+                        <li>кровопотерях;</li>
+                        <li>злокачественных заболеваниях;</li>
+                        <li>заболеваниях системы крови;</li>
+                        <li>уремии;</li>
+                        <li>диабетической коме.</li>
+                        </ul>"
                 >
                     <i class="la la-question-circle icon-lg text-danger"></i>
                 </button>
@@ -35,13 +65,20 @@
             <td class="text-danger font-weight-bolder">
                 Понижено
                 <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
-                        data-content="Снижение эритроцитов наблюдается при: "
+                        data-content="Снижение содержания эритроцитов наблюдается при анемиях."
                 >
                     <i class="la la-question-circle icon-lg text-danger"></i>
                 </button>
             </td>
         {% elif object.erythrocyte > range.cbc.erythrocyte_max %}
-            <td class="text-danger font-weight-bolder">Повышено</td>
+            <td class="text-danger font-weight-bolder">
+                Повышено
+                <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
+                        data-content="Повышение содержания эритроцитов наблюдается при эритремии (первичном эритроцитозе)."
+                >
+                    <i class="la la-question-circle icon-lg text-danger"></i>
+                </button>
+            </td>
         {% else %}
             <td></td>
         {% endif %}
@@ -54,7 +91,7 @@
             <td class="text-danger font-weight-bolder">
                 Понижено
                 <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
-                        data-content="Снижение гемоглобина наблюдается при анемиях."
+                        data-content="Снижение содержания гемоглобина наблюдается при анемиях."
                 >
                     <i class="la la-question-circle icon-lg text-danger"></i>
                 </button>
@@ -63,7 +100,14 @@
             <td class="text-danger font-weight-bolder">
                 Повышено
                 <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
-                        data-content="Повышение гемоглобина наблюдается при: <ul class='mt-1 mb-0'><li>полицитемии;</li><li>чрезмерной физической нагрузке;</li><li>стрессе;</li><li>пребывании на больших высотах;</li><li>дегидратации (ожоги, частая рвота, кишечная непроходимость).</li></ul>"
+                        data-content="Повышение содержания гемоглобина наблюдается при:
+                        <ul class='mt-1 mb-0'>
+                        <li>полицитемии;</li>
+                        <li>чрезмерной физической нагрузке;</li>
+                        <li>стрессе;</li>
+                        <li>пребывании на больших высотах;</li>
+                        <li>дегидратации (ожоги, частая рвота, кишечная непроходимость).</li>
+                        </ul>"
                 >
                     <i class="la la-question-circle icon-lg text-danger"></i>
                 </button>
@@ -80,7 +124,12 @@
             <td class="text-danger font-weight-bolder">
                 Понижено
                 <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
-                        data-content="Снижение гематокрита наблюдается при: <ul class='mt-1 mb-0'><li>анемиях;</li><li>почечной недостаточности;</li><li>во второй половине беременности.</li></ul>"
+                        data-content="Снижение содержания гематокрита наблюдается при:
+                        <ul class='mt-1 mb-0'>
+                        <li>анемиях;</li>
+                        <li>почечной недостаточности;</li>
+                        <li>во второй половине беременности.</li>
+                        </ul>"
                 >
                     <i class="la la-question-circle icon-lg text-danger"></i>
                 </button>
@@ -89,7 +138,12 @@
             <td class="text-danger font-weight-bolder">
                 Повышено
                 <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
-                        data-content="Повышение гематокрита наблюдается при: <ul class='mt-1 mb-0'><li>эритремиях;</li><li>сердечной или дыхательной недостаточности;</li><li>обезвоживании (рвоты, ожоги, сахарный диабет).</li></ul>"
+                        data-content="Повышение содержания гематокрита наблюдается при:
+                        <ul class='mt-1 mb-0'>
+                        <li>эритремиях;</li>
+                        <li>сердечной или дыхательной недостаточности;</li>
+                        <li>обезвоживании (рвоты, ожоги, сахарный диабет).</li>
+                        </ul>"
                 >
                     <i class="la la-question-circle icon-lg text-danger"></i>
                 </button>
@@ -106,7 +160,14 @@
             <td class="text-danger font-weight-bolder">
                 Понижено
                 <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
-                        data-content="Снижение СОЭ наблюдается при: <ul class='mt-1 mb-0'><li>сгущении крови;</li><li>голодании;</li><li>снижении мышечной массы;</li><li>вегетарианской диете;</li><li>приеме кортикостероидов.</li></ul>"
+                        data-content="Снижение содержания СОЭ наблюдается при:
+                        <ul class='mt-1 mb-0'>
+                        <li>сгущении крови;</li>
+                        <li>голодании;</li>
+                        <li>снижении мышечной массы;</li>
+                        <li>вегетарианской диете;</li>
+                        <li>приеме кортикостероидов.</li>
+                        </ul>"
                 >
                     <i class="la la-question-circle icon-lg text-danger"></i>
                 </button>
@@ -115,7 +176,16 @@
             <td class="text-danger font-weight-bolder">
                 Повышено
                 <button type="button" class="btn btn-link" style="padding: 0 !important;" data-container="body" data-toggle="popover" data-html="true"
-                        data-content="Повышение СОЭ наблюдается при: <ul class='mt-1 mb-0'><li>различных воспалительных процессах;</li><li>интоксикациях;</li><li>острых и хронических инфекциях;</li><li>инфаркте миокарда;</li><li>опухолях;</li><li>после кровопотерь;</li><li>оперативных вмешательств.</li></ul>"
+                        data-content="Повышение содержания СОЭ наблюдается при:
+                        <ul class='mt-1 mb-0'>
+                        <li>различных воспалительных процессах;</li>
+                        <li>интоксикациях;</li>
+                        <li>острых и хронических инфекциях;</li>
+                        <li>инфаркте миокарда;</li>
+                        <li>опухолях;</li>
+                        <li>после кровопотерь;</li>
+                        <li>оперативных вмешательств.</li>
+                        </ul>"
                 >
                     <i class="la la-question-circle icon-lg text-danger"></i>
                 </button>

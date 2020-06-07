@@ -60,8 +60,16 @@
 
 {% block extra_scripts %}
 <script>
+    let label1 = $("label[for='id_sex_1']");
+    let label2 = $("label[for='id_sex_2']");
+    let input1 = $('#id_sex_1');
+    let input2 = $('#id_sex_2');
+    let div = $('#div_id_sex').children('div');
+
     $(document).ready(function(){
         $('#nav_edit-profile').addClass('active');
+
+        radiomize(label1, label2, input1, input2, div);
     });
 </script>
 {% endblock %}

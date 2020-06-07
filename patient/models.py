@@ -1,4 +1,4 @@
-from  datetime import datetime
+from datetime import datetime
 
 from django.contrib.auth.models import User
 from django.db import models
@@ -60,6 +60,7 @@ class Patient(models.Model):
         auto_now_add=True,
         verbose_name='Время создания',
     )
+    tos = models.BooleanField()
 
     def get_age(self):
         return datetime.now().year - self.date_of_birth.year
