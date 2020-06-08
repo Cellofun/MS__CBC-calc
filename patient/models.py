@@ -11,8 +11,8 @@ class Patient(models.Model):
     FEMALE_CHOICE = 'female'
 
     SEX_CHOICES = (
-        (MALE_CHOICE, 'Мужской'),
-        (FEMALE_CHOICE, 'Женский')
+        (MALE_CHOICE, 'Мужчина'),
+        (FEMALE_CHOICE, 'Женщина')
     )
 
     user = models.OneToOneField(
@@ -60,7 +60,9 @@ class Patient(models.Model):
         auto_now_add=True,
         verbose_name='Время создания',
     )
-    tos = models.BooleanField()
+    tos = models.BooleanField(
+        default=False
+    )
 
     def get_age(self):
         return datetime.now().year - self.date_of_birth.year

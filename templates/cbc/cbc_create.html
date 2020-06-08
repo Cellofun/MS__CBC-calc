@@ -26,8 +26,7 @@
 							</li>
                             {% if request.user.is_authenticated %}
 	                    	<li class="breadcrumb-item">
-	                        	<a href="{% url 'cbc
-	                        	:cbc-list' %}" class="text-muted">Список результатов</a>
+	                        	<a href="{% url 'cbc:cbc-list' %}" class="text-muted">Список результатов</a>
 							</li>
                             {% endif %}
                         </ul>

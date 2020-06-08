@@ -16,8 +16,8 @@ class RegistrationForm(UserCreationForm):
 
     SEX_CHOICES = (
         (SEX, 'Пол'),
-        (MALE_CHOICE, 'Мужской'),
-        (FEMALE_CHOICE, 'Женский')
+        (MALE_CHOICE, 'Мужчина'),
+        (FEMALE_CHOICE, 'Женщина')
     )
 
     username = forms.CharField(
@@ -75,7 +75,8 @@ class RegistrationForm(UserCreationForm):
         )
     )
     tos = forms.BooleanField(
-        required=True
+        required=True,
+        label=''
     )
 
     class Meta:
