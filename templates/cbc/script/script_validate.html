@@ -3,20 +3,6 @@
     let divs = $('div');
     let sum_input = $('#id_sum');
     let blood_type = $('#id_blood_smear-0-value_type');
-    let change_range = function () {
-        let three_diff_selected = $('#id_three_diff-0-value_type_1').is(':checked');
-        let five_diff_selected = $('#id_five_diff-0-value_type_1').is(':checked');
-        let blood_smear_selected = $('#id_blood_smear-0-value_type_1').is(':checked');
-        if(three_diff_selected || five_diff_selected || blood_smear_selected) {
-            $('.value-type .range__label').each(function() {
-                $(this).html('%');
-            })
-        } else {
-            $('.value-type .range__label').each(function() {
-                $(this).html('10<sup>9</sup>/л');
-            })
-        }
-    };
 
     let sex_label1 = $("label[for='id_sex_1']");
     let sex_label2 = $("label[for='id_sex_2']");
@@ -41,6 +27,18 @@
     let blood_smear_input1 = $('#id_blood_smear-0-value_type_1');
     let blood_smear_input2 = $('#id_blood_smear-0-value_type_2');
     let blood_smear_div = $('#div_id_blood_smear-0-value_type').children('div');
+
+    let change_range = function () {
+        if(three_diff_input1.is(':checked') || five_diff_input1.is(':checked') || blood_smear_input1.is(':checked')) {
+            $('.value-type .range__label').each(function() {
+                $(this).html('%');
+            })
+        } else {
+            $('.value-type .range__label').each(function() {
+                $(this).html('10<sup>9</sup>/л');
+            })
+        }
+    };
 
     $(document).ready(function(){
         $('#div_id_leukocyte label').append('<span class="range__label">10<sup>9</sup>/л</div>');
@@ -115,7 +113,7 @@
         });
 
         inputs.on('change', function() {
-            if(blood_type.val() === 'relative') {
+            if(blood_smear_input1.is(':checked')) {
                 let sum = +$('#id_sum').val();
                 $(this).filter('[id*="id_blood_smear-0"]').each(function() {
                     sum += +this.value;
